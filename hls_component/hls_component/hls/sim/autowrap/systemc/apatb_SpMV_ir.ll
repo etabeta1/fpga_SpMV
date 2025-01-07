@@ -10,8 +10,8 @@ target triple = "fpga64-xilinx-none"
 %"struct.ap_int_base<5, false>" = type { %"struct.ssdm_int<5, false>" }
 %"struct.ssdm_int<5, false>" = type { i5 }
 
-; Function Attrs: argmemonly noinline willreturn
-define void @apatb_SpMV_ir(i32* noalias nocapture nonnull readonly "fpga.decayed.dim.hint"="100" %values, %"struct.ap_uint<5>"* noalias nocapture nonnull readonly "fpga.decayed.dim.hint"="100" %columnIndexes, %"struct.ap_uint<9>"* noalias nocapture nonnull readonly "fpga.decayed.dim.hint"="11" %rowPointers, %"struct.ap_uint<5>"* nocapture readonly %numOfRows, %"struct.ap_uint<5>"* nocapture readonly %numOfCols, i32* noalias nocapture nonnull readonly "fpga.decayed.dim.hint"="10" %vector, i32* noalias nocapture nonnull "fpga.decayed.dim.hint"="10" %output) local_unnamed_addr #0 {
+; Function Attrs: inaccessiblemem_or_argmemonly noinline willreturn
+define void @apatb_SpMV_ir(i32* noalias nocapture nonnull readonly "fpga.decayed.dim.hint"="100" "maxi" %values, %"struct.ap_uint<5>"* noalias nocapture nonnull readonly "fpga.decayed.dim.hint"="100" "maxi" %columnIndexes, %"struct.ap_uint<9>"* noalias nocapture nonnull readonly "fpga.decayed.dim.hint"="11" "maxi" %rowPointers, %"struct.ap_uint<5>"* nocapture readonly %numOfRows, i32* noalias nocapture nonnull readonly "fpga.decayed.dim.hint"="10" "maxi" %vector, i32* noalias nocapture nonnull "fpga.decayed.dim.hint"="10" "maxi" %output) local_unnamed_addr #0 {
 entry:
   %values_copy = alloca [100 x i32], align 512
   %columnIndexes_copy = alloca [100 x i5], align 512
@@ -24,7 +24,7 @@ entry:
   %3 = bitcast i32* %vector to [10 x i32]*
   %4 = bitcast i32* %output to [10 x i32]*
   call fastcc void @copy_in([100 x i32]* nonnull %0, [100 x i32]* nonnull align 512 %values_copy, [100 x %"struct.ap_uint<5>"]* nonnull %1, [100 x i5]* nonnull align 512 %columnIndexes_copy, [11 x %"struct.ap_uint<9>"]* nonnull %2, [11 x i9]* nonnull align 512 %rowPointers_copy, [10 x i32]* nonnull %3, [10 x i32]* nonnull align 512 %vector_copy, [10 x i32]* nonnull %4, [10 x i32]* nonnull align 512 %output_copy)
-  call void @apatb_SpMV_hw([100 x i32]* %values_copy, [100 x i5]* %columnIndexes_copy, [11 x i9]* %rowPointers_copy, %"struct.ap_uint<5>"* %numOfRows, %"struct.ap_uint<5>"* %numOfCols, [10 x i32]* %vector_copy, [10 x i32]* %output_copy)
+  call void @apatb_SpMV_hw([100 x i32]* %values_copy, [100 x i5]* %columnIndexes_copy, [11 x i9]* %rowPointers_copy, %"struct.ap_uint<5>"* %numOfRows, [10 x i32]* %vector_copy, [10 x i32]* %output_copy)
   call void @copy_back([100 x i32]* %0, [100 x i32]* %values_copy, [100 x %"struct.ap_uint<5>"]* %1, [100 x i5]* %columnIndexes_copy, [11 x %"struct.ap_uint<9>"]* %2, [11 x i9]* %rowPointers_copy, [10 x i32]* %3, [10 x i32]* %vector_copy, [10 x i32]* %4, [10 x i32]* %output_copy)
   ret void
 }
@@ -331,7 +331,7 @@ ret:                                              ; preds = %copy.split, %entry
   ret void
 }
 
-declare void @apatb_SpMV_hw([100 x i32]*, [100 x i5]*, [11 x i9]*, %"struct.ap_uint<5>"*, %"struct.ap_uint<5>"*, [10 x i32]*, [10 x i32]*)
+declare void @apatb_SpMV_hw([100 x i32]*, [100 x i5]*, [11 x i9]*, %"struct.ap_uint<5>"*, [10 x i32]*, [10 x i32]*)
 
 ; Function Attrs: argmemonly noinline norecurse willreturn
 define internal fastcc void @copy_back([100 x i32]* noalias "unpacked"="0", [100 x i32]* noalias readonly align 512 "unpacked"="1", [100 x %"struct.ap_uint<5>"]* noalias "unpacked"="2", [100 x i5]* noalias nocapture readonly align 512 "unpacked"="3.0", [11 x %"struct.ap_uint<9>"]* noalias "unpacked"="4", [11 x i9]* noalias nocapture readonly align 512 "unpacked"="5.0", [10 x i32]* noalias "unpacked"="6", [10 x i32]* noalias readonly align 512 "unpacked"="7", [10 x i32]* noalias "unpacked"="8", [10 x i32]* noalias readonly align 512 "unpacked"="9") unnamed_addr #4 {
@@ -340,24 +340,24 @@ entry:
   ret void
 }
 
-define void @SpMV_hw_stub_wrapper([100 x i32]*, [100 x i5]*, [11 x i9]*, %"struct.ap_uint<5>"*, %"struct.ap_uint<5>"*, [10 x i32]*, [10 x i32]*) #5 {
+define void @SpMV_hw_stub_wrapper([100 x i32]*, [100 x i5]*, [11 x i9]*, %"struct.ap_uint<5>"*, [10 x i32]*, [10 x i32]*) #5 {
 entry:
-  %7 = alloca [100 x %"struct.ap_uint<5>"]
-  %8 = alloca [11 x %"struct.ap_uint<9>"]
-  call void @copy_out([100 x i32]* null, [100 x i32]* %0, [100 x %"struct.ap_uint<5>"]* %7, [100 x i5]* %1, [11 x %"struct.ap_uint<9>"]* %8, [11 x i9]* %2, [10 x i32]* null, [10 x i32]* %5, [10 x i32]* null, [10 x i32]* %6)
-  %9 = bitcast [100 x i32]* %0 to i32*
-  %10 = bitcast [100 x %"struct.ap_uint<5>"]* %7 to %"struct.ap_uint<5>"*
-  %11 = bitcast [11 x %"struct.ap_uint<9>"]* %8 to %"struct.ap_uint<9>"*
+  %6 = alloca [100 x %"struct.ap_uint<5>"]
+  %7 = alloca [11 x %"struct.ap_uint<9>"]
+  call void @copy_out([100 x i32]* null, [100 x i32]* %0, [100 x %"struct.ap_uint<5>"]* %6, [100 x i5]* %1, [11 x %"struct.ap_uint<9>"]* %7, [11 x i9]* %2, [10 x i32]* null, [10 x i32]* %4, [10 x i32]* null, [10 x i32]* %5)
+  %8 = bitcast [100 x i32]* %0 to i32*
+  %9 = bitcast [100 x %"struct.ap_uint<5>"]* %6 to %"struct.ap_uint<5>"*
+  %10 = bitcast [11 x %"struct.ap_uint<9>"]* %7 to %"struct.ap_uint<9>"*
+  %11 = bitcast [10 x i32]* %4 to i32*
   %12 = bitcast [10 x i32]* %5 to i32*
-  %13 = bitcast [10 x i32]* %6 to i32*
-  call void @SpMV_hw_stub(i32* %9, %"struct.ap_uint<5>"* %10, %"struct.ap_uint<9>"* %11, %"struct.ap_uint<5>"* %3, %"struct.ap_uint<5>"* %4, i32* %12, i32* %13)
-  call void @copy_in([100 x i32]* null, [100 x i32]* %0, [100 x %"struct.ap_uint<5>"]* %7, [100 x i5]* %1, [11 x %"struct.ap_uint<9>"]* %8, [11 x i9]* %2, [10 x i32]* null, [10 x i32]* %5, [10 x i32]* null, [10 x i32]* %6)
+  call void @SpMV_hw_stub(i32* %8, %"struct.ap_uint<5>"* %9, %"struct.ap_uint<9>"* %10, %"struct.ap_uint<5>"* %3, i32* %11, i32* %12)
+  call void @copy_in([100 x i32]* null, [100 x i32]* %0, [100 x %"struct.ap_uint<5>"]* %6, [100 x i5]* %1, [11 x %"struct.ap_uint<9>"]* %7, [11 x i9]* %2, [10 x i32]* null, [10 x i32]* %4, [10 x i32]* null, [10 x i32]* %5)
   ret void
 }
 
-declare void @SpMV_hw_stub(i32* noalias nocapture nonnull readonly, %"struct.ap_uint<5>"* noalias nocapture nonnull readonly, %"struct.ap_uint<9>"* noalias nocapture nonnull readonly, %"struct.ap_uint<5>"* nocapture readonly, %"struct.ap_uint<5>"* nocapture readonly, i32* noalias nocapture nonnull readonly, i32* noalias nocapture nonnull)
+declare void @SpMV_hw_stub(i32* noalias nocapture nonnull readonly, %"struct.ap_uint<5>"* noalias nocapture nonnull readonly, %"struct.ap_uint<9>"* noalias nocapture nonnull readonly, %"struct.ap_uint<5>"* nocapture readonly, i32* noalias nocapture nonnull readonly, i32* noalias nocapture nonnull)
 
-attributes #0 = { argmemonly noinline willreturn "fpga.wrapper.func"="wrapper" }
+attributes #0 = { inaccessiblemem_or_argmemonly noinline willreturn "fpga.wrapper.func"="wrapper" }
 attributes #1 = { argmemonly noinline norecurse willreturn "fpga.wrapper.func"="copyin" }
 attributes #2 = { argmemonly noinline norecurse willreturn "fpga.wrapper.func"="onebyonecpy_hls" }
 attributes #3 = { argmemonly noinline norecurse willreturn "fpga.wrapper.func"="arraycpy_hls" }

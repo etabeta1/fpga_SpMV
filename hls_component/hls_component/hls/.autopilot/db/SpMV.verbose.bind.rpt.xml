@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'SpMV'" level="0">
-<item name = "Date">Tue Jan  7 13:53:08 2025
+<item name = "Date">Tue Jan  7 19:55:46 2025
 </item>
 <item name = "Version">2024.1 (Build 5069499 on May 21 2024)</item>
 <item name = "Project">hls_component</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 6.912 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 7.300 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -31,16 +31,16 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_SpMV_Pipeline_spmv_loop_internal_fu_560">SpMV_Pipeline_spmv_loop_internal, ?, ?, ?, ?, 0, 0, loop auto-rewind stp(delay=0 clock cycles(s))</column>
-<column name="grp_SpMV_Pipeline_spmv_loop_internal1_fu_575">SpMV_Pipeline_spmv_loop_internal1, ?, ?, ?, ?, 0, 0, loop auto-rewind stp(delay=0 clock cycles(s))</column>
-<column name="grp_SpMV_Pipeline_spmv_loop_internal2_fu_590">SpMV_Pipeline_spmv_loop_internal2, ?, ?, ?, ?, 0, 0, loop auto-rewind stp(delay=0 clock cycles(s))</column>
-<column name="grp_SpMV_Pipeline_spmv_loop_internal3_fu_605">SpMV_Pipeline_spmv_loop_internal3, ?, ?, ?, ?, 0, 0, loop auto-rewind stp(delay=0 clock cycles(s))</column>
-<column name="grp_SpMV_Pipeline_spmv_loop_internal4_fu_620">SpMV_Pipeline_spmv_loop_internal4, ?, ?, ?, ?, 0, 0, loop auto-rewind stp(delay=0 clock cycles(s))</column>
-<column name="grp_SpMV_Pipeline_spmv_loop_internal5_fu_635">SpMV_Pipeline_spmv_loop_internal5, ?, ?, ?, ?, 0, 0, loop auto-rewind stp(delay=0 clock cycles(s))</column>
-<column name="grp_SpMV_Pipeline_spmv_loop_internal6_fu_650">SpMV_Pipeline_spmv_loop_internal6, ?, ?, ?, ?, 0, 0, loop auto-rewind stp(delay=0 clock cycles(s))</column>
-<column name="grp_SpMV_Pipeline_spmv_loop_internal7_fu_665">SpMV_Pipeline_spmv_loop_internal7, ?, ?, ?, ?, 0, 0, loop auto-rewind stp(delay=0 clock cycles(s))</column>
-<column name="grp_SpMV_Pipeline_spmv_loop_internal8_fu_680">SpMV_Pipeline_spmv_loop_internal8, ?, ?, ?, ?, 0, 0, loop auto-rewind stp(delay=0 clock cycles(s))</column>
-<column name="grp_SpMV_Pipeline_spmv_loop_internal9_fu_695">SpMV_Pipeline_spmv_loop_internal9, ?, ?, ?, ?, 0, 0, loop auto-rewind stp(delay=0 clock cycles(s))</column>
+<column name="grp_SpMV_Pipeline_spmv_loop_internal_fu_841">SpMV_Pipeline_spmv_loop_internal, ?, ?, ?, ?, 0, 0, loop auto-rewind stp(delay=0 clock cycles(s))</column>
+<column name="grp_SpMV_Pipeline_spmv_loop_internal1_fu_857">SpMV_Pipeline_spmv_loop_internal1, ?, ?, ?, ?, 0, 0, loop auto-rewind stp(delay=0 clock cycles(s))</column>
+<column name="grp_SpMV_Pipeline_spmv_loop_internal2_fu_873">SpMV_Pipeline_spmv_loop_internal2, ?, ?, ?, ?, 0, 0, loop auto-rewind stp(delay=0 clock cycles(s))</column>
+<column name="grp_SpMV_Pipeline_spmv_loop_internal3_fu_889">SpMV_Pipeline_spmv_loop_internal3, ?, ?, ?, ?, 0, 0, loop auto-rewind stp(delay=0 clock cycles(s))</column>
+<column name="grp_SpMV_Pipeline_spmv_loop_internal4_fu_905">SpMV_Pipeline_spmv_loop_internal4, ?, ?, ?, ?, 0, 0, loop auto-rewind stp(delay=0 clock cycles(s))</column>
+<column name="grp_SpMV_Pipeline_spmv_loop_internal5_fu_921">SpMV_Pipeline_spmv_loop_internal5, ?, ?, ?, ?, 0, 0, loop auto-rewind stp(delay=0 clock cycles(s))</column>
+<column name="grp_SpMV_Pipeline_spmv_loop_internal6_fu_937">SpMV_Pipeline_spmv_loop_internal6, ?, ?, ?, ?, 0, 0, loop auto-rewind stp(delay=0 clock cycles(s))</column>
+<column name="grp_SpMV_Pipeline_spmv_loop_internal7_fu_953">SpMV_Pipeline_spmv_loop_internal7, ?, ?, ?, ?, 0, 0, loop auto-rewind stp(delay=0 clock cycles(s))</column>
+<column name="grp_SpMV_Pipeline_spmv_loop_internal8_fu_969">SpMV_Pipeline_spmv_loop_internal8, ?, ?, ?, ?, 0, 0, loop auto-rewind stp(delay=0 clock cycles(s))</column>
+<column name="grp_SpMV_Pipeline_spmv_loop_internal9_fu_985">SpMV_Pipeline_spmv_loop_internal9, ?, ?, ?, ?, 0, 0, loop auto-rewind stp(delay=0 clock cycles(s))</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">

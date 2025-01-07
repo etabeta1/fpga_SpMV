@@ -55001,7 +55001,7 @@ void SpMV(
     RowPointer rowPointers[10 + 1],
 
     VectorSize numOfRows,
-    VectorSize numOfCols,
+
 
     int vector[10],
 

@@ -5,7 +5,7 @@ set rawDecl ""
 set globalVariable ""
 set PortList ""
 set PortName "values"
-set BitWidth "32"
+set BitWidth "64"
 set ArrayOpt ""
 set Const "0"
 set Volatile "1"
@@ -17,7 +17,7 @@ set DataType "void"
 set Port [list $PortName $Interface $DataType $Pointer $Dims $Const    $Volatile $ArrayOpt]
 lappend PortList $Port
 set PortName "columnIndexes"
-set BitWidth "5"
+set BitWidth "64"
 set ArrayOpt ""
 set Const "0"
 set Volatile "1"
@@ -29,7 +29,7 @@ set DataType "void"
 set Port [list $PortName $Interface $DataType $Pointer $Dims $Const    $Volatile $ArrayOpt]
 lappend PortList $Port
 set PortName "rowPointers"
-set BitWidth "9"
+set BitWidth "64"
 set ArrayOpt ""
 set Const "0"
 set Volatile "1"
@@ -52,20 +52,8 @@ set Interface "wire"
 set DataType "char"
 set Port [list $PortName $Interface $DataType $Pointer $Dims $Const    $Volatile $ArrayOpt]
 lappend PortList $Port
-set PortName "numOfCols"
-set BitWidth "5"
-set ArrayOpt ""
-set Const "0"
-set Volatile "0"
-set Pointer "0"
-set Reference "0"
-set Dims [list 0]
-set Interface "wire"
-set DataType "char"
-set Port [list $PortName $Interface $DataType $Pointer $Dims $Const    $Volatile $ArrayOpt]
-lappend PortList $Port
 set PortName "vector"
-set BitWidth "32"
+set BitWidth "64"
 set ArrayOpt ""
 set Const "0"
 set Volatile "1"
@@ -77,7 +65,7 @@ set DataType "void"
 set Port [list $PortName $Interface $DataType $Pointer $Dims $Const    $Volatile $ArrayOpt]
 lappend PortList $Port
 set PortName "output_r"
-set BitWidth "32"
+set BitWidth "64"
 set ArrayOpt ""
 set Const "0"
 set Volatile "1"

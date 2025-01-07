@@ -11,4 +11,7 @@
 [[transaction]]           3
 0x09
 [[/transaction]]
+[[transaction]]           4
+0x0a
+[[/transaction]]
 [[[/runtime]]]

@@ -11,6 +11,5 @@ volatile void* values,
 volatile void* columnIndexes,
 volatile void* rowPointers,
 char numOfRows,
-char numOfCols,
 volatile void* vector,
 volatile void* output_r);

@@ -3,8 +3,8 @@
 # SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Tue Jan  7 13:54:01 2025
-# Process ID: 28080
+# Start of session at: Tue Jan  7 19:57:08 2025
+# Process ID: 11276
 # Current directory: D:/Desktop/SpMV/hls_component/hls_component/hls/sim/verilog
 # Command line: xsim.exe -mode tcl -source {xsim.dir/SpMV/xsim_script.tcl}
 # Log file: D:/Desktop/SpMV/hls_component/hls_component/hls/sim/verilog/xsim.log
@@ -17,9 +17,9 @@
 # CPU Physical cores:8
 # CPU Logical cores :16
 # Host memory       :16505 MB
-# Swap memory       :6710 MB
-# Total Virtual     :23216 MB
-# Available Virtual :2725 MB
+# Swap memory       :6979 MB
+# Total Virtual     :23485 MB
+# Available Virtual :6466 MB
 #-----------------------------------------------------------
 source xsim.dir/SpMV/xsim_script.tcl
 source SpMV.tcl

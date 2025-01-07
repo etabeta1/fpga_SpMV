@@ -30,7 +30,7 @@ void SpMV(
     RowPointer rowPointers[MAX_MATRIX_SIDE_SIZE + 1],
 
     VectorSize numOfRows,
-    VectorSize numOfCols,
+    // VectorSize numOfCols,
 
     int vector[MAX_MATRIX_SIDE_SIZE],
 

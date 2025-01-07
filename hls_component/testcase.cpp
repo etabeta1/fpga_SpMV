@@ -74,7 +74,7 @@ Testcase::~Testcase() {
 bool Testcase::run(std::ostream &os) {
     os << "Running test \'" << name << "\'...";
 
-    SpMV(values, columnIndexes, rowPointers, numOfRows, numOfCols, vector, output);
+    SpMV(values, columnIndexes, rowPointers, numOfRows, /* numOfCols, */ vector, output);
 
     if(check()) {
         os << "OK" << std::endl;

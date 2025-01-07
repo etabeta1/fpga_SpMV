@@ -55005,7 +55005,7 @@ void SpMV(
     RowPointer rowPointers[10 + 1],
 
     VectorSize numOfRows,
-    VectorSize numOfCols,
+
 
     int vector[10],
 
@@ -55117,7 +55117,7 @@ Testcase::~Testcase() {
 bool Testcase::run(std::ostream &os) {
     os << "Running test \'" << name << "\'...";
 
-    SpMV(values, columnIndexes, rowPointers, numOfRows, numOfCols, vector, output);
+    SpMV(values, columnIndexes, rowPointers, numOfRows, vector, output);
 
     if(check()) {
         os << "OK" << std::endl;

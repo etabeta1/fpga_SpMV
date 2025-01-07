@@ -55008,7 +55008,7 @@ void SpMV(
     RowPointer rowPointers[10 + 1],
 
     VectorSize numOfRows,
-    VectorSize numOfCols,
+
 
     int vector[10],
 
@@ -55022,12 +55022,26 @@ void SpMV(
     RowPointer rowPointers[10 + 1],
 
     VectorSize numOfRows,
-    VectorSize numOfCols,
+
 
     int vector[10],
 
     int output[10]
 ) {
+#pragma HLS INTERFACE mode=m_axi port=values bundle=gmem0 offset=slave depth=values_depth
+#pragma HLS INTERFACE mode=m_axi port=columnIndexes bundle=gmem1 offset=slave depth=columnIndexes_depth
+#pragma HLS INTERFACE mode=m_axi port=rowPointers bundle=gmem2 offset=slave depth=rowPointers_depth
+#pragma HLS INTERFACE mode=m_axi port=vector bundle=gmem3 offset=slave depth=vector_depth
+#pragma HLS INTERFACE mode=m_axi port=output bundle=gmem4 offset=slave depth=output_depth
+
+#pragma HLS INTERFACE s_axilite port=values bundle=control
+#pragma HLS INTERFACE s_axilite port=columnIndexes bundle=control
+#pragma HLS INTERFACE s_axilite port=rowPointers bundle=control
+#pragma HLS INTERFACE s_axilite port=numOfRows bundle=control
+#pragma HLS INTERFACE s_axilite port=vector bundle=control
+#pragma HLS INTERFACE s_axilite port=output bundle=control
+
+
     spmv_loop_external:for(VectorSize i = 0; i < 10; i++) {
 #pragma HLS UNROLL
 
@@ -55055,16 +55069,15 @@ void SpMV(
 };
 #ifndef HLS_FASTSIM
 struct __cosim_s1__{char data[sizeof(ap_uint<5>)];};
-struct __cosim_s2__{char data[sizeof(ap_uint<5>)];};
 #ifdef __cplusplus
 extern "C"
 #endif
-void apatb_SpMV_ir(int *, ap_uint<5> *, ap_uint<9> *, struct __cosim_s1__*, struct __cosim_s2__*, int *, int *);
+void apatb_SpMV_ir(int *, ap_uint<5> *, ap_uint<9> *, struct __cosim_s1__*, int *, int *);
 #ifdef __cplusplus
 extern "C"
 #endif
-void SpMV_hw_stub(int *values, ap_uint<5> *columnIndexes, ap_uint<9> *rowPointers, struct __cosim_s1__* numOfRows, struct __cosim_s2__* numOfCols, int *vector, int *output){
-SpMV(values, columnIndexes, rowPointers, *((ap_uint<5>*)numOfRows), *((ap_uint<5>*)numOfCols), vector, output);
+void SpMV_hw_stub(int *values, ap_uint<5> *columnIndexes, ap_uint<9> *rowPointers, struct __cosim_s1__* numOfRows, int *vector, int *output){
+SpMV(values, columnIndexes, rowPointers, *((ap_uint<5>*)numOfRows), vector, output);
 return ;
 }
 #ifdef __cplusplus
@@ -55074,11 +55087,11 @@ void refine_signal_handler();
 #ifdef __cplusplus
 extern "C"
 #endif
-void apatb_SpMV_sw(int *values, ap_uint<5> *columnIndexes, ap_uint<9> *rowPointers, ap_uint<5> numOfRows, ap_uint<5> numOfCols, int *vector, int *output){
+void apatb_SpMV_sw(int *values, ap_uint<5> *columnIndexes, ap_uint<9> *rowPointers, ap_uint<5> numOfRows, int *vector, int *output){
 refine_signal_handler();
-apatb_SpMV_ir(values, columnIndexes, rowPointers, ((struct __cosim_s1__*)&numOfRows), ((struct __cosim_s2__*)&numOfCols), vector, output);
+apatb_SpMV_ir(values, columnIndexes, rowPointers, ((struct __cosim_s1__*)&numOfRows), vector, output);
 return ;
 }
 #endif
-# 39 "D:/Desktop/SpMV/hls_component/SpMV.cpp"
+# 53 "D:/Desktop/SpMV/hls_component/SpMV.cpp"
 

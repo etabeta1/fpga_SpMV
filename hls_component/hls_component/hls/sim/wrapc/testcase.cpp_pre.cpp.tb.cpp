@@ -55011,7 +55011,7 @@ const int output_depth = 10;
 #ifdef __cplusplus
 extern "C"
 #endif
-void apatb_SpMV_sw(int *, ap_uint<5> *, ap_uint<9> *, ap_uint<5>, ap_uint<5>, int *, int *);
+void apatb_SpMV_sw(int *, ap_uint<5> *, ap_uint<9> *, ap_uint<5>, int *, int *);
 #endif
 # 27 "D:/Desktop/SpMV/hls_component/SpMV.hpp"
 void SpMV(
@@ -55020,7 +55020,7 @@ void SpMV(
     RowPointer rowPointers[10 + 1],
 
     VectorSize numOfRows,
-    VectorSize numOfCols,
+
 
     int vector[10],
 
@@ -55137,7 +55137,7 @@ bool Testcase::run(std::ostream &os) {
 #define SpMV apatb_SpMV_sw
 #endif
 # 77 "D:/Desktop/SpMV/hls_component/testcase.cpp"
-SpMV(values, columnIndexes, rowPointers, numOfRows, numOfCols, vector, output);
+SpMV(values, columnIndexes, rowPointers, numOfRows, vector, output);
 #undef SpMV
 # 77 "D:/Desktop/SpMV/hls_component/testcase.cpp"
 

@@ -9,11 +9,11 @@
 						"AP_CLK": { "actual": "ap_clk"},
 						"AP_DONE": { "actual": "ap_done"},
 						"AP_READY": { "actual": "ap_ready"},
-						"AP_RESET": { "actual": "ap_rst"},
+						"AP_RESET": { "actual": "ap_rst_n"},
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"grp_SpMV_Pipeline_spmv_loop_internal1_fu_575/grp_SpMV_Pipeline_spmv_loop_internal1_fu_575_activity": {
+				"grp_SpMV_Pipeline_spmv_loop_internal1_fu_857/grp_SpMV_Pipeline_spmv_loop_internal1_fu_857_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},
@@ -23,7 +23,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"grp_SpMV_Pipeline_spmv_loop_internal2_fu_590/grp_SpMV_Pipeline_spmv_loop_internal2_fu_590_activity": {
+				"grp_SpMV_Pipeline_spmv_loop_internal2_fu_873/grp_SpMV_Pipeline_spmv_loop_internal2_fu_873_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},
@@ -33,7 +33,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"grp_SpMV_Pipeline_spmv_loop_internal3_fu_605/grp_SpMV_Pipeline_spmv_loop_internal3_fu_605_activity": {
+				"grp_SpMV_Pipeline_spmv_loop_internal3_fu_889/grp_SpMV_Pipeline_spmv_loop_internal3_fu_889_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},
@@ -43,7 +43,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"grp_SpMV_Pipeline_spmv_loop_internal4_fu_620/grp_SpMV_Pipeline_spmv_loop_internal4_fu_620_activity": {
+				"grp_SpMV_Pipeline_spmv_loop_internal4_fu_905/grp_SpMV_Pipeline_spmv_loop_internal4_fu_905_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},
@@ -53,7 +53,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"grp_SpMV_Pipeline_spmv_loop_internal5_fu_635/grp_SpMV_Pipeline_spmv_loop_internal5_fu_635_activity": {
+				"grp_SpMV_Pipeline_spmv_loop_internal5_fu_921/grp_SpMV_Pipeline_spmv_loop_internal5_fu_921_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},
@@ -63,7 +63,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"grp_SpMV_Pipeline_spmv_loop_internal6_fu_650/grp_SpMV_Pipeline_spmv_loop_internal6_fu_650_activity": {
+				"grp_SpMV_Pipeline_spmv_loop_internal6_fu_937/grp_SpMV_Pipeline_spmv_loop_internal6_fu_937_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},
@@ -73,7 +73,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"grp_SpMV_Pipeline_spmv_loop_internal7_fu_665/grp_SpMV_Pipeline_spmv_loop_internal7_fu_665_activity": {
+				"grp_SpMV_Pipeline_spmv_loop_internal7_fu_953/grp_SpMV_Pipeline_spmv_loop_internal7_fu_953_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},
@@ -83,7 +83,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"grp_SpMV_Pipeline_spmv_loop_internal8_fu_680/grp_SpMV_Pipeline_spmv_loop_internal8_fu_680_activity": {
+				"grp_SpMV_Pipeline_spmv_loop_internal8_fu_969/grp_SpMV_Pipeline_spmv_loop_internal8_fu_969_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},
@@ -93,7 +93,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"grp_SpMV_Pipeline_spmv_loop_internal9_fu_695/grp_SpMV_Pipeline_spmv_loop_internal9_fu_695_activity": {
+				"grp_SpMV_Pipeline_spmv_loop_internal9_fu_985/grp_SpMV_Pipeline_spmv_loop_internal9_fu_985_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},
@@ -103,7 +103,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"grp_SpMV_Pipeline_spmv_loop_internal_fu_560/grp_SpMV_Pipeline_spmv_loop_internal_fu_560_activity": {
+				"grp_SpMV_Pipeline_spmv_loop_internal_fu_841/grp_SpMV_Pipeline_spmv_loop_internal_fu_841_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},

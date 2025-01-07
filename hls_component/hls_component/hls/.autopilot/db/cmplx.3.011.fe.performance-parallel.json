@@ -4,14 +4,11 @@
     "calls": "",
     "file": "SpMV.cpp",
     "fileloc": 3,
-    "instructions": 282,
+    "instructions": 419,
     "loads": {
-      "T": 50
+      "T": 30
     },
     "name": "SpMV",
-    "stores": {
-      "T": 10
-    },
-    "total_instructions": 282
+    "total_instructions": 419
   }
 }

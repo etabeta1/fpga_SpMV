@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'SpMV'
 ================================================================
 + General Information: 
-    * Date:           Tue Jan  7 13:53:12 2025
+    * Date:           Tue Jan  7 19:56:04 2025
     * Version:        2024.1 (Build 5069499 on May 21 2024)
     * Project:        hls_component
     * Solution:       hls (Vivado IP Flow Target)
@@ -15,69 +15,79 @@
 + Performance & Resource Estimates: 
     
     PS: '+' for module; 'o' for loop; '*' for dataflow
-    +--------------------------------------+------+------+---------+--------+----------+---------+------+----------+------+--------+-----------+-----------+-----+
-    |                Modules               | Issue|      | Latency | Latency| Iteration|         | Trip |          |      |        |           |           |     |
-    |                & Loops               | Type | Slack| (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined| BRAM |   DSP  |     FF    |    LUT    | URAM|
-    +--------------------------------------+------+------+---------+--------+----------+---------+------+----------+------+--------+-----------+-----------+-----+
-    |+ SpMV                                |     -|  0.39|        -|       -|         -|        -|     -|        no|     -|  3 (1%)|  3974 (3%)|  3864 (7%)|    -|
-    | + SpMV_Pipeline_spmv_loop_internal   |     -|  0.39|        -|       -|         -|        -|     -|        no|     -|       -|  342 (~0%)|  260 (~0%)|    -|
-    |  o spmv_loop_internal                |     -|  7.30|        -|       -|         6|        1|     -|       yes|     -|       -|          -|          -|    -|
-    | + SpMV_Pipeline_spmv_loop_internal1  |     -|  0.39|        -|       -|         -|        -|     -|        no|     -|       -|  342 (~0%)|  260 (~0%)|    -|
-    |  o spmv_loop_internal                |     -|  7.30|        -|       -|         6|        1|     -|       yes|     -|       -|          -|          -|    -|
-    | + SpMV_Pipeline_spmv_loop_internal2  |     -|  0.39|        -|       -|         -|        -|     -|        no|     -|       -|  342 (~0%)|  260 (~0%)|    -|
-    |  o spmv_loop_internal                |     -|  7.30|        -|       -|         6|        1|     -|       yes|     -|       -|          -|          -|    -|
-    | + SpMV_Pipeline_spmv_loop_internal3  |     -|  0.39|        -|       -|         -|        -|     -|        no|     -|       -|  342 (~0%)|  260 (~0%)|    -|
-    |  o spmv_loop_internal                |     -|  7.30|        -|       -|         6|        1|     -|       yes|     -|       -|          -|          -|    -|
-    | + SpMV_Pipeline_spmv_loop_internal4  |     -|  0.39|        -|       -|         -|        -|     -|        no|     -|       -|  342 (~0%)|  260 (~0%)|    -|
-    |  o spmv_loop_internal                |     -|  7.30|        -|       -|         6|        1|     -|       yes|     -|       -|          -|          -|    -|
-    | + SpMV_Pipeline_spmv_loop_internal5  |     -|  0.39|        -|       -|         -|        -|     -|        no|     -|       -|  342 (~0%)|  260 (~0%)|    -|
-    |  o spmv_loop_internal                |     -|  7.30|        -|       -|         6|        1|     -|       yes|     -|       -|          -|          -|    -|
-    | + SpMV_Pipeline_spmv_loop_internal6  |     -|  0.39|        -|       -|         -|        -|     -|        no|     -|       -|  342 (~0%)|  260 (~0%)|    -|
-    |  o spmv_loop_internal                |     -|  7.30|        -|       -|         6|        1|     -|       yes|     -|       -|          -|          -|    -|
-    | + SpMV_Pipeline_spmv_loop_internal7  |     -|  0.39|        -|       -|         -|        -|     -|        no|     -|       -|  342 (~0%)|  260 (~0%)|    -|
-    |  o spmv_loop_internal                |     -|  7.30|        -|       -|         6|        1|     -|       yes|     -|       -|          -|          -|    -|
-    | + SpMV_Pipeline_spmv_loop_internal8  |     -|  0.39|        -|       -|         -|        -|     -|        no|     -|       -|  342 (~0%)|  260 (~0%)|    -|
-    |  o spmv_loop_internal                |     -|  7.30|        -|       -|         6|        1|     -|       yes|     -|       -|          -|          -|    -|
-    | + SpMV_Pipeline_spmv_loop_internal9  |     -|  0.39|        -|       -|         -|        -|     -|        no|     -|       -|  342 (~0%)|  260 (~0%)|    -|
-    |  o spmv_loop_internal                |     -|  7.30|        -|       -|         6|        1|     -|       yes|     -|       -|          -|          -|    -|
-    +--------------------------------------+------+------+---------+--------+----------+---------+------+----------+------+--------+-----------+-----------+-----+
+    +--------------------------------------+------+------+---------+--------+----------+---------+------+----------+--------+--------+-------------+-------------+-----+
+    |                Modules               | Issue|      | Latency | Latency| Iteration|         | Trip |          |        |        |             |             |     |
+    |                & Loops               | Type | Slack| (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined|  BRAM  |   DSP  |      FF     |     LUT     | URAM|
+    +--------------------------------------+------+------+---------+--------+----------+---------+------+----------+--------+--------+-------------+-------------+-----+
+    |+ SpMV                                |     -|  0.00|        -|       -|         -|        -|     -|        no|  8 (2%)|  3 (1%)|  11263 (10%)|  13462 (25%)|    -|
+    | + SpMV_Pipeline_spmv_loop_internal   |     -|  0.00|        -|       -|         -|        -|     -|        no|       -|       -|    365 (~0%)|    373 (~0%)|    -|
+    |  o spmv_loop_internal                |     -|  7.30|        -|       -|        15|        1|     -|       yes|       -|       -|            -|            -|    -|
+    | + SpMV_Pipeline_spmv_loop_internal1  |     -|  0.00|        -|       -|         -|        -|     -|        no|       -|       -|    365 (~0%)|    373 (~0%)|    -|
+    |  o spmv_loop_internal                |     -|  7.30|        -|       -|        15|        1|     -|       yes|       -|       -|            -|            -|    -|
+    | + SpMV_Pipeline_spmv_loop_internal2  |     -|  0.00|        -|       -|         -|        -|     -|        no|       -|       -|    365 (~0%)|    373 (~0%)|    -|
+    |  o spmv_loop_internal                |     -|  7.30|        -|       -|        15|        1|     -|       yes|       -|       -|            -|            -|    -|
+    | + SpMV_Pipeline_spmv_loop_internal3  |     -|  0.00|        -|       -|         -|        -|     -|        no|       -|       -|    365 (~0%)|    373 (~0%)|    -|
+    |  o spmv_loop_internal                |     -|  7.30|        -|       -|        15|        1|     -|       yes|       -|       -|            -|            -|    -|
+    | + SpMV_Pipeline_spmv_loop_internal4  |     -|  0.00|        -|       -|         -|        -|     -|        no|       -|       -|    365 (~0%)|    373 (~0%)|    -|
+    |  o spmv_loop_internal                |     -|  7.30|        -|       -|        15|        1|     -|       yes|       -|       -|            -|            -|    -|
+    | + SpMV_Pipeline_spmv_loop_internal5  |     -|  0.00|        -|       -|         -|        -|     -|        no|       -|       -|    365 (~0%)|    373 (~0%)|    -|
+    |  o spmv_loop_internal                |     -|  7.30|        -|       -|        15|        1|     -|       yes|       -|       -|            -|            -|    -|
+    | + SpMV_Pipeline_spmv_loop_internal6  |     -|  0.00|        -|       -|         -|        -|     -|        no|       -|       -|    365 (~0%)|    373 (~0%)|    -|
+    |  o spmv_loop_internal                |     -|  7.30|        -|       -|        15|        1|     -|       yes|       -|       -|            -|            -|    -|
+    | + SpMV_Pipeline_spmv_loop_internal7  |     -|  0.00|        -|       -|         -|        -|     -|        no|       -|       -|    365 (~0%)|    373 (~0%)|    -|
+    |  o spmv_loop_internal                |     -|  7.30|        -|       -|        15|        1|     -|       yes|       -|       -|            -|            -|    -|
+    | + SpMV_Pipeline_spmv_loop_internal8  |     -|  0.00|        -|       -|         -|        -|     -|        no|       -|       -|    365 (~0%)|    373 (~0%)|    -|
+    |  o spmv_loop_internal                |     -|  7.30|        -|       -|        15|        1|     -|       yes|       -|       -|            -|            -|    -|
+    | + SpMV_Pipeline_spmv_loop_internal9  |     -|  0.00|        -|       -|         -|        -|     -|        no|       -|       -|    365 (~0%)|    373 (~0%)|    -|
+    |  o spmv_loop_internal                |     -|  7.30|        -|       -|        15|        1|     -|       yes|       -|       -|            -|            -|    -|
+    +--------------------------------------+------+------+---------+--------+----------+---------+------+----------+--------+--------+-------------+-------------+-----+
 
 
 ================================================================
 == HW Interfaces
 ================================================================
-* AP_MEMORY
-+------------------------+-----------+----------+
-| Port                   | Direction | Bitwidth |
-+------------------------+-----------+----------+
-| columnIndexes_address0 | out       | 7        |
-| columnIndexes_q0       | in        | 5        |
-| output_r_address0      | out       | 4        |
-| output_r_d0            | out       | 32       |
-| rowPointers_address0   | out       | 4        |
-| rowPointers_address1   | out       | 4        |
-| rowPointers_q0         | in        | 9        |
-| rowPointers_q1         | in        | 9        |
-| values_address0        | out       | 7        |
-| values_q0              | in        | 32       |
-| vector_address0        | out       | 4        |
-| vector_q0              | in        | 32       |
-+------------------------+-----------+----------+
+* M_AXI
++-------------+------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+| Interface   | Read/Write | Data Width | Address Width | Latency | Offset | Register | Max Widen | Max Read     | Max Write    | Num Read    | Num Write   | Resource Estimate |
+|             |            | (SW->HW)   |               |         |        |          | Bitwidth  | Burst Length | Burst Length | Outstanding | Outstanding |                   |
++-------------+------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+| m_axi_gmem0 | READ_ONLY  | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=2            |
+| m_axi_gmem1 | READ_ONLY  | 5 -> 8     | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=1            |
+| m_axi_gmem2 | READ_ONLY  | 9 -> 16    | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=1            |
+| m_axi_gmem3 | READ_ONLY  | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=2            |
+| m_axi_gmem4 | WRITE_ONLY | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=2            |
++-------------+------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
 
-* Other Ports
-+-----------+---------+-----------+----------+
-| Port      | Mode    | Direction | Bitwidth |
-+-----------+---------+-----------+----------+
-| numOfCols | ap_none | in        | 5        |
-| numOfRows | ap_none | in        | 5        |
-+-----------+---------+-----------+----------+
+* S_AXILITE Interfaces
++---------------+------------+---------------+--------+----------+
+| Interface     | Data Width | Address Width | Offset | Register |
++---------------+------------+---------------+--------+----------+
+| s_axi_control | 32         | 7             | 16     | 0        |
++---------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++---------------+-----------------+--------+-------+--------+------------------------------+
+| Interface     | Register        | Offset | Width | Access | Description                  |
++---------------+-----------------+--------+-------+--------+------------------------------+
+| s_axi_control | values_1        | 0x10   | 32    | W      | Data signal of values        |
+| s_axi_control | values_2        | 0x14   | 32    | W      | Data signal of values        |
+| s_axi_control | columnIndexes_1 | 0x1c   | 32    | W      | Data signal of columnIndexes |
+| s_axi_control | columnIndexes_2 | 0x20   | 32    | W      | Data signal of columnIndexes |
+| s_axi_control | rowPointers_1   | 0x28   | 32    | W      | Data signal of rowPointers   |
+| s_axi_control | rowPointers_2   | 0x2c   | 32    | W      | Data signal of rowPointers   |
+| s_axi_control | numOfRows       | 0x34   | 32    | W      | Data signal of numOfRows     |
+| s_axi_control | vector_1        | 0x3c   | 32    | W      | Data signal of vector        |
+| s_axi_control | vector_2        | 0x40   | 32    | W      | Data signal of vector        |
+| s_axi_control | output_r_1      | 0x48   | 32    | W      | Data signal of output_r      |
+| s_axi_control | output_r_2      | 0x4c   | 32    | W      | Data signal of output_r      |
++---------------+-----------------+--------+-------+--------+------------------------------+
 
 * TOP LEVEL CONTROL
 +-----------+------------+-----------------------------------+
 | Interface | Type       | Ports                             |
 +-----------+------------+-----------------------------------+
 | ap_clk    | clock      | ap_clk                            |
-| ap_rst    | reset      | ap_rst                            |
+| ap_rst_n  | reset      | ap_rst_n                          |
 | ap_ctrl   | ap_ctrl_hs | ap_done ap_idle ap_ready ap_start |
 +-----------+------------+-----------------------------------+
 
@@ -93,113 +103,256 @@
 | columnIndexes | in        | ap_uint<5>* |
 | rowPointers   | in        | ap_uint<9>* |
 | numOfRows     | in        | ap_uint<5>  |
-| numOfCols     | in        | ap_uint<5>  |
 | vector        | in        | int*        |
 | output        | out       | int*        |
 +---------------+-----------+-------------+
 
 * SW-to-HW Mapping
-+---------------+------------------------+---------+----------+
-| Argument      | HW Interface           | HW Type | HW Usage |
-+---------------+------------------------+---------+----------+
-| values        | values_address0        | port    | offset   |
-| values        | values_ce0             | port    |          |
-| values        | values_q0              | port    |          |
-| columnIndexes | columnIndexes_address0 | port    | offset   |
-| columnIndexes | columnIndexes_ce0      | port    |          |
-| columnIndexes | columnIndexes_q0       | port    |          |
-| rowPointers   | rowPointers_address0   | port    | offset   |
-| rowPointers   | rowPointers_ce0        | port    |          |
-| rowPointers   | rowPointers_q0         | port    |          |
-| rowPointers   | rowPointers_address1   | port    | offset   |
-| rowPointers   | rowPointers_ce1        | port    |          |
-| rowPointers   | rowPointers_q1         | port    |          |
-| numOfRows     | numOfRows              | port    |          |
-| numOfCols     | numOfCols              | port    |          |
-| vector        | vector_address0        | port    | offset   |
-| vector        | vector_ce0             | port    |          |
-| vector        | vector_q0              | port    |          |
-| output        | output_r_address0      | port    | offset   |
-| output        | output_r_ce0           | port    |          |
-| output        | output_r_we0           | port    |          |
-| output        | output_r_d0            | port    |          |
-+---------------+------------------------+---------+----------+
++---------------+---------------+-----------+----------+-------------------------------------------+
+| Argument      | HW Interface  | HW Type   | HW Usage | HW Info                                   |
++---------------+---------------+-----------+----------+-------------------------------------------+
+| values        | m_axi_gmem0   | interface |          | channel=0                                 |
+| values        | s_axi_control | register  | offset   | name=values_1 offset=0x10 range=32        |
+| values        | s_axi_control | register  | offset   | name=values_2 offset=0x14 range=32        |
+| columnIndexes | m_axi_gmem1   | interface |          | channel=0                                 |
+| columnIndexes | s_axi_control | register  | offset   | name=columnIndexes_1 offset=0x1c range=32 |
+| columnIndexes | s_axi_control | register  | offset   | name=columnIndexes_2 offset=0x20 range=32 |
+| rowPointers   | m_axi_gmem2   | interface |          | channel=0                                 |
+| rowPointers   | s_axi_control | register  | offset   | name=rowPointers_1 offset=0x28 range=32   |
+| rowPointers   | s_axi_control | register  | offset   | name=rowPointers_2 offset=0x2c range=32   |
+| numOfRows     | s_axi_control | register  |          | name=numOfRows offset=0x34 range=32       |
+| vector        | m_axi_gmem3   | interface |          | channel=0                                 |
+| vector        | s_axi_control | register  | offset   | name=vector_1 offset=0x3c range=32        |
+| vector        | s_axi_control | register  | offset   | name=vector_2 offset=0x40 range=32        |
+| output        | m_axi_gmem4   | interface |          | channel=0                                 |
+| output        | s_axi_control | register  | offset   | name=output_r_1 offset=0x48 range=32      |
+| output        | s_axi_control | register  | offset   | name=output_r_2 offset=0x4c range=32      |
++---------------+---------------+-----------+----------+-------------------------------------------+
 
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+* Inferred Burst Summary
++--------------+-----------+----------+-------+--------------------+----------------+
+| HW Interface | Direction | Length   | Width | Loop               | Loop Location  |
++--------------+-----------+----------+-------+--------------------+----------------+
+| m_axi_gmem0  | read      | variable | 32    | spmv_loop_internal | SpMV.cpp:36:32 |
+| m_axi_gmem1  | read      | variable | 8     | spmv_loop_internal | SpMV.cpp:36:32 |
+| m_axi_gmem4  | write     | 10       | 32    |                    |                |
++--------------+-----------+----------+-------+--------------------+----------------+
+
+* All M_AXI Variable Accesses
++--------------+---------------+-----------------+-----------+--------------+----------+--------------------+----------------+------------+-------------------------------------------------------------------------------------------------------+
+| HW Interface | Variable      | Access Location | Direction | Burst Status | Length   | Loop               | Loop Location  | Resolution | Problem                                                                                               |
++--------------+---------------+-----------------+-----------+--------------+----------+--------------------+----------------+------------+-------------------------------------------------------------------------------------------------------+
+| m_axi_gmem0  | values        | SpMV.cpp:39:21  | read      | Inferred     | variable | spmv_loop_internal | SpMV.cpp:36:32 |            |                                                                                                       |
+| m_axi_gmem1  | columnIndexes | SpMV.cpp:41:44  | read      | Inferred     | variable | spmv_loop_internal | SpMV.cpp:36:32 |            |                                                                                                       |
+| m_axi_gmem3  | vector        | SpMV.cpp:43:36  | read      | Fail         |          | spmv_loop_internal | SpMV.cpp:36:32 | 214-229    | Could not analyze pattern                                                                             |
+| m_axi_gmem4  | output        | SpMV.cpp:51:19  | write     | Widen Fail   |          |                    |                | 214-353    | Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem4  | output        | SpMV.cpp:51:19  | write     | Inferred     | 10       |                    |                |            |                                                                                                       |
++--------------+---------------+-----------------+-----------+--------------+----------+--------------------+----------------+------------+-------------------------------------------------------------------------------------------------------+
+
+    * Resolution URL: docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=XXX-YYY.html (replace XXX-YYY with column value)
 
 ================================================================
 == Bind Op Report
 ================================================================
-+--------------------------------------+-----+--------+-------------+-------+--------+---------+
-| Name                                 | DSP | Pragma | Variable    | Op    | Impl   | Latency |
-+--------------------------------------+-----+--------+-------------+-------+--------+---------+
-| + SpMV                               | 3   |        |             |       |        |         |
-|   mul_32s_32s_32_2_1_U71             |     |        | icmp_ln20   | seteq | auto   | 0       |
-|   icmp_ln20_1_fu_757_p2              |     |        | icmp_ln20_1 | seteq | auto   | 0       |
-|   icmp_ln20_2_fu_767_p2              |     |        | icmp_ln20_2 | setgt | auto   | 0       |
-|   icmp_ln20_3_fu_785_p2              |     |        | icmp_ln20_3 | seteq | auto   | 0       |
-|   icmp_ln20_4_fu_795_p2              |     |        | icmp_ln20_4 | setgt | auto   | 0       |
-|   icmp_ln20_5_fu_804_p2              |     |        | icmp_ln20_5 | setgt | auto   | 0       |
-|   icmp_ln20_6_fu_813_p2              |     |        | icmp_ln20_6 | setgt | auto   | 0       |
-|   icmp_ln20_7_fu_831_p2              |     |        | icmp_ln20_7 | seteq | auto   | 0       |
-|   icmp_ln20_8_fu_841_p2              |     |        | icmp_ln20_8 | setgt | auto   | 0       |
-|   icmp_ln20_9_fu_850_p2              |     |        | icmp_ln20_9 | setgt | auto   | 0       |
-|  + SpMV_Pipeline_spmv_loop_internal  | 0   |        |             |       |        |         |
-|    icmp_ln22_fu_130_p2               |     |        | icmp_ln22   | setlt | auto   | 0       |
-|    sum_8_fu_154_p2                   |     |        | sum_8       | add   | fabric | 0       |
-|    add_ln22_fu_135_p2                |     |        | add_ln22    | add   | fabric | 0       |
-|  + SpMV_Pipeline_spmv_loop_internal1 | 0   |        |             |       |        |         |
-|    icmp_ln22_fu_130_p2               |     |        | icmp_ln22   | setlt | auto   | 0       |
-|    sum_fu_154_p2                     |     |        | sum         | add   | fabric | 0       |
-|    add_ln22_fu_135_p2                |     |        | add_ln22    | add   | fabric | 0       |
-|  + SpMV_Pipeline_spmv_loop_internal2 | 0   |        |             |       |        |         |
-|    icmp_ln22_fu_130_p2               |     |        | icmp_ln22   | setlt | auto   | 0       |
-|    sum_fu_154_p2                     |     |        | sum         | add   | fabric | 0       |
-|    add_ln22_fu_135_p2                |     |        | add_ln22    | add   | fabric | 0       |
-|  + SpMV_Pipeline_spmv_loop_internal3 | 0   |        |             |       |        |         |
-|    icmp_ln22_fu_130_p2               |     |        | icmp_ln22   | setlt | auto   | 0       |
-|    sum_7_fu_154_p2                   |     |        | sum_7       | add   | fabric | 0       |
-|    add_ln22_fu_135_p2                |     |        | add_ln22    | add   | fabric | 0       |
-|  + SpMV_Pipeline_spmv_loop_internal4 | 0   |        |             |       |        |         |
-|    icmp_ln22_fu_130_p2               |     |        | icmp_ln22   | setlt | auto   | 0       |
-|    sum_6_fu_154_p2                   |     |        | sum_6       | add   | fabric | 0       |
-|    add_ln22_fu_135_p2                |     |        | add_ln22    | add   | fabric | 0       |
-|  + SpMV_Pipeline_spmv_loop_internal5 | 0   |        |             |       |        |         |
-|    icmp_ln22_fu_130_p2               |     |        | icmp_ln22   | setlt | auto   | 0       |
-|    sum_5_fu_154_p2                   |     |        | sum_5       | add   | fabric | 0       |
-|    add_ln22_fu_135_p2                |     |        | add_ln22    | add   | fabric | 0       |
-|  + SpMV_Pipeline_spmv_loop_internal6 | 0   |        |             |       |        |         |
-|    icmp_ln22_fu_130_p2               |     |        | icmp_ln22   | setlt | auto   | 0       |
-|    sum_4_fu_154_p2                   |     |        | sum_4       | add   | fabric | 0       |
-|    add_ln22_fu_135_p2                |     |        | add_ln22    | add   | fabric | 0       |
-|  + SpMV_Pipeline_spmv_loop_internal7 | 0   |        |             |       |        |         |
-|    icmp_ln22_fu_130_p2               |     |        | icmp_ln22   | setlt | auto   | 0       |
-|    sum_3_fu_154_p2                   |     |        | sum_3       | add   | fabric | 0       |
-|    add_ln22_fu_135_p2                |     |        | add_ln22    | add   | fabric | 0       |
-|  + SpMV_Pipeline_spmv_loop_internal8 | 0   |        |             |       |        |         |
-|    icmp_ln22_fu_130_p2               |     |        | icmp_ln22   | setlt | auto   | 0       |
-|    sum_2_fu_154_p2                   |     |        | sum_2       | add   | fabric | 0       |
-|    add_ln22_fu_135_p2                |     |        | add_ln22    | add   | fabric | 0       |
-|  + SpMV_Pipeline_spmv_loop_internal9 | 0   |        |             |       |        |         |
-|    icmp_ln22_fu_130_p2               |     |        | icmp_ln22   | setlt | auto   | 0       |
-|    sum_1_fu_154_p2                   |     |        | sum_1       | add   | fabric | 0       |
-|    add_ln22_fu_135_p2                |     |        | add_ln22    | add   | fabric | 0       |
-+--------------------------------------+-----+--------+-------------+-------+--------+---------+
++--------------------------------------+-----+--------+----------------+--------+----------+---------+
+| Name                                 | DSP | Pragma | Variable       | Op     | Impl     | Latency |
++--------------------------------------+-----+--------+----------------+--------+----------+---------+
+| + SpMV                               | 3   |        |                |        |          |         |
+|   icmp_ln34_fu_1136_p2               |     |        | icmp_ln34      | seteq  | auto     | 0       |
+|   grp_fu_1001_p2                     |     |        | empty          | add    | fabric   | 0       |
+|   icmp_ln36_fu_1186_p2               |     |        | icmp_ln36      | setgt  | auto     | 0       |
+|   select_ln36_2_fu_1190_p3           |     |        | select_ln36_2  | select | auto_sel | 0       |
+|   sub_ln36_fu_1200_p2                |     |        | sub_ln36       | sub    | fabric   | 0       |
+|   icmp_ln36_1_fu_1210_p2             |     |        | icmp_ln36_1    | setgt  | auto     | 0       |
+|   select_ln36_1_fu_1216_p3           |     |        | select_ln36_1  | select | auto_sel | 0       |
+|   add_ln36_fu_1235_p2                |     |        | add_ln36       | add    | fabric   | 0       |
+|   add_ln36_1_fu_1250_p2              |     |        | add_ln36_1     | add    | fabric   | 0       |
+|   icmp_ln34_1_fu_1289_p2             |     |        | icmp_ln34_1    | seteq  | auto     | 0       |
+|   grp_fu_1001_p2                     |     |        | add_ln36_2     | add    | fabric   | 0       |
+|   grp_fu_1016_p2                     |     |        | empty_41       | add    | fabric   | 0       |
+|   icmp_ln36_2_fu_1329_p2             |     |        | icmp_ln36_2    | setgt  | auto     | 0       |
+|   select_ln36_fu_1333_p3             |     |        | select_ln36    | select | auto_sel | 0       |
+|   sub_ln36_1_fu_1343_p2              |     |        | sub_ln36_1     | sub    | fabric   | 0       |
+|   icmp_ln36_3_fu_1353_p2             |     |        | icmp_ln36_3    | setgt  | auto     | 0       |
+|   select_ln36_3_fu_1359_p3           |     |        | select_ln36_3  | select | auto_sel | 0       |
+|   add_ln36_3_fu_1378_p2              |     |        | add_ln36_3     | add    | fabric   | 0       |
+|   add_ln36_4_fu_1393_p2              |     |        | add_ln36_4     | add    | fabric   | 0       |
+|   icmp_ln34_2_fu_1423_p2             |     |        | icmp_ln34_2    | setgt  | auto     | 0       |
+|   grp_fu_1016_p2                     |     |        | add_ln36_5     | add    | fabric   | 0       |
+|   grp_fu_1031_p2                     |     |        | empty_45       | add    | fabric   | 0       |
+|   icmp_ln36_4_fu_1462_p2             |     |        | icmp_ln36_4    | setgt  | auto     | 0       |
+|   select_ln36_4_fu_1466_p3           |     |        | select_ln36_4  | select | auto_sel | 0       |
+|   sub_ln36_2_fu_1476_p2              |     |        | sub_ln36_2     | sub    | fabric   | 0       |
+|   icmp_ln36_5_fu_1486_p2             |     |        | icmp_ln36_5    | setgt  | auto     | 0       |
+|   select_ln36_5_fu_1492_p3           |     |        | select_ln36_5  | select | auto_sel | 0       |
+|   add_ln36_6_fu_1511_p2              |     |        | add_ln36_6     | add    | fabric   | 0       |
+|   add_ln36_7_fu_1526_p2              |     |        | add_ln36_7     | add    | fabric   | 0       |
+|   icmp_ln34_3_fu_1565_p2             |     |        | icmp_ln34_3    | seteq  | auto     | 0       |
+|   grp_fu_1031_p2                     |     |        | add_ln36_8     | add    | fabric   | 0       |
+|   grp_fu_1046_p2                     |     |        | empty_49       | add    | fabric   | 0       |
+|   icmp_ln36_6_fu_1605_p2             |     |        | icmp_ln36_6    | setgt  | auto     | 0       |
+|   select_ln36_6_fu_1609_p3           |     |        | select_ln36_6  | select | auto_sel | 0       |
+|   sub_ln36_3_fu_1619_p2              |     |        | sub_ln36_3     | sub    | fabric   | 0       |
+|   icmp_ln36_7_fu_1629_p2             |     |        | icmp_ln36_7    | setgt  | auto     | 0       |
+|   select_ln36_7_fu_1635_p3           |     |        | select_ln36_7  | select | auto_sel | 0       |
+|   add_ln36_9_fu_1654_p2              |     |        | add_ln36_9     | add    | fabric   | 0       |
+|   add_ln36_10_fu_1669_p2             |     |        | add_ln36_10    | add    | fabric   | 0       |
+|   icmp_ln34_4_fu_1699_p2             |     |        | icmp_ln34_4    | setgt  | auto     | 0       |
+|   grp_fu_1046_p2                     |     |        | add_ln36_11    | add    | fabric   | 0       |
+|   grp_fu_1061_p2                     |     |        | empty_53       | add    | fabric   | 0       |
+|   icmp_ln36_8_fu_1738_p2             |     |        | icmp_ln36_8    | setgt  | auto     | 0       |
+|   select_ln36_8_fu_1742_p3           |     |        | select_ln36_8  | select | auto_sel | 0       |
+|   sub_ln36_4_fu_1752_p2              |     |        | sub_ln36_4     | sub    | fabric   | 0       |
+|   icmp_ln36_9_fu_1762_p2             |     |        | icmp_ln36_9    | setgt  | auto     | 0       |
+|   select_ln36_9_fu_1768_p3           |     |        | select_ln36_9  | select | auto_sel | 0       |
+|   add_ln36_12_fu_1787_p2             |     |        | add_ln36_12    | add    | fabric   | 0       |
+|   add_ln36_13_fu_1802_p2             |     |        | add_ln36_13    | add    | fabric   | 0       |
+|   icmp_ln34_5_fu_1832_p2             |     |        | icmp_ln34_5    | setgt  | auto     | 0       |
+|   grp_fu_1061_p2                     |     |        | add_ln36_14    | add    | fabric   | 0       |
+|   grp_fu_1076_p2                     |     |        | empty_57       | add    | fabric   | 0       |
+|   icmp_ln36_10_fu_1871_p2            |     |        | icmp_ln36_10   | setgt  | auto     | 0       |
+|   select_ln36_10_fu_1875_p3          |     |        | select_ln36_10 | select | auto_sel | 0       |
+|   sub_ln36_5_fu_1885_p2              |     |        | sub_ln36_5     | sub    | fabric   | 0       |
+|   icmp_ln36_11_fu_1895_p2            |     |        | icmp_ln36_11   | setgt  | auto     | 0       |
+|   select_ln36_11_fu_1901_p3          |     |        | select_ln36_11 | select | auto_sel | 0       |
+|   add_ln36_15_fu_1920_p2             |     |        | add_ln36_15    | add    | fabric   | 0       |
+|   add_ln36_16_fu_1935_p2             |     |        | add_ln36_16    | add    | fabric   | 0       |
+|   icmp_ln34_6_fu_1965_p2             |     |        | icmp_ln34_6    | setgt  | auto     | 0       |
+|   grp_fu_1076_p2                     |     |        | add_ln36_17    | add    | fabric   | 0       |
+|   grp_fu_1091_p2                     |     |        | empty_61       | add    | fabric   | 0       |
+|   icmp_ln36_12_fu_2004_p2            |     |        | icmp_ln36_12   | setgt  | auto     | 0       |
+|   select_ln36_12_fu_2008_p3          |     |        | select_ln36_12 | select | auto_sel | 0       |
+|   sub_ln36_6_fu_2018_p2              |     |        | sub_ln36_6     | sub    | fabric   | 0       |
+|   icmp_ln36_13_fu_2028_p2            |     |        | icmp_ln36_13   | setgt  | auto     | 0       |
+|   select_ln36_13_fu_2034_p3          |     |        | select_ln36_13 | select | auto_sel | 0       |
+|   add_ln36_18_fu_2053_p2             |     |        | add_ln36_18    | add    | fabric   | 0       |
+|   add_ln36_19_fu_2068_p2             |     |        | add_ln36_19    | add    | fabric   | 0       |
+|   icmp_ln34_7_fu_2107_p2             |     |        | icmp_ln34_7    | seteq  | auto     | 0       |
+|   grp_fu_1091_p2                     |     |        | add_ln36_20    | add    | fabric   | 0       |
+|   grp_fu_1106_p2                     |     |        | empty_65       | add    | fabric   | 0       |
+|   icmp_ln36_14_fu_2147_p2            |     |        | icmp_ln36_14   | setgt  | auto     | 0       |
+|   select_ln36_14_fu_2151_p3          |     |        | select_ln36_14 | select | auto_sel | 0       |
+|   sub_ln36_7_fu_2161_p2              |     |        | sub_ln36_7     | sub    | fabric   | 0       |
+|   icmp_ln36_15_fu_2171_p2            |     |        | icmp_ln36_15   | setgt  | auto     | 0       |
+|   select_ln36_15_fu_2177_p3          |     |        | select_ln36_15 | select | auto_sel | 0       |
+|   add_ln36_21_fu_2196_p2             |     |        | add_ln36_21    | add    | fabric   | 0       |
+|   add_ln36_22_fu_2211_p2             |     |        | add_ln36_22    | add    | fabric   | 0       |
+|   icmp_ln34_8_fu_2241_p2             |     |        | icmp_ln34_8    | setgt  | auto     | 0       |
+|   grp_fu_1106_p2                     |     |        | add_ln36_23    | add    | fabric   | 0       |
+|   grp_fu_1121_p2                     |     |        | empty_69       | add    | fabric   | 0       |
+|   icmp_ln36_16_fu_2280_p2            |     |        | icmp_ln36_16   | setgt  | auto     | 0       |
+|   select_ln36_16_fu_2284_p3          |     |        | select_ln36_16 | select | auto_sel | 0       |
+|   sub_ln36_8_fu_2294_p2              |     |        | sub_ln36_8     | sub    | fabric   | 0       |
+|   icmp_ln36_17_fu_2304_p2            |     |        | icmp_ln36_17   | setgt  | auto     | 0       |
+|   select_ln36_17_fu_2310_p3          |     |        | select_ln36_17 | select | auto_sel | 0       |
+|   add_ln36_24_fu_2329_p2             |     |        | add_ln36_24    | add    | fabric   | 0       |
+|   add_ln36_25_fu_2344_p2             |     |        | add_ln36_25    | add    | fabric   | 0       |
+|   icmp_ln34_9_fu_2374_p2             |     |        | icmp_ln34_9    | setgt  | auto     | 0       |
+|   grp_fu_1121_p2                     |     |        | add_ln36_26    | add    | fabric   | 0       |
+|   empty_73_fu_2389_p2                |     |        | empty_73       | add    | fabric   | 0       |
+|   icmp_ln36_18_fu_2454_p2            |     |        | icmp_ln36_18   | setgt  | auto     | 0       |
+|   select_ln36_18_fu_2458_p3          |     |        | select_ln36_18 | select | auto_sel | 0       |
+|   sub_ln36_9_fu_2468_p2              |     |        | sub_ln36_9     | sub    | fabric   | 0       |
+|   icmp_ln36_19_fu_2478_p2            |     |        | icmp_ln36_19   | setgt  | auto     | 0       |
+|   select_ln36_19_fu_2484_p3          |     |        | select_ln36_19 | select | auto_sel | 0       |
+|   add_ln36_27_fu_2433_p2             |     |        | add_ln36_27    | add    | fabric   | 0       |
+|   add_ln36_28_fu_2492_p2             |     |        | add_ln36_28    | add    | fabric   | 0       |
+|  + SpMV_Pipeline_spmv_loop_internal  | 0   |        |                |        |          |         |
+|    icmp_ln36_fu_176_p2               |     |        | icmp_ln36      | setlt  | auto     | 0       |
+|    add_ln43_fu_213_p2                |     |        | add_ln43       | add    | fabric   | 0       |
+|    sum_8_fu_247_p2                   |     |        | sum_8          | add    | fabric   | 0       |
+|    add_ln36_fu_181_p2                |     |        | add_ln36       | add    | fabric   | 0       |
+|  + SpMV_Pipeline_spmv_loop_internal1 | 0   |        |                |        |          |         |
+|    icmp_ln36_fu_176_p2               |     |        | icmp_ln36      | setlt  | auto     | 0       |
+|    add_ln43_fu_213_p2                |     |        | add_ln43       | add    | fabric   | 0       |
+|    sum_fu_247_p2                     |     |        | sum            | add    | fabric   | 0       |
+|    add_ln36_fu_181_p2                |     |        | add_ln36       | add    | fabric   | 0       |
+|  + SpMV_Pipeline_spmv_loop_internal2 | 0   |        |                |        |          |         |
+|    icmp_ln36_fu_176_p2               |     |        | icmp_ln36      | setlt  | auto     | 0       |
+|    add_ln43_fu_213_p2                |     |        | add_ln43       | add    | fabric   | 0       |
+|    sum_fu_247_p2                     |     |        | sum            | add    | fabric   | 0       |
+|    add_ln36_fu_181_p2                |     |        | add_ln36       | add    | fabric   | 0       |
+|  + SpMV_Pipeline_spmv_loop_internal3 | 0   |        |                |        |          |         |
+|    icmp_ln36_fu_176_p2               |     |        | icmp_ln36      | setlt  | auto     | 0       |
+|    add_ln43_fu_213_p2                |     |        | add_ln43       | add    | fabric   | 0       |
+|    sum_7_fu_247_p2                   |     |        | sum_7          | add    | fabric   | 0       |
+|    add_ln36_fu_181_p2                |     |        | add_ln36       | add    | fabric   | 0       |
+|  + SpMV_Pipeline_spmv_loop_internal4 | 0   |        |                |        |          |         |
+|    icmp_ln36_fu_176_p2               |     |        | icmp_ln36      | setlt  | auto     | 0       |
+|    add_ln43_fu_213_p2                |     |        | add_ln43       | add    | fabric   | 0       |
+|    sum_6_fu_247_p2                   |     |        | sum_6          | add    | fabric   | 0       |
+|    add_ln36_fu_181_p2                |     |        | add_ln36       | add    | fabric   | 0       |
+|  + SpMV_Pipeline_spmv_loop_internal5 | 0   |        |                |        |          |         |
+|    icmp_ln36_fu_176_p2               |     |        | icmp_ln36      | setlt  | auto     | 0       |
+|    add_ln43_fu_213_p2                |     |        | add_ln43       | add    | fabric   | 0       |
+|    sum_5_fu_247_p2                   |     |        | sum_5          | add    | fabric   | 0       |
+|    add_ln36_fu_181_p2                |     |        | add_ln36       | add    | fabric   | 0       |
+|  + SpMV_Pipeline_spmv_loop_internal6 | 0   |        |                |        |          |         |
+|    icmp_ln36_fu_176_p2               |     |        | icmp_ln36      | setlt  | auto     | 0       |
+|    add_ln43_fu_213_p2                |     |        | add_ln43       | add    | fabric   | 0       |
+|    sum_4_fu_247_p2                   |     |        | sum_4          | add    | fabric   | 0       |
+|    add_ln36_fu_181_p2                |     |        | add_ln36       | add    | fabric   | 0       |
+|  + SpMV_Pipeline_spmv_loop_internal7 | 0   |        |                |        |          |         |
+|    icmp_ln36_fu_176_p2               |     |        | icmp_ln36      | setlt  | auto     | 0       |
+|    add_ln43_fu_213_p2                |     |        | add_ln43       | add    | fabric   | 0       |
+|    sum_3_fu_247_p2                   |     |        | sum_3          | add    | fabric   | 0       |
+|    add_ln36_fu_181_p2                |     |        | add_ln36       | add    | fabric   | 0       |
+|  + SpMV_Pipeline_spmv_loop_internal8 | 0   |        |                |        |          |         |
+|    icmp_ln36_fu_176_p2               |     |        | icmp_ln36      | setlt  | auto     | 0       |
+|    add_ln43_fu_213_p2                |     |        | add_ln43       | add    | fabric   | 0       |
+|    sum_2_fu_247_p2                   |     |        | sum_2          | add    | fabric   | 0       |
+|    add_ln36_fu_181_p2                |     |        | add_ln36       | add    | fabric   | 0       |
+|  + SpMV_Pipeline_spmv_loop_internal9 | 0   |        |                |        |          |         |
+|    icmp_ln36_fu_176_p2               |     |        | icmp_ln36      | setlt  | auto     | 0       |
+|    add_ln43_fu_213_p2                |     |        | add_ln43       | add    | fabric   | 0       |
+|    sum_1_fu_247_p2                   |     |        | sum_1          | add    | fabric   | 0       |
+|    add_ln36_fu_181_p2                |     |        | add_ln36       | add    | fabric   | 0       |
++--------------------------------------+-----+--------+----------------+--------+----------+---------+
 
 
 ================================================================
 == Storage Report
 ================================================================
-  No bind storage info in design
++-------------------+-----------+-----------+------+------+--------+----------+------+---------+------------------+
+| Name              | Usage     | Type      | BRAM | URAM | Pragma | Variable | Impl | Latency | Bitwidth, Depth, |
+|                   |           |           |      |      |        |          |      |         | Banks            |
++-------------------+-----------+-----------+------+------+--------+----------+------+---------+------------------+
+| + SpMV            |           |           | 8    | 0    |        |          |      |         |                  |
+|   control_s_axi_U | interface | s_axilite |      |      |        |          |      |         |                  |
+|   gmem0_m_axi_U   | interface | m_axi     | 2    |      |        |          |      |         |                  |
+|   gmem1_m_axi_U   | interface | m_axi     | 1    |      |        |          |      |         |                  |
+|   gmem2_m_axi_U   | interface | m_axi     | 1    |      |        |          |      |         |                  |
+|   gmem3_m_axi_U   | interface | m_axi     | 2    |      |        |          |      |         |                  |
+|   gmem4_m_axi_U   | interface | m_axi     | 2    |      |        |          |      |         |                  |
++-------------------+-----------+-----------+------+------+--------+----------+------+---------+------------------+
+
 
 ================================================================
 == Pragma Report
 ================================================================
 * Valid Pragma Syntax
-+----------+---------+---------------------+
-| Type     | Options | Location            |
-+----------+---------+---------------------+
-| unroll   |         | SpMV.cpp:16 in spmv |
-| pipeline | II=1    | SpMV.cpp:23 in spmv |
-+----------+---------+---------------------+
++-----------+-----------------------------------------------------------------------------------+------------------------------------+
+| Type      | Options                                                                           | Location                           |
++-----------+-----------------------------------------------------------------------------------+------------------------------------+
+| interface | mode=m_axi port=values bundle=gmem0 offset=slave depth=values_depth               | SpMV.cpp:15 in spmv, values        |
+| interface | mode=m_axi port=columnIndexes bundle=gmem1 offset=slave depth=columnIndexes_depth | SpMV.cpp:16 in spmv, columnIndexes |
+| interface | mode=m_axi port=rowPointers bundle=gmem2 offset=slave depth=rowPointers_depth     | SpMV.cpp:17 in spmv, rowPointers   |
+| interface | mode=m_axi port=vector bundle=gmem3 offset=slave depth=vector_depth               | SpMV.cpp:18 in spmv, vector        |
+| interface | mode=m_axi port=output bundle=gmem4 offset=slave depth=output_depth               | SpMV.cpp:19 in spmv, output        |
+| interface | s_axilite port=values bundle=control                                              | SpMV.cpp:21 in spmv, values        |
+| interface | s_axilite port=columnIndexes bundle=control                                       | SpMV.cpp:22 in spmv, columnIndexes |
+| interface | s_axilite port=rowPointers bundle=control                                         | SpMV.cpp:23 in spmv, rowPointers   |
+| interface | s_axilite port=numOfRows bundle=control                                           | SpMV.cpp:24 in spmv, numOfRows     |
+| interface | s_axilite port=vector bundle=control                                              | SpMV.cpp:25 in spmv, vector        |
+| interface | s_axilite port=output bundle=control                                              | SpMV.cpp:26 in spmv, output        |
+| unroll    |                                                                                   | SpMV.cpp:30 in spmv                |
+| pipeline  | II=1                                                                              | SpMV.cpp:37 in spmv                |
++-----------+-----------------------------------------------------------------------------------+------------------------------------+
 
 

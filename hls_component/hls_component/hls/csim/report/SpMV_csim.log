@@ -1,6 +1,9 @@
 INFO: [SIM 2] *************** CSIM start ***************
 INFO: [SIM 4] CSIM will launch CLANG as the compiler.
-make: 'csim.exe' is up to date.
+   Compiling ../../../../testcase.cpp in debug mode
+   Compiling ../../../../testbench.cpp in debug mode
+   Compiling ../../../../SpMV.cpp in debug mode
+   Generating csim.exe
 Running 5 tests
 Running test 'Square_4x4_matrix'...OK
 Running test 'Big_matrix'...OK

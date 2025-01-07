@@ -244,8 +244,8 @@ class AESL_RUNTIME_BC {
 };
 using hls::sim::Byte;
 struct __cosim_s1__ { char data[1]; };
-extern "C" void SpMV(Byte<4>*, Byte<1>*, Byte<2>*, __cosim_s1__, __cosim_s1__, Byte<4>*, Byte<4>*);
-extern "C" void apatb_SpMV_hw(volatile void * __xlx_apatb_param_values, volatile void * __xlx_apatb_param_columnIndexes, volatile void * __xlx_apatb_param_rowPointers, __cosim_s1__* __xlx_apatb_param_numOfRows, __cosim_s1__* __xlx_apatb_param_numOfCols, volatile void * __xlx_apatb_param_vector, volatile void * __xlx_apatb_param_output_r) {
+extern "C" void SpMV(Byte<4>*, Byte<1>*, Byte<2>*, Byte<4>*, Byte<4>*, int, int, int, __cosim_s1__, int, int);
+extern "C" void apatb_SpMV_hw(volatile void * __xlx_apatb_param_values, volatile void * __xlx_apatb_param_columnIndexes, volatile void * __xlx_apatb_param_rowPointers, __cosim_s1__* __xlx_apatb_param_numOfRows, volatile void * __xlx_apatb_param_vector, volatile void * __xlx_apatb_param_output_r) {
 using hls::sim::createStream;
   // Collect __xlx_values__tmp_vec
 std::vector<Byte<4>> __xlx_values__tmp_vec;
@@ -288,7 +288,7 @@ __xlx_output_r__tmp_vec.push_back(((Byte<4>*)__xlx_apatb_param_output_r)[i]);
   int __xlx_offset_param_output_r = 0;
   int __xlx_offset_byte_param_output_r = 0*4;
   // DUT call
-  SpMV(__xlx_values__tmp_vec.data(), __xlx_columnIndexes__tmp_vec.data(), __xlx_rowPointers__tmp_vec.data(), *__xlx_apatb_param_numOfRows, *__xlx_apatb_param_numOfCols, __xlx_vector__tmp_vec.data(), __xlx_output_r__tmp_vec.data());
+  SpMV(__xlx_values__tmp_vec.data(), __xlx_columnIndexes__tmp_vec.data(), __xlx_rowPointers__tmp_vec.data(), __xlx_vector__tmp_vec.data(), __xlx_output_r__tmp_vec.data(), __xlx_offset_byte_param_values, __xlx_offset_byte_param_columnIndexes, __xlx_offset_byte_param_rowPointers, *__xlx_apatb_param_numOfRows, __xlx_offset_byte_param_vector, __xlx_offset_byte_param_output_r);
 // print __xlx_apatb_param_values
 for (size_t i = 0; i < __xlx_size_param_values; ++i) {
 ((Byte<4>*)__xlx_apatb_param_values)[i] = __xlx_values__tmp_vec[__xlx_offset_param_values+i];

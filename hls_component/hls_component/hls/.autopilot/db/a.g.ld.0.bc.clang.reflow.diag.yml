@@ -2,15 +2,2001 @@
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
-Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S1_S_S_
+Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        spmv_loop_external
   - String:          ''' ('
-  - LoopLoc:         'SpMV.cpp:15:24'
+  - LoopLoc:         'SpMV.cpp:29:21'
   - String:          ') '
   - String:          'in function '''
   - String:          SpMV
   - String:          ''' completely with a factor of '
   - Factor:          '10'
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgepseq
+  - ArrayName:       values
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        spmv_loop_internal
+  - String:          ' '
+  - LoopLoc:         'SpMV.cpp:36:32'
+  - String:          ' '
+  - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
+    DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: SpMV.cpp, Line: 39, Column: 21 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.2
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep6162seq
+  - ArrayName:       columnIndexes
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        spmv_loop_internal
+  - String:          ' '
+  - LoopLoc:         'SpMV.cpp:36:32'
+  - String:          ' '
+  - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
+    DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: SpMV.cpp, Line: 41, Column: 44 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.7
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep65seq
+  - ArrayName:       values
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        spmv_loop_internal
+  - String:          ' '
+  - LoopLoc:         'SpMV.cpp:36:32'
+  - String:          ' '
+  - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
+    DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: SpMV.cpp, Line: 39, Column: 21 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.1.load.2
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep7071seq
+  - ArrayName:       columnIndexes
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        spmv_loop_internal
+  - String:          ' '
+  - LoopLoc:         'SpMV.cpp:36:32'
+  - String:          ' '
+  - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
+    DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: SpMV.cpp, Line: 41, Column: 44 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.1.load.7
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep74seq
+  - ArrayName:       values
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        spmv_loop_internal
+  - String:          ' '
+  - LoopLoc:         'SpMV.cpp:36:32'
+  - String:          ' '
+  - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
+    DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: SpMV.cpp, Line: 39, Column: 21 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.2.load.2
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep7980seq
+  - ArrayName:       columnIndexes
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        spmv_loop_internal
+  - String:          ' '
+  - LoopLoc:         'SpMV.cpp:36:32'
+  - String:          ' '
+  - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
+    DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: SpMV.cpp, Line: 41, Column: 44 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.2.load.7
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep83seq
+  - ArrayName:       values
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        spmv_loop_internal
+  - String:          ' '
+  - LoopLoc:         'SpMV.cpp:36:32'
+  - String:          ' '
+  - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
+    DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: SpMV.cpp, Line: 39, Column: 21 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.3.load.2
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep8889seq
+  - ArrayName:       columnIndexes
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        spmv_loop_internal
+  - String:          ' '
+  - LoopLoc:         'SpMV.cpp:36:32'
+  - String:          ' '
+  - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
+    DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: SpMV.cpp, Line: 41, Column: 44 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.3.load.7
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep92seq
+  - ArrayName:       values
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        spmv_loop_internal
+  - String:          ' '
+  - LoopLoc:         'SpMV.cpp:36:32'
+  - String:          ' '
+  - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
+    DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: SpMV.cpp, Line: 39, Column: 21 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.4.load.2
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep9798seq
+  - ArrayName:       columnIndexes
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        spmv_loop_internal
+  - String:          ' '
+  - LoopLoc:         'SpMV.cpp:36:32'
+  - String:          ' '
+  - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
+    DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: SpMV.cpp, Line: 41, Column: 44 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.4.load.7
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep101seq
+  - ArrayName:       values
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        spmv_loop_internal
+  - String:          ' '
+  - LoopLoc:         'SpMV.cpp:36:32'
+  - String:          ' '
+  - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
+    DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: SpMV.cpp, Line: 39, Column: 21 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.5.load.2
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep106107seq
+  - ArrayName:       columnIndexes
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        spmv_loop_internal
+  - String:          ' '
+  - LoopLoc:         'SpMV.cpp:36:32'
+  - String:          ' '
+  - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
+    DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: SpMV.cpp, Line: 41, Column: 44 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.5.load.7
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep110seq
+  - ArrayName:       values
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        spmv_loop_internal
+  - String:          ' '
+  - LoopLoc:         'SpMV.cpp:36:32'
+  - String:          ' '
+  - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
+    DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: SpMV.cpp, Line: 39, Column: 21 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.6.load.2
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep115116seq
+  - ArrayName:       columnIndexes
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        spmv_loop_internal
+  - String:          ' '
+  - LoopLoc:         'SpMV.cpp:36:32'
+  - String:          ' '
+  - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
+    DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: SpMV.cpp, Line: 41, Column: 44 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.6.load.7
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep119seq
+  - ArrayName:       values
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        spmv_loop_internal
+  - String:          ' '
+  - LoopLoc:         'SpMV.cpp:36:32'
+  - String:          ' '
+  - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
+    DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: SpMV.cpp, Line: 39, Column: 21 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.7.load.2
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep124125seq
+  - ArrayName:       columnIndexes
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        spmv_loop_internal
+  - String:          ' '
+  - LoopLoc:         'SpMV.cpp:36:32'
+  - String:          ' '
+  - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
+    DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: SpMV.cpp, Line: 41, Column: 44 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.7.load.7
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep128seq
+  - ArrayName:       values
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        spmv_loop_internal
+  - String:          ' '
+  - LoopLoc:         'SpMV.cpp:36:32'
+  - String:          ' '
+  - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
+    DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: SpMV.cpp, Line: 39, Column: 21 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.8.load.2
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep133134seq
+  - ArrayName:       columnIndexes
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        spmv_loop_internal
+  - String:          ' '
+  - LoopLoc:         'SpMV.cpp:36:32'
+  - String:          ' '
+  - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
+    DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: SpMV.cpp, Line: 41, Column: 44 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.8.load.7
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep137seq
+  - ArrayName:       values
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        spmv_loop_internal
+  - String:          ' '
+  - LoopLoc:         'SpMV.cpp:36:32'
+  - String:          ' '
+  - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
+    DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: SpMV.cpp, Line: 39, Column: 21 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.9.load.2
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep142143seq
+  - ArrayName:       columnIndexes
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        spmv_loop_internal
+  - String:          ' '
+  - LoopLoc:         'SpMV.cpp:36:32'
+  - String:          ' '
+  - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
+    DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: SpMV.cpp, Line: 41, Column: 44 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.9.load.7
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: SpMV.cpp, Line: 51, Column: 19 }
+Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of length '
+  - Length:          '10'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        output144seq
+  - ArrayName:       output
+  - String:          ' '
+  - BundleName:      gmem4
+  - String:          ' '
+  - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
+    DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: SpMV.cpp, Line: 51, Column: 19 }
+  - OrigDirection:   write
+  - OrigID:          for.inc19.store.2
+  - OrigAccess:      store
+    DebugLoc:        { File: SpMV.cpp, Line: 51, Column: 19 }
+  - OrigDirection:   write
+  - OrigID:          for.inc19.1.store.3
+  - OrigAccess:      store
+    DebugLoc:        { File: SpMV.cpp, Line: 51, Column: 19 }
+  - OrigDirection:   write
+  - OrigID:          for.inc19.2.store.3
+  - OrigAccess:      store
+    DebugLoc:        { File: SpMV.cpp, Line: 51, Column: 19 }
+  - OrigDirection:   write
+  - OrigID:          for.inc19.3.store.3
+  - OrigAccess:      store
+    DebugLoc:        { File: SpMV.cpp, Line: 51, Column: 19 }
+  - OrigDirection:   write
+  - OrigID:          for.inc19.4.store.3
+  - OrigAccess:      store
+    DebugLoc:        { File: SpMV.cpp, Line: 51, Column: 19 }
+  - OrigDirection:   write
+  - OrigID:          for.inc19.5.store.3
+  - OrigAccess:      store
+    DebugLoc:        { File: SpMV.cpp, Line: 51, Column: 19 }
+  - OrigDirection:   write
+  - OrigID:          for.inc19.6.store.3
+  - OrigAccess:      store
+    DebugLoc:        { File: SpMV.cpp, Line: 51, Column: 19 }
+  - OrigDirection:   write
+  - OrigID:          for.inc19.7.store.3
+  - OrigAccess:      store
+    DebugLoc:        { File: SpMV.cpp, Line: 51, Column: 19 }
+  - OrigDirection:   write
+  - OrigID:          for.inc19.8.store.3
+  - OrigAccess:      store
+    DebugLoc:        { File: SpMV.cpp, Line: 51, Column: 19 }
+  - OrigDirection:   write
+  - OrigID:          for.inc19.9.store.15
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzePattern
+DebugLoc:        { File: SpMV.cpp, Line: 43, Column: 36 }
+Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
+Args:            
+  - String:          Could not analyze pattern
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      vector_value
+    DebugLoc:        { File: SpMV.cpp, Line: 43, Column: 36 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.11
+  - ArrayName:       vector
+  - String:          ' '
+  - BundleName:      gmem3
+  - String:          ' '
+  - LoopName:        spmv_loop_internal
+  - String:          ' '
+  - LoopLoc:         'SpMV.cpp:36:32'
+  - String:          ' '
+  - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
+    DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzePattern
+DebugLoc:        { File: SpMV.cpp, Line: 43, Column: 36 }
+Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
+Args:            
+  - String:          Could not analyze pattern
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      vector_value
+    DebugLoc:        { File: SpMV.cpp, Line: 43, Column: 36 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.1.load.11
+  - ArrayName:       vector
+  - String:          ' '
+  - BundleName:      gmem3
+  - String:          ' '
+  - LoopName:        spmv_loop_internal
+  - String:          ' '
+  - LoopLoc:         'SpMV.cpp:36:32'
+  - String:          ' '
+  - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
+    DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzePattern
+DebugLoc:        { File: SpMV.cpp, Line: 43, Column: 36 }
+Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
+Args:            
+  - String:          Could not analyze pattern
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      vector_value
+    DebugLoc:        { File: SpMV.cpp, Line: 43, Column: 36 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.2.load.11
+  - ArrayName:       vector
+  - String:          ' '
+  - BundleName:      gmem3
+  - String:          ' '
+  - LoopName:        spmv_loop_internal
+  - String:          ' '
+  - LoopLoc:         'SpMV.cpp:36:32'
+  - String:          ' '
+  - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
+    DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzePattern
+DebugLoc:        { File: SpMV.cpp, Line: 43, Column: 36 }
+Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
+Args:            
+  - String:          Could not analyze pattern
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      vector_value
+    DebugLoc:        { File: SpMV.cpp, Line: 43, Column: 36 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.3.load.11
+  - ArrayName:       vector
+  - String:          ' '
+  - BundleName:      gmem3
+  - String:          ' '
+  - LoopName:        spmv_loop_internal
+  - String:          ' '
+  - LoopLoc:         'SpMV.cpp:36:32'
+  - String:          ' '
+  - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
+    DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzePattern
+DebugLoc:        { File: SpMV.cpp, Line: 43, Column: 36 }
+Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
+Args:            
+  - String:          Could not analyze pattern
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      vector_value
+    DebugLoc:        { File: SpMV.cpp, Line: 43, Column: 36 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.4.load.11
+  - ArrayName:       vector
+  - String:          ' '
+  - BundleName:      gmem3
+  - String:          ' '
+  - LoopName:        spmv_loop_internal
+  - String:          ' '
+  - LoopLoc:         'SpMV.cpp:36:32'
+  - String:          ' '
+  - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
+    DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzePattern
+DebugLoc:        { File: SpMV.cpp, Line: 43, Column: 36 }
+Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
+Args:            
+  - String:          Could not analyze pattern
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      vector_value
+    DebugLoc:        { File: SpMV.cpp, Line: 43, Column: 36 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.5.load.11
+  - ArrayName:       vector
+  - String:          ' '
+  - BundleName:      gmem3
+  - String:          ' '
+  - LoopName:        spmv_loop_internal
+  - String:          ' '
+  - LoopLoc:         'SpMV.cpp:36:32'
+  - String:          ' '
+  - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
+    DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzePattern
+DebugLoc:        { File: SpMV.cpp, Line: 43, Column: 36 }
+Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
+Args:            
+  - String:          Could not analyze pattern
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      vector_value
+    DebugLoc:        { File: SpMV.cpp, Line: 43, Column: 36 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.6.load.11
+  - ArrayName:       vector
+  - String:          ' '
+  - BundleName:      gmem3
+  - String:          ' '
+  - LoopName:        spmv_loop_internal
+  - String:          ' '
+  - LoopLoc:         'SpMV.cpp:36:32'
+  - String:          ' '
+  - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
+    DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzePattern
+DebugLoc:        { File: SpMV.cpp, Line: 43, Column: 36 }
+Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
+Args:            
+  - String:          Could not analyze pattern
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      vector_value
+    DebugLoc:        { File: SpMV.cpp, Line: 43, Column: 36 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.7.load.11
+  - ArrayName:       vector
+  - String:          ' '
+  - BundleName:      gmem3
+  - String:          ' '
+  - LoopName:        spmv_loop_internal
+  - String:          ' '
+  - LoopLoc:         'SpMV.cpp:36:32'
+  - String:          ' '
+  - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
+    DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzePattern
+DebugLoc:        { File: SpMV.cpp, Line: 43, Column: 36 }
+Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
+Args:            
+  - String:          Could not analyze pattern
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      vector_value
+    DebugLoc:        { File: SpMV.cpp, Line: 43, Column: 36 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.8.load.11
+  - ArrayName:       vector
+  - String:          ' '
+  - BundleName:      gmem3
+  - String:          ' '
+  - LoopName:        spmv_loop_internal
+  - String:          ' '
+  - LoopLoc:         'SpMV.cpp:36:32'
+  - String:          ' '
+  - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
+    DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzePattern
+DebugLoc:        { File: SpMV.cpp, Line: 43, Column: 36 }
+Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
+Args:            
+  - String:          Could not analyze pattern
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      vector_value
+    DebugLoc:        { File: SpMV.cpp, Line: 43, Column: 36 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.9.load.11
+  - ArrayName:       vector
+  - String:          ' '
+  - BundleName:      gmem3
+  - String:          ' '
+  - LoopName:        spmv_loop_internal
+  - String:          ' '
+  - LoopLoc:         'SpMV.cpp:36:32'
+  - String:          ' '
+  - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
+    DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: SpMV.cpp, Line: 51, Column: 19 }
+Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i32
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: SpMV.cpp, Line: 51, Column: 19 }
+  - OrigDirection:   write
+  - OrigID:          output144seq
+  - ArrayName:       output
+  - String:          ' '
+  - BundleName:      gmem4
+  - String:          ' '
+  - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
+    DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        spmv_loop_internal
+  - String:          ' '
+  - LoopLoc:         'SpMV.cpp:36:32'
+  - String:          ' '
+  - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
+    DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        spmv_loop_internal
+  - String:          '''('
+  - LoopLoc:         'SpMV.cpp:36:32'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem0
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq1
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        spmv_loop_internal
+  - String:          ' '
+  - LoopLoc:         'SpMV.cpp:36:32'
+  - String:          ' '
+  - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
+    DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' in loop '''
+  - LoopName:        spmv_loop_internal
+  - String:          '''('
+  - LoopLoc:         'SpMV.cpp:36:32'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem1
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq2
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        spmv_loop_internal
+  - String:          ' '
+  - LoopLoc:         'SpMV.cpp:36:32'
+  - String:          ' '
+  - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
+    DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        spmv_loop_internal
+  - String:          '''('
+  - LoopLoc:         'SpMV.cpp:36:32'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem0
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq3
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        spmv_loop_internal
+  - String:          ' '
+  - LoopLoc:         'SpMV.cpp:36:32'
+  - String:          ' '
+  - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
+    DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' in loop '''
+  - LoopName:        spmv_loop_internal
+  - String:          '''('
+  - LoopLoc:         'SpMV.cpp:36:32'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem1
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq4
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        spmv_loop_internal
+  - String:          ' '
+  - LoopLoc:         'SpMV.cpp:36:32'
+  - String:          ' '
+  - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
+    DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        spmv_loop_internal
+  - String:          '''('
+  - LoopLoc:         'SpMV.cpp:36:32'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem0
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq5
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        spmv_loop_internal
+  - String:          ' '
+  - LoopLoc:         'SpMV.cpp:36:32'
+  - String:          ' '
+  - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
+    DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' in loop '''
+  - LoopName:        spmv_loop_internal
+  - String:          '''('
+  - LoopLoc:         'SpMV.cpp:36:32'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem1
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq6
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        spmv_loop_internal
+  - String:          ' '
+  - LoopLoc:         'SpMV.cpp:36:32'
+  - String:          ' '
+  - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
+    DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        spmv_loop_internal
+  - String:          '''('
+  - LoopLoc:         'SpMV.cpp:36:32'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem0
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq7
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        spmv_loop_internal
+  - String:          ' '
+  - LoopLoc:         'SpMV.cpp:36:32'
+  - String:          ' '
+  - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
+    DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' in loop '''
+  - LoopName:        spmv_loop_internal
+  - String:          '''('
+  - LoopLoc:         'SpMV.cpp:36:32'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem1
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq8
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        spmv_loop_internal
+  - String:          ' '
+  - LoopLoc:         'SpMV.cpp:36:32'
+  - String:          ' '
+  - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
+    DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        spmv_loop_internal
+  - String:          '''('
+  - LoopLoc:         'SpMV.cpp:36:32'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem0
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq9
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        spmv_loop_internal
+  - String:          ' '
+  - LoopLoc:         'SpMV.cpp:36:32'
+  - String:          ' '
+  - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
+    DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' in loop '''
+  - LoopName:        spmv_loop_internal
+  - String:          '''('
+  - LoopLoc:         'SpMV.cpp:36:32'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem1
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq10
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        spmv_loop_internal
+  - String:          ' '
+  - LoopLoc:         'SpMV.cpp:36:32'
+  - String:          ' '
+  - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
+    DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        spmv_loop_internal
+  - String:          '''('
+  - LoopLoc:         'SpMV.cpp:36:32'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem0
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq11
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        spmv_loop_internal
+  - String:          ' '
+  - LoopLoc:         'SpMV.cpp:36:32'
+  - String:          ' '
+  - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
+    DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' in loop '''
+  - LoopName:        spmv_loop_internal
+  - String:          '''('
+  - LoopLoc:         'SpMV.cpp:36:32'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem1
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq12
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        spmv_loop_internal
+  - String:          ' '
+  - LoopLoc:         'SpMV.cpp:36:32'
+  - String:          ' '
+  - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
+    DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        spmv_loop_internal
+  - String:          '''('
+  - LoopLoc:         'SpMV.cpp:36:32'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem0
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq13
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        spmv_loop_internal
+  - String:          ' '
+  - LoopLoc:         'SpMV.cpp:36:32'
+  - String:          ' '
+  - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
+    DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' in loop '''
+  - LoopName:        spmv_loop_internal
+  - String:          '''('
+  - LoopLoc:         'SpMV.cpp:36:32'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem1
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq14
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        spmv_loop_internal
+  - String:          ' '
+  - LoopLoc:         'SpMV.cpp:36:32'
+  - String:          ' '
+  - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
+    DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        spmv_loop_internal
+  - String:          '''('
+  - LoopLoc:         'SpMV.cpp:36:32'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem0
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq15
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        spmv_loop_internal
+  - String:          ' '
+  - LoopLoc:         'SpMV.cpp:36:32'
+  - String:          ' '
+  - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
+    DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' in loop '''
+  - LoopName:        spmv_loop_internal
+  - String:          '''('
+  - LoopLoc:         'SpMV.cpp:36:32'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem1
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq16
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        spmv_loop_internal
+  - String:          ' '
+  - LoopLoc:         'SpMV.cpp:36:32'
+  - String:          ' '
+  - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
+    DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        spmv_loop_internal
+  - String:          '''('
+  - LoopLoc:         'SpMV.cpp:36:32'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem0
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq17
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        spmv_loop_internal
+  - String:          ' '
+  - LoopLoc:         'SpMV.cpp:36:32'
+  - String:          ' '
+  - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
+    DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' in loop '''
+  - LoopName:        spmv_loop_internal
+  - String:          '''('
+  - LoopLoc:         'SpMV.cpp:36:32'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem1
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq18
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        spmv_loop_internal
+  - String:          ' '
+  - LoopLoc:         'SpMV.cpp:36:32'
+  - String:          ' '
+  - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
+    DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        spmv_loop_internal
+  - String:          '''('
+  - LoopLoc:         'SpMV.cpp:36:32'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem0
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq19
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        spmv_loop_internal
+  - String:          ' '
+  - LoopLoc:         'SpMV.cpp:36:32'
+  - String:          ' '
+  - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
+    DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '8'
+  - String:          ' in loop '''
+  - LoopName:        spmv_loop_internal
+  - String:          '''('
+  - LoopLoc:         'SpMV.cpp:36:32'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem1
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: SpMV.cpp, Line: 51, Column: 19 }
+Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of length '
+  - Length:          '10'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq20
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem4
+  - String:          ' '
+  - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
+    DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: SpMV.cpp, Line: 51, Column: 19 }
+Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of length '
+  - Length:          '10'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem4
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
 ...

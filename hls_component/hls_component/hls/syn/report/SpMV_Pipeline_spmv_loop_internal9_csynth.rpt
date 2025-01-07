@@ -1,0 +1,171 @@
+
+
+================================================================
+== Vitis HLS Report for 'SpMV_Pipeline_spmv_loop_internal9'
+================================================================
+* Date:           Tue Jan  7 13:53:11 2025
+
+* Version:        2024.1 (Build 5069499 on May 21 2024)
+* Project:        hls_component
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.912 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+-----------------------------------------------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval |                    Pipeline                   |
+    |   min   |   max   |    min   |    max   | min | max |                      Type                     |
+    +---------+---------+----------+----------+-----+-----+-----------------------------------------------+
+    |        ?|        ?|         ?|         ?|    0|    0|  loop auto-rewind stp(delay=0 clock cycles(s))|
+    +---------+---------+----------+----------+-----+-----+-----------------------------------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                      |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |       Loop Name      |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- spmv_loop_internal  |        ?|        ?|         6|          1|          1|     ?|       yes|
+        +----------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|    183|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|       -|      -|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       0|     45|    -|
+|Register         |        -|    -|     342|     32|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|     342|    260|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|      ~0|     ~0|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------+----------+----+---+----+------------+------------+
+    |    Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------+----------+----+---+----+------------+------------+
+    |add_ln22_fu_135_p2   |         +|   0|  0|  71|          64|           1|
+    |sum_1_fu_154_p2      |         +|   0|  0|  39|          32|          32|
+    |icmp_ln22_fu_130_p2  |      icmp|   0|  0|  71|          64|          64|
+    |ap_enable_pp0        |       xor|   0|  0|   2|           1|           2|
+    +---------------------+----------+----+---+----+------------+------------+
+    |Total                |          |   0|  0| 183|         161|          99|
+    +---------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |ap_done_int              |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1  |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter2  |   9|          2|    1|          2|
+    |j_fu_42                  |   9|          2|   64|        128|
+    |sum_fu_38                |   9|          2|   32|         64|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    |  45|         10|   99|        198|
+    +-------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------+----+----+-----+-----------+
+    |               Name               | FF | LUT| Bits| Const Bits|
+    +----------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                         |   1|   0|    1|          0|
+    |ap_done_reg                       |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter3           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter4           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter5           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter6           |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter2_reg  |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter3_reg  |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter4_reg  |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter5_reg  |   1|   0|    1|          0|
+    |icmp_ln22_reg_193                 |   1|   0|    1|          0|
+    |j_1_reg_188                       |  64|   0|   64|          0|
+    |j_fu_42                           |  64|   0|   64|          0|
+    |matrix_value_reg_212              |  32|   0|   32|          0|
+    |sum_fu_38                         |  32|   0|   32|          0|
+    |temp_reg_222                      |  32|   0|   32|          0|
+    |vector_value_reg_217              |  32|   0|   32|          0|
+    |zext_ln22_19_cast_reg_183         |   9|   0|   64|         55|
+    |icmp_ln22_reg_193                 |  64|  32|    1|          0|
+    +----------------------------------+----+----+-----+-----------+
+    |Total                             | 342|  32|  334|         55|
+    +----------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------+-----+-----+------------+-----------------------------------+--------------+
+|        RTL Ports       | Dir | Bits|  Protocol  |           Source Object           |    C Type    |
++------------------------+-----+-----+------------+-----------------------------------+--------------+
+|ap_clk                  |   in|    1|  ap_ctrl_hs|  SpMV_Pipeline_spmv_loop_internal9|  return value|
+|ap_rst                  |   in|    1|  ap_ctrl_hs|  SpMV_Pipeline_spmv_loop_internal9|  return value|
+|ap_start                |   in|    1|  ap_ctrl_hs|  SpMV_Pipeline_spmv_loop_internal9|  return value|
+|ap_done                 |  out|    1|  ap_ctrl_hs|  SpMV_Pipeline_spmv_loop_internal9|  return value|
+|ap_idle                 |  out|    1|  ap_ctrl_hs|  SpMV_Pipeline_spmv_loop_internal9|  return value|
+|ap_ready                |  out|    1|  ap_ctrl_hs|  SpMV_Pipeline_spmv_loop_internal9|  return value|
+|grp_fu_1072_p_din0      |  out|   32|  ap_ctrl_hs|  SpMV_Pipeline_spmv_loop_internal9|  return value|
+|grp_fu_1072_p_din1      |  out|   32|  ap_ctrl_hs|  SpMV_Pipeline_spmv_loop_internal9|  return value|
+|grp_fu_1072_p_dout0     |   in|   32|  ap_ctrl_hs|  SpMV_Pipeline_spmv_loop_internal9|  return value|
+|grp_fu_1072_p_ce        |  out|    1|  ap_ctrl_hs|  SpMV_Pipeline_spmv_loop_internal9|  return value|
+|zext_ln22_18            |   in|    9|     ap_none|                       zext_ln22_18|        scalar|
+|zext_ln22_19            |   in|    9|     ap_none|                       zext_ln22_19|        scalar|
+|values_address0         |  out|    7|   ap_memory|                             values|         array|
+|values_ce0              |  out|    1|   ap_memory|                             values|         array|
+|values_q0               |   in|   32|   ap_memory|                             values|         array|
+|columnIndexes_address0  |  out|    7|   ap_memory|                      columnIndexes|         array|
+|columnIndexes_ce0       |  out|    1|   ap_memory|                      columnIndexes|         array|
+|columnIndexes_q0        |   in|    5|   ap_memory|                      columnIndexes|         array|
+|vector_address0         |  out|    4|   ap_memory|                             vector|         array|
+|vector_ce0              |  out|    1|   ap_memory|                             vector|         array|
+|vector_q0               |   in|   32|   ap_memory|                             vector|         array|
+|sum_27_out              |  out|   32|      ap_vld|                         sum_27_out|       pointer|
+|sum_27_out_ap_vld       |  out|    1|      ap_vld|                         sum_27_out|       pointer|
++------------------------+-----+-----+------------+-----------------------------------+--------------+
+

@@ -5,5 +5,14 @@
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="directive:1:9" msg_body="HLS pragma dump">
         <args ARG_PragmaContext="directive" ARG_PragmaFunction="SpMV" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=SpMV" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SpMV.cpp:16:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="SpMV" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SpMV.cpp:23:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="SpMV" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="SpMV.cpp:14:0" msg_body="Unrolling loop 'spmv_loop_external' (SpMV.cpp:15:24) in function 'SpMV' completely with a factor of 10">
+        <args Factor="10" LoopLoc="SpMV.cpp:15:24" LoopName="spmv_loop_external"/>
+    </msg>
 </xilinx:hls_fe_msgs>
 

@@ -3,8 +3,8 @@
 # SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Tue Jan  7 11:41:07 2025
-# Process ID: 25264
+# Start of session at: Tue Jan  7 13:54:01 2025
+# Process ID: 28080
 # Current directory: D:/Desktop/SpMV/hls_component/hls_component/hls/sim/verilog
 # Command line: xsim.exe -mode tcl -source {xsim.dir/SpMV/xsim_script.tcl}
 # Log file: D:/Desktop/SpMV/hls_component/hls_component/hls/sim/verilog/xsim.log
@@ -19,7 +19,7 @@
 # Host memory       :16505 MB
 # Swap memory       :6710 MB
 # Total Virtual     :23216 MB
-# Available Virtual :5245 MB
+# Available Virtual :2725 MB
 #-----------------------------------------------------------
 source xsim.dir/SpMV/xsim_script.tcl
 # xsim {SpMV} -autoloadwcfg -tclbatch {SpMV.tcl}
@@ -32,12 +32,12 @@ source SpMV.tcl
 //
 // RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
 ////////////////////////////////////////////////////////////////////////////////////
-// RTL Simulation : 0 / 4 [0.00%] @ "125000"
-// RTL Simulation : 1 / 4 [100.00%] @ "725000"
-// RTL Simulation : 2 / 4 [100.00%] @ "1365000"
-// RTL Simulation : 3 / 4 [100.00%] @ "2195000"
-// RTL Simulation : 4 / 4 [100.00%] @ "3465000"
+// RTL Simulation : 0 / 4 [n/a] @ "125000"
+// RTL Simulation : 1 / 4 [n/a] @ "615000"
+// RTL Simulation : 2 / 4 [n/a] @ "1145000"
+// RTL Simulation : 3 / 4 [n/a] @ "1865000"
+// RTL Simulation : 4 / 4 [n/a] @ "3025000"
 ////////////////////////////////////////////////////////////////////////////////////
-$finish called at time : 3525 ns : File "D:/Desktop/SpMV/hls_component/hls_component/hls/sim/verilog/SpMV.autotb.v" Line 500
+$finish called at time : 3085 ns : File "D:/Desktop/SpMV/hls_component/hls_component/hls/sim/verilog/SpMV.autotb.v" Line 500
 ## quit
-INFO: [Common 17-206] Exiting xsim at Tue Jan  7 11:41:09 2025...
+INFO: [Common 17-206] Exiting xsim at Tue Jan  7 13:54:03 2025...

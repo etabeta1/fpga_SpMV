@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'SpMV'
 ================================================================
-* Date:           Tue Jan  7 11:33:44 2025
+* Date:           Tue Jan  7 13:53:12 2025
 
 * Version:        2024.1 (Build 5069499 on May 21 2024)
 * Project:        hls_component
@@ -25,29 +25,33 @@
 
 + Latency: 
     * Summary: 
-    +---------+---------+----------+-----------+-----+------+---------+
-    |  Latency (cycles) |  Latency (absolute)  |  Interval  | Pipeline|
-    |   min   |   max   |    min   |    max    | min |  max |   Type  |
-    +---------+---------+----------+-----------+-----+------+---------+
-    |       21|     5211|  0.210 us|  52.110 us|   22|  5212|       no|
-    +---------+---------+----------+-----------+-----+------+---------+
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
 
     + Detail: 
         * Instance: 
-        +---------------------------------------------+----------------------------------+---------+---------+-----------+----------+-----+-----+-----------------------------------------------+
-        |                                             |                                  |  Latency (cycles) |  Latency (absolute)  |  Interval |                    Pipeline                   |
-        |                   Instance                  |              Module              |   min   |   max   |    min    |    max   | min | max |                      Type                     |
-        +---------------------------------------------+----------------------------------+---------+---------+-----------+----------+-----+-----+-----------------------------------------------+
-        |grp_SpMV_Pipeline_spmv_loop_internal_fu_109  |SpMV_Pipeline_spmv_loop_internal  |        2|      517|  20.000 ns|  5.170 us|    1|  512|  loop auto-rewind stp(delay=0 clock cycles(s))|
-        +---------------------------------------------+----------------------------------+---------+---------+-----------+----------+-----+-----+-----------------------------------------------+
+        +----------------------------------------------+-----------------------------------+---------+---------+----------+----------+-----+-----+-----------------------------------------------+
+        |                                              |                                   |  Latency (cycles) |  Latency (absolute) |  Interval |                    Pipeline                   |
+        |                   Instance                   |               Module              |   min   |   max   |    min   |    max   | min | max |                      Type                     |
+        +----------------------------------------------+-----------------------------------+---------+---------+----------+----------+-----+-----+-----------------------------------------------+
+        |grp_SpMV_Pipeline_spmv_loop_internal_fu_560   |SpMV_Pipeline_spmv_loop_internal   |        ?|        ?|         ?|         ?|    0|    0|  loop auto-rewind stp(delay=0 clock cycles(s))|
+        |grp_SpMV_Pipeline_spmv_loop_internal1_fu_575  |SpMV_Pipeline_spmv_loop_internal1  |        ?|        ?|         ?|         ?|    0|    0|  loop auto-rewind stp(delay=0 clock cycles(s))|
+        |grp_SpMV_Pipeline_spmv_loop_internal2_fu_590  |SpMV_Pipeline_spmv_loop_internal2  |        ?|        ?|         ?|         ?|    0|    0|  loop auto-rewind stp(delay=0 clock cycles(s))|
+        |grp_SpMV_Pipeline_spmv_loop_internal3_fu_605  |SpMV_Pipeline_spmv_loop_internal3  |        ?|        ?|         ?|         ?|    0|    0|  loop auto-rewind stp(delay=0 clock cycles(s))|
+        |grp_SpMV_Pipeline_spmv_loop_internal4_fu_620  |SpMV_Pipeline_spmv_loop_internal4  |        ?|        ?|         ?|         ?|    0|    0|  loop auto-rewind stp(delay=0 clock cycles(s))|
+        |grp_SpMV_Pipeline_spmv_loop_internal5_fu_635  |SpMV_Pipeline_spmv_loop_internal5  |        ?|        ?|         ?|         ?|    0|    0|  loop auto-rewind stp(delay=0 clock cycles(s))|
+        |grp_SpMV_Pipeline_spmv_loop_internal6_fu_650  |SpMV_Pipeline_spmv_loop_internal6  |        ?|        ?|         ?|         ?|    0|    0|  loop auto-rewind stp(delay=0 clock cycles(s))|
+        |grp_SpMV_Pipeline_spmv_loop_internal7_fu_665  |SpMV_Pipeline_spmv_loop_internal7  |        ?|        ?|         ?|         ?|    0|    0|  loop auto-rewind stp(delay=0 clock cycles(s))|
+        |grp_SpMV_Pipeline_spmv_loop_internal8_fu_680  |SpMV_Pipeline_spmv_loop_internal8  |        ?|        ?|         ?|         ?|    0|    0|  loop auto-rewind stp(delay=0 clock cycles(s))|
+        |grp_SpMV_Pipeline_spmv_loop_internal9_fu_695  |SpMV_Pipeline_spmv_loop_internal9  |        ?|        ?|         ?|         ?|    0|    0|  loop auto-rewind stp(delay=0 clock cycles(s))|
+        +----------------------------------------------+-----------------------------------+---------+---------+----------+----------+-----+-----+-----------------------------------------------+
 
         * Loop: 
-        +----------------------+---------+---------+----------+-----------+-----------+------+----------+
-        |                      |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
-        |       Loop Name      |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
-        +----------------------+---------+---------+----------+-----------+-----------+------+----------+
-        |- spmv_loop_external  |       20|     5210|   2 ~ 521|          -|          -|    10|        no|
-        +----------------------+---------+---------+----------+-----------+-----------+------+----------+
+        N/A
 
 
 
@@ -59,29 +63,39 @@
 |       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
 +-----------------+---------+-----+--------+-------+-----+
 |DSP              |        -|    -|       -|      -|    -|
-|Expression       |        -|    -|       0|     53|    -|
+|Expression       |        -|    -|       0|    125|    -|
 |FIFO             |        -|    -|       -|      -|    -|
-|Instance         |        -|    3|     507|    310|    -|
+|Instance         |        -|    3|    3585|   2650|    -|
 |Memory           |        -|    -|       -|      -|    -|
-|Multiplexer      |        -|    -|       0|     68|    -|
-|Register         |        -|    -|      38|      -|    -|
+|Multiplexer      |        -|    -|       0|   1089|    -|
+|Register         |        -|    -|     389|      -|    -|
 +-----------------+---------+-----+--------+-------+-----+
-|Total            |        0|    3|     545|    431|    0|
+|Total            |        0|    3|    3974|   3864|    0|
 +-----------------+---------+-----+--------+-------+-----+
 |Available        |      280|  220|  106400|  53200|    0|
 +-----------------+---------+-----+--------+-------+-----+
-|Utilization (%)  |        0|    1|      ~0|     ~0|    0|
+|Utilization (%)  |        0|    1|       3|      7|    0|
 +-----------------+---------+-----+--------+-------+-----+
 
 + Detail: 
     * Instance: 
-    +---------------------------------------------+----------------------------------+---------+----+-----+-----+-----+
-    |                   Instance                  |              Module              | BRAM_18K| DSP|  FF | LUT | URAM|
-    +---------------------------------------------+----------------------------------+---------+----+-----+-----+-----+
-    |grp_SpMV_Pipeline_spmv_loop_internal_fu_109  |SpMV_Pipeline_spmv_loop_internal  |        0|   3|  507|  310|    0|
-    +---------------------------------------------+----------------------------------+---------+----+-----+-----+-----+
-    |Total                                        |                                  |        0|   3|  507|  310|    0|
-    +---------------------------------------------+----------------------------------+---------+----+-----+-----+-----+
+    +----------------------------------------------+-----------------------------------+---------+----+-----+-----+-----+
+    |                   Instance                   |               Module              | BRAM_18K| DSP|  FF | LUT | URAM|
+    +----------------------------------------------+-----------------------------------+---------+----+-----+-----+-----+
+    |grp_SpMV_Pipeline_spmv_loop_internal_fu_560   |SpMV_Pipeline_spmv_loop_internal   |        0|   0|  342|  260|    0|
+    |grp_SpMV_Pipeline_spmv_loop_internal1_fu_575  |SpMV_Pipeline_spmv_loop_internal1  |        0|   0|  342|  260|    0|
+    |grp_SpMV_Pipeline_spmv_loop_internal2_fu_590  |SpMV_Pipeline_spmv_loop_internal2  |        0|   0|  342|  260|    0|
+    |grp_SpMV_Pipeline_spmv_loop_internal3_fu_605  |SpMV_Pipeline_spmv_loop_internal3  |        0|   0|  342|  260|    0|
+    |grp_SpMV_Pipeline_spmv_loop_internal4_fu_620  |SpMV_Pipeline_spmv_loop_internal4  |        0|   0|  342|  260|    0|
+    |grp_SpMV_Pipeline_spmv_loop_internal5_fu_635  |SpMV_Pipeline_spmv_loop_internal5  |        0|   0|  342|  260|    0|
+    |grp_SpMV_Pipeline_spmv_loop_internal6_fu_650  |SpMV_Pipeline_spmv_loop_internal6  |        0|   0|  342|  260|    0|
+    |grp_SpMV_Pipeline_spmv_loop_internal7_fu_665  |SpMV_Pipeline_spmv_loop_internal7  |        0|   0|  342|  260|    0|
+    |grp_SpMV_Pipeline_spmv_loop_internal8_fu_680  |SpMV_Pipeline_spmv_loop_internal8  |        0|   0|  342|  260|    0|
+    |grp_SpMV_Pipeline_spmv_loop_internal9_fu_695  |SpMV_Pipeline_spmv_loop_internal9  |        0|   0|  342|  260|    0|
+    |mul_32s_32s_32_2_1_U71                        |mul_32s_32s_32_2_1                 |        0|   3|  165|   50|    0|
+    +----------------------------------------------+-----------------------------------+---------+----+-----+-----+-----+
+    |Total                                         |                                   |        0|   3| 3585| 2650|    0|
+    +----------------------------------------------+-----------------------------------+---------+----+-----+-----+-----+
 
     * DSP: 
     N/A
@@ -93,45 +107,105 @@
     N/A
 
     * Expression: 
-    +---------------------+----------+----+---+----+------------+------------+
-    |    Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
-    +---------------------+----------+----+---+----+------------+------------+
-    |add_ln15_fu_138_p2   |         +|   0|  0|  13|           4|           1|
-    |icmp_ln15_fu_132_p2  |      icmp|   0|  0|  13|           4|           4|
-    |icmp_ln16_fu_154_p2  |      icmp|   0|  0|  13|           5|           5|
-    |icmp_ln19_fu_164_p2  |      icmp|   0|  0|  14|           9|           9|
-    +---------------------+----------+----+---+----+------------+------------+
-    |Total                |          |   0|  0|  53|          22|          19|
-    +---------------------+----------+----+---+----+------------+------------+
+    +-----------------------+----------+----+---+----+------------+------------+
+    |     Variable Name     | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------------+----------+----+---+----+------------+------------+
+    |icmp_ln20_1_fu_757_p2  |      icmp|   0|  0|  13|           4|           1|
+    |icmp_ln20_2_fu_767_p2  |      icmp|   0|  0|  13|           5|           2|
+    |icmp_ln20_3_fu_785_p2  |      icmp|   0|  0|  11|           3|           1|
+    |icmp_ln20_4_fu_795_p2  |      icmp|   0|  0|  13|           5|           3|
+    |icmp_ln20_5_fu_804_p2  |      icmp|   0|  0|  13|           5|           3|
+    |icmp_ln20_6_fu_813_p2  |      icmp|   0|  0|  13|           5|           3|
+    |icmp_ln20_7_fu_831_p2  |      icmp|   0|  0|  10|           2|           1|
+    |icmp_ln20_8_fu_841_p2  |      icmp|   0|  0|  13|           5|           4|
+    |icmp_ln20_9_fu_850_p2  |      icmp|   0|  0|  13|           5|           4|
+    |icmp_ln20_fu_738_p2    |      icmp|   0|  0|  13|           5|           1|
+    +-----------------------+----------+----+---+----+------------+------------+
+    |Total                  |          |   0|  0| 125|          44|          23|
+    +-----------------------+----------+----+---+----+------------+------------+
 
     * Multiplexer: 
-    +-------------------------+----+-----------+-----+-----------+
-    |           Name          | LUT| Input Size| Bits| Total Bits|
-    +-------------------------+----+-----------+-----+-----------+
-    |ap_NS_fsm                |  31|          6|    1|          6|
-    |i_fu_56                  |   9|          2|    4|          8|
-    |output_r_address0_local  |  14|          3|    4|         12|
-    |output_r_d0_local        |  14|          3|   32|         96|
-    +-------------------------+----+-----------+-----+-----------+
-    |Total                    |  68|         14|   41|        122|
-    +-------------------------+----+-----------+-----+-----------+
+    +---------------------------------+-----+-----------+-----+-----------+
+    |               Name              | LUT | Input Size| Bits| Total Bits|
+    +---------------------------------+-----+-----------+-----+-----------+
+    |ap_NS_fsm                        |  142|         32|    1|         32|
+    |ap_phi_mux_sum_10_phi_fu_504_p4  |    9|          2|   32|         64|
+    |ap_phi_mux_sum_11_phi_fu_516_p4  |    9|          2|   32|         64|
+    |ap_phi_mux_sum_12_phi_fu_528_p4  |    9|          2|   32|         64|
+    |ap_phi_mux_sum_13_phi_fu_540_p4  |    9|          2|   32|         64|
+    |ap_phi_mux_sum_14_phi_fu_552_p4  |    9|          2|   32|         64|
+    |ap_phi_mux_sum_1_phi_fu_444_p4   |    9|          2|   32|         64|
+    |ap_phi_mux_sum_5_phi_fu_456_p4   |    9|          2|   32|         64|
+    |ap_phi_mux_sum_8_phi_fu_468_p4   |    9|          2|   32|         64|
+    |ap_phi_mux_sum_9_phi_fu_492_p4   |    9|          2|   32|         64|
+    |ap_phi_mux_sum_phi_fu_480_p4     |    9|          2|   32|         64|
+    |columnIndexes_address0           |   59|         11|    7|         77|
+    |columnIndexes_ce0                |   59|         11|    1|         11|
+    |grp_fu_1072_ce                   |   59|         11|    1|         11|
+    |grp_fu_1072_p0                   |   59|         11|   32|        352|
+    |grp_fu_1072_p1                   |   59|         11|   32|        352|
+    |output_r_address0_local          |   59|         11|    4|         44|
+    |output_r_d0_local                |   59|         11|   32|        352|
+    |rowPointers_address0_local       |   59|         11|    4|         44|
+    |rowPointers_address1_local       |   59|         11|    4|         44|
+    |sum_10_reg_500                   |    9|          2|   32|         64|
+    |sum_11_reg_512                   |    9|          2|   32|         64|
+    |sum_12_reg_524                   |    9|          2|   32|         64|
+    |sum_13_reg_536                   |    9|          2|   32|         64|
+    |sum_14_reg_548                   |    9|          2|   32|         64|
+    |sum_1_reg_440                    |    9|          2|   32|         64|
+    |sum_5_reg_452                    |    9|          2|   32|         64|
+    |sum_8_reg_464                    |    9|          2|   32|         64|
+    |sum_9_reg_488                    |    9|          2|   32|         64|
+    |sum_reg_476                      |    9|          2|   32|         64|
+    |values_address0                  |   59|         11|    7|         77|
+    |values_ce0                       |   59|         11|    1|         11|
+    |vector_address0                  |   59|         11|    4|         44|
+    |vector_ce0                       |   59|         11|    1|         11|
+    +---------------------------------+-----+-----------+-----+-----------+
+    |Total                            | 1089|        215|  771|       2742|
+    +---------------------------------+-----+-----------+-----+-----------+
 
     * Register: 
-    +----------------------------------------------------------+---+----+-----+-----------+
-    |                           Name                           | FF| LUT| Bits| Const Bits|
-    +----------------------------------------------------------+---+----+-----+-----------+
-    |add_ln15_reg_199                                          |  4|   0|    4|          0|
-    |ap_CS_fsm                                                 |  5|   0|    5|          0|
-    |grp_SpMV_Pipeline_spmv_loop_internal_fu_109_ap_start_reg  |  1|   0|    1|          0|
-    |i_fu_56                                                   |  4|   0|    4|          0|
-    |icmp_ln16_reg_204                                         |  1|   0|    1|          0|
-    |icmp_ln19_reg_233                                         |  1|   0|    1|          0|
-    |j_reg_223                                                 |  9|   0|    9|          0|
-    |output_r_addr_reg_208                                     |  4|   0|    4|          0|
-    |rowPointers_load_reg_228                                  |  9|   0|    9|          0|
-    +----------------------------------------------------------+---+----+-----+-----------+
-    |Total                                                     | 38|   0|   38|          0|
-    +----------------------------------------------------------+---+----+-----+-----------+
+    +-----------------------------------------------------------+----+----+-----+-----------+
+    |                            Name                           | FF | LUT| Bits| Const Bits|
+    +-----------------------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                                  |  31|   0|   31|          0|
+    |grp_SpMV_Pipeline_spmv_loop_internal1_fu_575_ap_start_reg  |   1|   0|    1|          0|
+    |grp_SpMV_Pipeline_spmv_loop_internal2_fu_590_ap_start_reg  |   1|   0|    1|          0|
+    |grp_SpMV_Pipeline_spmv_loop_internal3_fu_605_ap_start_reg  |   1|   0|    1|          0|
+    |grp_SpMV_Pipeline_spmv_loop_internal4_fu_620_ap_start_reg  |   1|   0|    1|          0|
+    |grp_SpMV_Pipeline_spmv_loop_internal5_fu_635_ap_start_reg  |   1|   0|    1|          0|
+    |grp_SpMV_Pipeline_spmv_loop_internal6_fu_650_ap_start_reg  |   1|   0|    1|          0|
+    |grp_SpMV_Pipeline_spmv_loop_internal7_fu_665_ap_start_reg  |   1|   0|    1|          0|
+    |grp_SpMV_Pipeline_spmv_loop_internal8_fu_680_ap_start_reg  |   1|   0|    1|          0|
+    |grp_SpMV_Pipeline_spmv_loop_internal9_fu_695_ap_start_reg  |   1|   0|    1|          0|
+    |grp_SpMV_Pipeline_spmv_loop_internal_fu_560_ap_start_reg   |   1|   0|    1|          0|
+    |icmp_ln20_1_reg_946                                        |   1|   0|    1|          0|
+    |icmp_ln20_2_reg_960                                        |   1|   0|    1|          0|
+    |icmp_ln20_3_reg_974                                        |   1|   0|    1|          0|
+    |icmp_ln20_4_reg_988                                        |   1|   0|    1|          0|
+    |icmp_ln20_5_reg_1002                                       |   1|   0|    1|          0|
+    |icmp_ln20_6_reg_1016                                       |   1|   0|    1|          0|
+    |icmp_ln20_7_reg_1030                                       |   1|   0|    1|          0|
+    |icmp_ln20_8_reg_1044                                       |   1|   0|    1|          0|
+    |icmp_ln20_9_reg_1058                                       |   1|   0|    1|          0|
+    |icmp_ln20_reg_932                                          |   1|   0|    1|          0|
+    |reg_710                                                    |   9|   0|    9|          0|
+    |reg_724                                                    |   9|   0|    9|          0|
+    |sum_10_reg_500                                             |  32|   0|   32|          0|
+    |sum_11_reg_512                                             |  32|   0|   32|          0|
+    |sum_12_reg_524                                             |  32|   0|   32|          0|
+    |sum_13_reg_536                                             |  32|   0|   32|          0|
+    |sum_14_reg_548                                             |  32|   0|   32|          0|
+    |sum_1_reg_440                                              |  32|   0|   32|          0|
+    |sum_5_reg_452                                              |  32|   0|   32|          0|
+    |sum_8_reg_464                                              |  32|   0|   32|          0|
+    |sum_9_reg_488                                              |  32|   0|   32|          0|
+    |sum_reg_476                                                |  32|   0|   32|          0|
+    +-----------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                      | 389|   0|  389|          0|
+    +-----------------------------------------------------------+----+----+-----+-----------+
 
 
 

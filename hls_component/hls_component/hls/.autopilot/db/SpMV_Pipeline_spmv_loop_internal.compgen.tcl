@@ -1,11 +1,5 @@
 # This script segment is generated automatically by AutoPilot
 
-set name SpMV_mul_32s_32s_32_2_1
-if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {mul} IMPL {auto} LATENCY 1 ALLOW_PRAGMA 1
-}
-
-
 # clear list
 if {${::AESL::PGuard_autoexp_gen}} {
     cg_default_interface_gen_dc_begin
@@ -17,7 +11,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 5 \
+    id 4 \
     name values \
     reset_level 1 \
     sync_rst true \
@@ -36,7 +30,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 6 \
+    id 5 \
     name columnIndexes \
     reset_level 1 \
     sync_rst true \
@@ -55,7 +49,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 7 \
+    id 6 \
     name vector \
     reset_level 1 \
     sync_rst true \
@@ -73,45 +67,45 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
+    id 2 \
+    name zext_ln22 \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_zext_ln22 \
+    op interface \
+    ports { zext_ln22 { I 9 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
     id 3 \
-    name zext_ln19 \
+    name zext_ln22_1 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_zext_ln19 \
+    corename dc_zext_ln22_1 \
     op interface \
-    ports { zext_ln19 { I 9 vector } } \
+    ports { zext_ln22_1 { I 9 vector } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 4 \
-    name wide_trip_count \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_wide_trip_count \
-    op interface \
-    ports { wide_trip_count { I 9 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 8 \
-    name add7_out \
+    id 7 \
+    name sum_out \
     type other \
     dir O \
     reset_level 1 \
     sync_rst true \
-    corename dc_add7_out \
+    corename dc_sum_out \
     op interface \
-    ports { add7_out { O 32 vector } add7_out_ap_vld { O 1 bit } } \
+    ports { sum_out { O 32 vector } sum_out_ap_vld { O 1 bit } } \
 } "
 }
 

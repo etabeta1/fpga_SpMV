@@ -5762,18 +5762,27 @@ __attribute__((sdx_kernel("SpMV", 0))) void SpMV(
 # 14 "SpMV.cpp"
 
     spmv_loop_external:for(VectorSize i = 0; i < 10; i++) {
+#pragma HLS UNROLL
+
+ int sum = 0;
+
         if(i < numOfRows) {
-            output[i] = 0;
 
             spmv_loop_internal:for(ValuesSize j = rowPointers[i]; j < rowPointers[i + 1]; j++) {
-                int matrix_value = values[j];
+#pragma HLS PIPELINE II=1
+
+ int matrix_value = values[j];
+
                 ColumnIndex column_index = columnIndexes[j];
 
                 int vector_value = vector[column_index];
 
                 int temp = matrix_value * vector_value;
-                output[i] += temp;
+                sum += temp;
             }
+
         }
+
+        output[i] = sum;
     }
 };

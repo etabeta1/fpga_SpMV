@@ -1,10 +1,16 @@
---- !HLSReportInfo
-Pass:            auto-loop-pipeline
-Name:            AutoLoopPipeline
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
+Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S1_S_S_
 Args:            
-  - String:          'automatically set the pipeline for Loop< '
-  - LoopName:        spmv_loop_internal
-  - String:          '> at '
-  - LoopLoc:         'SpMV.cpp:19:32'
-  - String:          ' '
+  - String:          'Unrolling loop '''
+  - LoopName:        spmv_loop_external
+  - String:          ''' ('
+  - LoopLoc:         'SpMV.cpp:15:24'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          SpMV
+  - String:          ''' completely with a factor of '
+  - Factor:          '10'
 ...

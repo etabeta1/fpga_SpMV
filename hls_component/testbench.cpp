@@ -16,6 +16,8 @@ int main() {
 
     int succ = 0;
 
+    std::cout << "Running " << n << " tests" << std::endl;
+
     for(int i = 0; i < n; i++) {
         Testcase t(is);
         (t.run(std::cout) ? succ++ : 0);

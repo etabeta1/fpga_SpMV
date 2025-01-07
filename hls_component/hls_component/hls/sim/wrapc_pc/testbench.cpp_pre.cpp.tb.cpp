@@ -57006,6 +57006,8 @@ int main() {
 
     int succ = 0;
 
+    std::cout << "Running " << n << " tests" << std::endl;
+
     for(int i = 0; i < n; i++) {
         Testcase t(is);
         (t.run(std::cout) ? succ++ : 0);
@@ -57016,5 +57018,5 @@ int main() {
     return 0;
 }
 #endif
-# 27 "D:/Desktop/SpMV/hls_component/testbench.cpp"
+# 29 "D:/Desktop/SpMV/hls_component/testbench.cpp"
 

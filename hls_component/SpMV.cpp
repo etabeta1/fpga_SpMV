@@ -12,22 +12,28 @@ void SpMV(
 
     int output[MAX_MATRIX_SIDE_SIZE]
 ) {
-    spmv_setup_loop:for(int i = 0; i < MAX_MATRIX_SIDE_SIZE; i++) {
-        #pragma HLS UNROLL
-        output[i] = 0;
-    }
-
     spmv_loop_external:for(VectorSize i = 0; i < MAX_MATRIX_SIDE_SIZE; i++) {
+        #pragma HLS UNROLL
+
+        int sum = 0;
+
         if(i < numOfRows) {
+            
             spmv_loop_internal:for(ValuesSize j = rowPointers[i]; j < rowPointers[i + 1]; j++) {
+                #pragma HLS PIPELINE II=1
+
                 int matrix_value = values[j];
+                
                 ColumnIndex column_index = columnIndexes[j];
 
                 int vector_value = vector[column_index];
                 
                 int temp = matrix_value * vector_value;
-                output[i] += temp;
+                sum += temp;
             }
+
         }
+        
+        output[i] = sum;
     }
 };

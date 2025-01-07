@@ -19,25 +19,25 @@ dict set ap_memory_interface_dict values { MEM_WIDTH 32 MEM_SIZE 400 MASTER_TYPE
 dict set ap_memory_interface_dict columnIndexes { MEM_WIDTH 5 MEM_SIZE 100 MASTER_TYPE BRAM_CTRL MEM_ADDRESS_MODE WORD_ADDRESS PACKAGE_IO port READ_LATENCY 1 }
 dict set ap_memory_interface_dict vector { MEM_WIDTH 32 MEM_SIZE 40 MASTER_TYPE BRAM_CTRL MEM_ADDRESS_MODE WORD_ADDRESS PACKAGE_IO port READ_LATENCY 1 }
 set C_modelArgList {
-	{ zext_ln19 int 9 regular  }
-	{ wide_trip_count int 9 regular  }
+	{ zext_ln22 int 9 regular  }
+	{ zext_ln22_1 int 9 regular  }
 	{ values int 32 regular {array 100 { 1 3 } 1 1 }  }
 	{ columnIndexes int 5 regular {array 100 { 1 3 } 1 1 }  }
 	{ vector int 32 regular {array 10 { 1 3 } 1 1 }  }
-	{ add7_out int 32 regular {pointer 1}  }
+	{ sum_out int 32 regular {pointer 1}  }
 }
 set hasAXIMCache 0
 set hasAXIML2Cache 0
 set AXIMCacheInstDict [dict create]
 set C_modelArgMapList {[ 
-	{ "Name" : "zext_ln19", "interface" : "wire", "bitwidth" : 9, "direction" : "READONLY"} , 
- 	{ "Name" : "wide_trip_count", "interface" : "wire", "bitwidth" : 9, "direction" : "READONLY"} , 
+	{ "Name" : "zext_ln22", "interface" : "wire", "bitwidth" : 9, "direction" : "READONLY"} , 
+ 	{ "Name" : "zext_ln22_1", "interface" : "wire", "bitwidth" : 9, "direction" : "READONLY"} , 
  	{ "Name" : "values", "interface" : "memory", "bitwidth" : 32, "direction" : "READONLY"} , 
  	{ "Name" : "columnIndexes", "interface" : "memory", "bitwidth" : 5, "direction" : "READONLY"} , 
  	{ "Name" : "vector", "interface" : "memory", "bitwidth" : 32, "direction" : "READONLY"} , 
- 	{ "Name" : "add7_out", "interface" : "wire", "bitwidth" : 32, "direction" : "WRITEONLY"} ]}
+ 	{ "Name" : "sum_out", "interface" : "wire", "bitwidth" : 32, "direction" : "WRITEONLY"} ]}
 # RTL Port declarations: 
-set portNum 19
+set portNum 23
 set portList { 
 	{ ap_clk sc_in sc_logic 1 clock -1 } 
 	{ ap_rst sc_in sc_logic 1 reset -1 active_high_sync } 
@@ -45,8 +45,8 @@ set portList {
 	{ ap_done sc_out sc_logic 1 predone -1 } 
 	{ ap_idle sc_out sc_logic 1 done -1 } 
 	{ ap_ready sc_out sc_logic 1 ready -1 } 
-	{ zext_ln19 sc_in sc_lv 9 signal 0 } 
-	{ wide_trip_count sc_in sc_lv 9 signal 1 } 
+	{ zext_ln22 sc_in sc_lv 9 signal 0 } 
+	{ zext_ln22_1 sc_in sc_lv 9 signal 1 } 
 	{ values_address0 sc_out sc_lv 7 signal 2 } 
 	{ values_ce0 sc_out sc_logic 1 signal 2 } 
 	{ values_q0 sc_in sc_lv 32 signal 2 } 
@@ -56,8 +56,12 @@ set portList {
 	{ vector_address0 sc_out sc_lv 4 signal 4 } 
 	{ vector_ce0 sc_out sc_logic 1 signal 4 } 
 	{ vector_q0 sc_in sc_lv 32 signal 4 } 
-	{ add7_out sc_out sc_lv 32 signal 5 } 
-	{ add7_out_ap_vld sc_out sc_logic 1 outvld 5 } 
+	{ sum_out sc_out sc_lv 32 signal 5 } 
+	{ sum_out_ap_vld sc_out sc_logic 1 outvld 5 } 
+	{ grp_fu_1072_p_din0 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_1072_p_din1 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_1072_p_dout0 sc_in sc_lv 32 signal -1 } 
+	{ grp_fu_1072_p_ce sc_out sc_logic 1 signal -1 } 
 }
 set NewPortList {[ 
 	{ "name": "ap_clk", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "clock", "bundle":{"name": "ap_clk", "role": "default" }} , 
@@ -66,8 +70,8 @@ set NewPortList {[
  	{ "name": "ap_done", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "predone", "bundle":{"name": "ap_done", "role": "default" }} , 
  	{ "name": "ap_idle", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "done", "bundle":{"name": "ap_idle", "role": "default" }} , 
  	{ "name": "ap_ready", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "ready", "bundle":{"name": "ap_ready", "role": "default" }} , 
- 	{ "name": "zext_ln19", "direction": "in", "datatype": "sc_lv", "bitwidth":9, "type": "signal", "bundle":{"name": "zext_ln19", "role": "default" }} , 
- 	{ "name": "wide_trip_count", "direction": "in", "datatype": "sc_lv", "bitwidth":9, "type": "signal", "bundle":{"name": "wide_trip_count", "role": "default" }} , 
+ 	{ "name": "zext_ln22", "direction": "in", "datatype": "sc_lv", "bitwidth":9, "type": "signal", "bundle":{"name": "zext_ln22", "role": "default" }} , 
+ 	{ "name": "zext_ln22_1", "direction": "in", "datatype": "sc_lv", "bitwidth":9, "type": "signal", "bundle":{"name": "zext_ln22_1", "role": "default" }} , 
  	{ "name": "values_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":7, "type": "signal", "bundle":{"name": "values", "role": "address0" }} , 
  	{ "name": "values_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "values", "role": "ce0" }} , 
  	{ "name": "values_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "values", "role": "q0" }} , 
@@ -77,17 +81,21 @@ set NewPortList {[
  	{ "name": "vector_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":4, "type": "signal", "bundle":{"name": "vector", "role": "address0" }} , 
  	{ "name": "vector_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "vector", "role": "ce0" }} , 
  	{ "name": "vector_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "vector", "role": "q0" }} , 
- 	{ "name": "add7_out", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "add7_out", "role": "default" }} , 
- 	{ "name": "add7_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "add7_out", "role": "ap_vld" }}  ]}
+ 	{ "name": "sum_out", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "sum_out", "role": "default" }} , 
+ 	{ "name": "sum_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "sum_out", "role": "ap_vld" }} , 
+ 	{ "name": "grp_fu_1072_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1072_p_din0", "role": "default" }} , 
+ 	{ "name": "grp_fu_1072_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1072_p_din1", "role": "default" }} , 
+ 	{ "name": "grp_fu_1072_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1072_p_dout0", "role": "default" }} , 
+ 	{ "name": "grp_fu_1072_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_1072_p_ce", "role": "default" }}  ]}
 
 set RtlHierarchyInfo {[
-	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2"],
+	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1"],
 		"CDFG" : "SpMV_Pipeline_spmv_loop_internal",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "2", "EstimateLatencyMax" : "517",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "-1", "EstimateLatencyMax" : "-1",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -96,33 +104,32 @@ set RtlHierarchyInfo {[
 		"HasNonBlockingOperation" : "0",
 		"IsBlackBox" : "0",
 		"Port" : [
-			{"Name" : "zext_ln19", "Type" : "None", "Direction" : "I"},
-			{"Name" : "wide_trip_count", "Type" : "None", "Direction" : "I"},
+			{"Name" : "zext_ln22", "Type" : "None", "Direction" : "I"},
+			{"Name" : "zext_ln22_1", "Type" : "None", "Direction" : "I"},
 			{"Name" : "values", "Type" : "Memory", "Direction" : "I"},
 			{"Name" : "columnIndexes", "Type" : "Memory", "Direction" : "I"},
 			{"Name" : "vector", "Type" : "Memory", "Direction" : "I"},
-			{"Name" : "add7_out", "Type" : "Vld", "Direction" : "O"}],
+			{"Name" : "sum_out", "Type" : "Vld", "Direction" : "O"}],
 		"Loop" : [
 			{"Name" : "spmv_loop_internal", "PipelineType" : "UPC",
 				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter6", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter6", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_32s_32s_32_2_1_U1", "Parent" : "0"},
-	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.flow_control_loop_pipe_sequential_init_U", "Parent" : "0"}]}
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.flow_control_loop_pipe_sequential_init_U", "Parent" : "0"}]}
 
 
 set ArgLastReadFirstWriteLatency {
 	SpMV_Pipeline_spmv_loop_internal {
-		zext_ln19 {Type I LastRead 0 FirstWrite -1}
-		wide_trip_count {Type I LastRead 0 FirstWrite -1}
+		zext_ln22 {Type I LastRead 0 FirstWrite -1}
+		zext_ln22_1 {Type I LastRead 0 FirstWrite -1}
 		values {Type I LastRead 2 FirstWrite -1}
 		columnIndexes {Type I LastRead 1 FirstWrite -1}
 		vector {Type I LastRead 2 FirstWrite -1}
-		add7_out {Type O LastRead -1 FirstWrite 5}}}
+		sum_out {Type O LastRead -1 FirstWrite 5}}}
 
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "2", "Max" : "517"}
-	, {"Name" : "Interval", "Min" : "2", "Max" : "517"}
+	{"Name" : "Latency", "Min" : "-1", "Max" : "-1"}
+	, {"Name" : "Interval", "Min" : "-1", "Max" : "-1"}
 ]}
 
 set PipelineEnableSignalInfo {[
@@ -130,10 +137,10 @@ set PipelineEnableSignalInfo {[
 ]}
 
 set Spec2ImplPortList { 
-	zext_ln19 { ap_none {  { zext_ln19 in_data 0 9 } } }
-	wide_trip_count { ap_none {  { wide_trip_count in_data 0 9 } } }
+	zext_ln22 { ap_none {  { zext_ln22 in_data 0 9 } } }
+	zext_ln22_1 { ap_none {  { zext_ln22_1 in_data 0 9 } } }
 	values { ap_memory {  { values_address0 mem_address 1 7 }  { values_ce0 mem_ce 1 1 }  { values_q0 mem_dout 0 32 } } }
 	columnIndexes { ap_memory {  { columnIndexes_address0 mem_address 1 7 }  { columnIndexes_ce0 mem_ce 1 1 }  { columnIndexes_q0 mem_dout 0 5 } } }
 	vector { ap_memory {  { vector_address0 mem_address 1 4 }  { vector_ce0 mem_ce 1 1 }  { vector_q0 mem_dout 0 32 } } }
-	add7_out { ap_vld {  { add7_out out_data 1 32 }  { add7_out_ap_vld out_vld 1 1 } } }
+	sum_out { ap_vld {  { sum_out out_data 1 32 }  { sum_out_ap_vld out_vld 1 1 } } }
 }

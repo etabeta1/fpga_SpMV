@@ -1,17 +1,17 @@
 {
   "0": {
-    "basicblocks": 11,
+    "basicblocks": 54,
     "calls": "",
     "file": "SpMV.cpp",
     "fileloc": 3,
-    "instructions": 50,
+    "instructions": 293,
     "loads": {
-      "T": 6
+      "T": 50
     },
     "name": "SpMV",
     "stores": {
-      "T": 2
+      "T": 10
     },
-    "total_instructions": 50
+    "total_instructions": 293
   }
 }

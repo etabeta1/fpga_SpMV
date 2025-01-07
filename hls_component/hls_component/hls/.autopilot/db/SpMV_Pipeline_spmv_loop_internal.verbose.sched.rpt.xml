@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'SpMV_Pipeline_spmv_loop_internal'" level="0">
-<item name = "Date">Tue Jan  7 11:33:43 2025
+<item name = "Date">Tue Jan  7 13:53:02 2025
 </item>
 <item name = "Version">2024.1 (Build 5069499 on May 21 2024)</item>
 <item name = "Project">hls_component</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">2, 517, 20.000 ns, 5.170 us, 1, 512, loop auto-rewind stp(delay=0 clock cycles(s))</column>
+<column name="">?, ?, ?, ?, 0, 0, loop auto-rewind stp(delay=0 clock cycles(s))</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,7 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- spmv_loop_internal">0, 515, 6, 1, 1, 0 ~ 511, yes</column>
+<column name="- spmv_loop_internal">?, ?, 6, 1, 1, ?, yes</column>
 </table>
 </item>
 </section>

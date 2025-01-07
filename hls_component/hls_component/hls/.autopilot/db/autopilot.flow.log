@@ -1361,3 +1361,190 @@ Execute   close_project
 Execute     close_solution 
 Execute       cleanup_all 
 Execute       cleanup_all 
+INFO-FLOW: Workspace D:/Desktop/SpMV/hls_component/hls_component/hls opened at Tue Jan 07 15:20:53 +0100 2025
+Execute     send_msg_by_id INFO @200-1505@%s%s default  vivado 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Execute   apply_ini D:/Desktop/SpMV/hls_component/hls_config.cfg 
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=D:\Desktop\SpMV\hls_component\SpMV.cpp' from D:/Desktop/SpMV/hls_component/hls_config.cfg(7) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=D:\Desktop\SpMV\hls_component\SpMV.cpp' from D:/Desktop/SpMV/hls_component/hls_config.cfg(7)
+Execute     add_files D:\Desktop\SpMV\hls_component\SpMV.cpp 
+INFO: [HLS 200-10] Adding design file 'D:/Desktop/SpMV/hls_component/SpMV.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=D:\Desktop\SpMV\hls_component\SpMV.hpp' from D:/Desktop/SpMV/hls_component/hls_config.cfg(8) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=D:\Desktop\SpMV\hls_component\SpMV.hpp' from D:/Desktop/SpMV/hls_component/hls_config.cfg(8)
+Execute     add_files D:\Desktop\SpMV\hls_component\SpMV.hpp 
+INFO: [HLS 200-10] Adding design file 'D:/Desktop/SpMV/hls_component/SpMV.hpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file=testbench.cpp' from D:/Desktop/SpMV/hls_component/hls_config.cfg(9) 
+INFO: [HLS 200-1465] Applying ini 'tb.file=testbench.cpp' from D:/Desktop/SpMV/hls_component/hls_config.cfg(9)
+Execute     add_files -tb D:/Desktop/SpMV/hls_component/testbench.cpp 
+INFO: [HLS 200-10] Adding test bench file 'D:/Desktop/SpMV/hls_component/testbench.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file=input.txt' from D:/Desktop/SpMV/hls_component/hls_config.cfg(10) 
+INFO: [HLS 200-1465] Applying ini 'tb.file=input.txt' from D:/Desktop/SpMV/hls_component/hls_config.cfg(10)
+Execute     add_files -tb D:/Desktop/SpMV/hls_component/input.txt 
+INFO: [HLS 200-10] Adding test bench file 'D:/Desktop/SpMV/hls_component/input.txt' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file=testcase.cpp' from D:/Desktop/SpMV/hls_component/hls_config.cfg(11) 
+INFO: [HLS 200-1465] Applying ini 'tb.file=testcase.cpp' from D:/Desktop/SpMV/hls_component/hls_config.cfg(11)
+Execute     add_files -tb D:/Desktop/SpMV/hls_component/testcase.cpp 
+INFO: [HLS 200-10] Adding test bench file 'D:/Desktop/SpMV/hls_component/testcase.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file=testcase.hpp' from D:/Desktop/SpMV/hls_component/hls_config.cfg(12) 
+INFO: [HLS 200-1465] Applying ini 'tb.file=testcase.hpp' from D:/Desktop/SpMV/hls_component/hls_config.cfg(12)
+Execute     add_files -tb D:/Desktop/SpMV/hls_component/testcase.hpp 
+INFO: [HLS 200-10] Adding test bench file 'D:/Desktop/SpMV/hls_component/testcase.hpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.top=SpMV' from D:/Desktop/SpMV/hls_component/hls_config.cfg(13) 
+INFO: [HLS 200-1465] Applying ini 'syn.top=SpMV' from D:/Desktop/SpMV/hls_component/hls_config.cfg(13)
+Execute     set_top SpMV 
+Execute     send_msg_by_id INFO @200-1465@%s 'flow_target=vivado' from D:/Desktop/SpMV/hls_component/hls_config.cfg(4) 
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' from D:/Desktop/SpMV/hls_component/hls_config.cfg(4)
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute     send_msg_by_id INFO @200-1465@%s 'part=xc7z020clg400-1' from D:/Desktop/SpMV/hls_component/hls_config.cfg(1) 
+INFO: [HLS 200-1465] Applying ini 'part=xc7z020clg400-1' from D:/Desktop/SpMV/hls_component/hls_config.cfg(1)
+Execute     set_part xc7z020clg400-1 
+Execute       create_platform xc7z020clg400-1 -board  
+DBG:HLSDevice: Trying to load device library: D:/Xilinx\Vitis_HLS\2024.1\lib\win64.o\xv_hlsvwrap.dll
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: D:/Xilinx/Vivado/2024.1/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+Command       create_platform done; 0.649 sec.
+Execute       source D:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source D:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source D:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source D:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source D:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/saxilite.gen 
+Execute         source D:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source D:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source D:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source D:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/util.gen 
+Execute         source D:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfft.gen 
+Execute         source D:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source D:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/DSP48/dsp48.gen 
+Command       ap_source done; 0.108 sec.
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 0.774 sec.
+Execute     send_msg_by_id INFO @200-1465@%s 'package.output.format=ip_catalog' from D:/Desktop/SpMV/hls_component/hls_config.cfg(5) 
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from D:/Desktop/SpMV/hls_component/hls_config.cfg(5)
+Execute     config_export -format=ip_catalog 
+Command   apply_ini done; 0.82 sec.
+Execute   apply_ini D:/Desktop/SpMV/hls_component/hls_component/hls/config.cmdline 
+Execute   csim_design 
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+INFO-FLOW: Running SLX 'csim' proc: ::SLX::run_csim
+Execute     source D:/Desktop/SpMV/hls_component/hls_component/hls/.autopilot/db/global.setting.tcl 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     send_msg_by_id INFO @200-2036@%s debug 
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+Execute     source D:/Xilinx/Vitis_HLS/2024.1/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute     source D:/Xilinx/Vitis_HLS/2024.1/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
+Execute     source run_sim.tcl 
+Command     ap_source done; error code: 1; 0.361 sec.
+INFO-FLOW: AESL_CSIM::c_sim errorInfo:
+
+    while executing
+"::AESL_CSIM::c_sim "$argn" "
+ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO-FLOW: AESL_CSIM::csim_cmd_wrap errorInfo:
+4
+    while executing
+"::AESL_CSIM::csim_cmd_wrap $args"
+INFO-FLOW: Caught error in csim_design: 4
+    while executing
+"ap_internal_csim_design "
+Command   csim_design done; error code: 2; 6.163 sec.
+Execute   close_project 
+Execute     close_solution 
+Execute       cleanup_all 
+Execute       cleanup_all 
+INFO-FLOW: Workspace D:/Desktop/SpMV/hls_component/hls_component/hls opened at Tue Jan 07 15:23:48 +0100 2025
+Execute     send_msg_by_id INFO @200-1505@%s%s default  vivado 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Execute   apply_ini D:/Desktop/SpMV/hls_component/hls_config.cfg 
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=D:\Desktop\SpMV\hls_component\SpMV.cpp' from D:/Desktop/SpMV/hls_component/hls_config.cfg(7) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=D:\Desktop\SpMV\hls_component\SpMV.cpp' from D:/Desktop/SpMV/hls_component/hls_config.cfg(7)
+Execute     add_files D:\Desktop\SpMV\hls_component\SpMV.cpp 
+INFO: [HLS 200-10] Adding design file 'D:/Desktop/SpMV/hls_component/SpMV.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=D:\Desktop\SpMV\hls_component\SpMV.hpp' from D:/Desktop/SpMV/hls_component/hls_config.cfg(8) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=D:\Desktop\SpMV\hls_component\SpMV.hpp' from D:/Desktop/SpMV/hls_component/hls_config.cfg(8)
+Execute     add_files D:\Desktop\SpMV\hls_component\SpMV.hpp 
+INFO: [HLS 200-10] Adding design file 'D:/Desktop/SpMV/hls_component/SpMV.hpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file=testbench.cpp' from D:/Desktop/SpMV/hls_component/hls_config.cfg(9) 
+INFO: [HLS 200-1465] Applying ini 'tb.file=testbench.cpp' from D:/Desktop/SpMV/hls_component/hls_config.cfg(9)
+Execute     add_files -tb D:/Desktop/SpMV/hls_component/testbench.cpp 
+INFO: [HLS 200-10] Adding test bench file 'D:/Desktop/SpMV/hls_component/testbench.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file=input.txt' from D:/Desktop/SpMV/hls_component/hls_config.cfg(10) 
+INFO: [HLS 200-1465] Applying ini 'tb.file=input.txt' from D:/Desktop/SpMV/hls_component/hls_config.cfg(10)
+Execute     add_files -tb D:/Desktop/SpMV/hls_component/input.txt 
+INFO: [HLS 200-10] Adding test bench file 'D:/Desktop/SpMV/hls_component/input.txt' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file=testcase.cpp' from D:/Desktop/SpMV/hls_component/hls_config.cfg(11) 
+INFO: [HLS 200-1465] Applying ini 'tb.file=testcase.cpp' from D:/Desktop/SpMV/hls_component/hls_config.cfg(11)
+Execute     add_files -tb D:/Desktop/SpMV/hls_component/testcase.cpp 
+INFO: [HLS 200-10] Adding test bench file 'D:/Desktop/SpMV/hls_component/testcase.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file=testcase.hpp' from D:/Desktop/SpMV/hls_component/hls_config.cfg(12) 
+INFO: [HLS 200-1465] Applying ini 'tb.file=testcase.hpp' from D:/Desktop/SpMV/hls_component/hls_config.cfg(12)
+Execute     add_files -tb D:/Desktop/SpMV/hls_component/testcase.hpp 
+INFO: [HLS 200-10] Adding test bench file 'D:/Desktop/SpMV/hls_component/testcase.hpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.top=SpMV' from D:/Desktop/SpMV/hls_component/hls_config.cfg(13) 
+INFO: [HLS 200-1465] Applying ini 'syn.top=SpMV' from D:/Desktop/SpMV/hls_component/hls_config.cfg(13)
+Execute     set_top SpMV 
+Execute     send_msg_by_id INFO @200-1465@%s 'flow_target=vivado' from D:/Desktop/SpMV/hls_component/hls_config.cfg(4) 
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' from D:/Desktop/SpMV/hls_component/hls_config.cfg(4)
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute     send_msg_by_id INFO @200-1465@%s 'part=xc7z020clg400-1' from D:/Desktop/SpMV/hls_component/hls_config.cfg(1) 
+INFO: [HLS 200-1465] Applying ini 'part=xc7z020clg400-1' from D:/Desktop/SpMV/hls_component/hls_config.cfg(1)
+Execute     set_part xc7z020clg400-1 
+Execute       create_platform xc7z020clg400-1 -board  
+DBG:HLSDevice: Trying to load device library: D:/Xilinx\Vitis_HLS\2024.1\lib\win64.o\xv_hlsvwrap.dll
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: D:/Xilinx/Vivado/2024.1/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+Command       create_platform done; 0.571 sec.
+Execute       source D:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source D:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source D:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source D:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source D:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/saxilite.gen 
+Execute         source D:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source D:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source D:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source D:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/util.gen 
+Execute         source D:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfft.gen 
+Command         ap_source done; 0.112 sec.
+Execute         source D:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source D:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/DSP48/dsp48.gen 
+Command       ap_source done; 0.143 sec.
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 0.722 sec.
+Execute     send_msg_by_id INFO @200-1465@%s 'package.output.format=ip_catalog' from D:/Desktop/SpMV/hls_component/hls_config.cfg(5) 
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from D:/Desktop/SpMV/hls_component/hls_config.cfg(5)
+Execute     config_export -format=ip_catalog 
+Command   apply_ini done; 0.763 sec.
+Execute   apply_ini D:/Desktop/SpMV/hls_component/hls_component/hls/config.cmdline 
+Execute   csim_design 
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+INFO-FLOW: Running SLX 'csim' proc: ::SLX::run_csim
+Execute     source D:/Desktop/SpMV/hls_component/hls_component/hls/.autopilot/db/global.setting.tcl 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     send_msg_by_id INFO @200-2036@%s debug 
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+Execute     source D:/Xilinx/Vitis_HLS/2024.1/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute     source D:/Xilinx/Vitis_HLS/2024.1/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
+Execute     source run_sim.tcl 
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command   csim_design done; 0.613 sec.
+Execute   close_project 
+Execute     close_solution 
+Execute       cleanup_all 
+Execute       cleanup_all 

@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "directory": "D:\\Desktop\\SpMV\\hls_component",
+    "arguments": [
+      "D:\\Xilinx\\Vitis_HLS\\2024.1\\vcxx\\libexec\\clang++.exe",
+      "-fhls",
+      "-hls-syn-headers-dir=D:\\Xilinx\\Vitis_HLS\\2024.1\\common\\technology\\autopilot",
+      "",
+      "-c",
+      "D:\\Desktop\\SpMV\\hls_component\\SpMV.cpp"
+    ],
+    "file": "D:\\Desktop\\SpMV\\hls_component\\SpMV.cpp"
+  },
+  {
+    "directory": "D:\\Desktop\\SpMV\\hls_component",
+    "arguments": [
+      "D:\\Xilinx\\Vitis_HLS\\2024.1\\vcxx\\libexec\\clang++.exe",
+      "-fhls",
+      "-hls-syn-headers-dir=D:\\Xilinx\\Vitis_HLS\\2024.1\\common\\technology\\autopilot",
+      "",
+      "-c",
+      "D:\\Desktop\\SpMV\\hls_component\\SpMV.c"
+    ],
+    "file": "D:\\Desktop\\SpMV\\hls_component\\SpMV.c"
+  }
+]

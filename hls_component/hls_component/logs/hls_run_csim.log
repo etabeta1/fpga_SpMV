@@ -1,0 +1,112 @@
+INFO: [vitis-run 60-1548] Creating build summary session with primary output D:/Desktop/SpMV/hls_component/hls_component\hls_component.hlsrun_csim_summary, at 01/07/25 10:59:48
+INFO: [vitis-run 82-31] Launching vitis_hls: vitis_hls -nolog -run csim -work_dir D:/Desktop/SpMV/hls_component/hls_component -config D:/Desktop/SpMV/hls_component/hls_config.cfg -cmdlineconfig D:/Desktop/SpMV/hls_component/hls_component/hls/config.cmdline
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2024.1 (64-bit)
+  **** SW Build 5069499 on May 21 2024
+  **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+  **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+  **** Start of session at: Tue Jan  7 10:59:51 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source D:/Xilinx/Vitis_HLS/2024.1/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] For user 'Utente' on host 'laptop-9btr5ocl' (Windows NT_amd64 version 10.0) on Tue Jan 07 10:59:51 +0100 2025
+INFO: [HLS 200-10] In directory 'D:/Desktop/SpMV/hls_component'
+INFO: [HLS 200-2005] Using work_dir D:/Desktop/SpMV/hls_component/hls_component 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+WARNING: [HLS 200-2001] file not found 'SpMV.c' see [hls] from D:/Desktop/SpMV/hls_component/hls_config.cfg(7)
+WARNING: [HLS 200-2001] file not found 'SpMV.hppb.file=SpMV.hpp' see [hls] from D:/Desktop/SpMV/hls_component/hls_config.cfg(8)
+WARNING: [HLS 200-2001] file not found 'D:\Desktop\SpMV\hls_component\SpMV.h' see [hls] from D:/Desktop/SpMV/hls_component/hls_config.cfg(9)
+WARNING: [HLS 200-2001] file not found 'SpMV.hppp' see [hls] from D:/Desktop/SpMV/hls_component/hls_config.cfg(12)
+INFO: [HLS 200-1465] Applying ini 'syn.file=SpMV.c' from D:/Desktop/SpMV/hls_component/hls_config.cfg(7)
+WARNING: [HLS 200-40] Cannot find design file 'SpMV.c'
+INFO: [HLS 200-1465] Applying ini 'syn.file=SpMV.hppb.file=SpMV.hpp' from D:/Desktop/SpMV/hls_component/hls_config.cfg(8)
+WARNING: [HLS 200-40] Cannot find design file 'SpMV.hppb.file=SpMV.hpp'
+INFO: [HLS 200-1465] Applying ini 'syn.file=D:\Desktop\SpMV\hls_component\SpMV.h' from D:/Desktop/SpMV/hls_component/hls_config.cfg(9)
+WARNING: [HLS 200-40] Cannot find design file 'D:/Desktop/SpMV/hls_component/SpMV.h'
+INFO: [HLS 200-1465] Applying ini 'syn.file=D:\Desktop\SpMV\hls_component\SpMV.cpp' from D:/Desktop/SpMV/hls_component/hls_config.cfg(10)
+INFO: [HLS 200-10] Adding design file 'D:/Desktop/SpMV/hls_component/SpMV.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=D:\Desktop\SpMV\hls_component\SpMV.hpp' from D:/Desktop/SpMV/hls_component/hls_config.cfg(11)
+INFO: [HLS 200-10] Adding design file 'D:/Desktop/SpMV/hls_component/SpMV.hpp' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=SpMV.hppp' from D:/Desktop/SpMV/hls_component/hls_config.cfg(12)
+WARNING: [HLS 200-40] Cannot find test bench file 'SpMV.hppp'
+INFO: [HLS 200-1465] Applying ini 'tb.file=testbench.cpp' from D:/Desktop/SpMV/hls_component/hls_config.cfg(13)
+INFO: [HLS 200-10] Adding test bench file 'D:/Desktop/SpMV/hls_component/testbench.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=input.txt' from D:/Desktop/SpMV/hls_component/hls_config.cfg(14)
+INFO: [HLS 200-10] Adding test bench file 'D:/Desktop/SpMV/hls_component/input.txt' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=testcase.cpp' from D:/Desktop/SpMV/hls_component/hls_config.cfg(15)
+INFO: [HLS 200-10] Adding test bench file 'D:/Desktop/SpMV/hls_component/testcase.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=testcase.hpp' from D:/Desktop/SpMV/hls_component/hls_config.cfg(16)
+INFO: [HLS 200-10] Adding test bench file 'D:/Desktop/SpMV/hls_component/testcase.hpp' to the project
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' from D:/Desktop/SpMV/hls_component/hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'part=xc7z020clg400-1' from D:/Desktop/SpMV/hls_component/hls_config.cfg(1)
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from D:/Desktop/SpMV/hls_component/hls_config.cfg(5)
+WARNING: [HLS 200-1998] cannot find relative file path '../../SpMV.hppp' in directory(s): D:/Desktop/SpMV/hls_component/hls_component/solution D:/Desktop/SpMV/hls_component
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+   Compiling ../../../../testcase.cpp in debug mode
+   Compiling ../../../../testbench.cpp in debug mode
+   Compiling ../../../../SpMV.cpp in debug mode
+   Generating csim.exe
+In file included from ../../../../testcase.cpp:1:
+In file included from ../../../../testcase.hpp:4:
+In file included from ../../../../SpMV.hpp:4:
+In file included from D:/Xilinx/Vitis_HLS/2024.1/include/ap_int.h:10:
+In file included from D:/Xilinx/Vitis_HLS/2024.1/include/etc/ap_common.h:658:
+In file included from D:/Xilinx/Vitis_HLS/2024.1/include/etc/ap_private.h:68:
+In file included from D:/Xilinx/Vitis_HLS/2024.1/include/hls_half.h:26:
+In file included from D:/Xilinx/Vitis_HLS/2024.1/include/etc/hls_half_fpo.h:19:
+In file included from D:/Xilinx/Vitis_HLS/2024.1/include/hls_fpo.h:140:
+In file included from D:/Xilinx/Vitis_HLS/2024.1/include/floating_point_v7_1_bitacc_cmodel.h:150:
+D:/Xilinx/Vitis_HLS/2024.1/include/gmp.h:58:9: warning: '__GMP_LIBGMP_DLL' macro redefined [-Wmacro-redefined]
+#define __GMP_LIBGMP_DLL  0
+        ^
+D:/Xilinx/Vitis_HLS/2024.1/include/floating_point_v7_1_bitacc_cmodel.h:142:9: note: previous definition is here
+#define __GMP_LIBGMP_DLL 1
+        ^
+1 warning generated.
+In file included from ../../../../testbench.cpp:1:
+In file included from ../../../../SpMV.hpp:4:
+In file included from D:/Xilinx/Vitis_HLS/2024.1/include/ap_int.h:10:
+In file included from D:/Xilinx/Vitis_HLS/2024.1/include/etc/ap_common.h:658:
+In file included from D:/Xilinx/Vitis_HLS/2024.1/include/etc/ap_private.h:68:
+In file included from D:/Xilinx/Vitis_HLS/2024.1/include/hls_half.h:26:
+In file included from D:/Xilinx/Vitis_HLS/2024.1/include/etc/hls_half_fpo.h:19:
+In file included from D:/Xilinx/Vitis_HLS/2024.1/include/hls_fpo.h:140:
+In file included from D:/Xilinx/Vitis_HLS/2024.1/include/floating_point_v7_1_bitacc_cmodel.h:150:
+D:/Xilinx/Vitis_HLS/2024.1/include/gmp.h:58:9: warning: '__GMP_LIBGMP_DLL' macro redefined [-Wmacro-redefined]
+#define __GMP_LIBGMP_DLL  0
+        ^
+D:/Xilinx/Vitis_HLS/2024.1/include/floating_point_v7_1_bitacc_cmodel.h:142:9: note: previous definition is here
+#define __GMP_LIBGMP_DLL 1
+        ^
+1 warning generated.
+In file included from ../../../../SpMV.cpp:1:
+In file included from ../../../../SpMV.hpp:4:
+In file included from D:/Xilinx/Vitis_HLS/2024.1/include/ap_int.h:10:
+In file included from D:/Xilinx/Vitis_HLS/2024.1/include/etc/ap_common.h:658:
+In file included from D:/Xilinx/Vitis_HLS/2024.1/include/etc/ap_private.h:68:
+In file included from D:/Xilinx/Vitis_HLS/2024.1/include/hls_half.h:26:
+In file included from D:/Xilinx/Vitis_HLS/2024.1/include/etc/hls_half_fpo.h:19:
+In file included from D:/Xilinx/Vitis_HLS/2024.1/include/hls_fpo.h:140:
+In file included from D:/Xilinx/Vitis_HLS/2024.1/include/floating_point_v7_1_bitacc_cmodel.h:150:
+D:/Xilinx/Vitis_HLS/2024.1/include/gmp.h:58:9: warning: '__GMP_LIBGMP_DLL' macro redefined [-Wmacro-redefined]
+#define __GMP_LIBGMP_DLL  0
+        ^
+D:/Xilinx/Vitis_HLS/2024.1/include/floating_point_v7_1_bitacc_cmodel.h:142:9: note: previous definition is here
+#define __GMP_LIBGMP_DLL 1
+        ^
+1 warning generated.
+Running test 'Square_4x4_matrix'...OK
+Running test 'Big_matrix'...OK
+Running test 'Biggish_matrix'...OK
+Running test 'Bigger_matrix'...OK
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-112] Total CPU user time: 1 seconds. Total CPU system time: 1 seconds. Total elapsed time: 8.793 seconds; peak allocated memory: 128.199 MB.
+INFO: [vitis-run 60-791] Total elapsed time: 0h 0m 14s

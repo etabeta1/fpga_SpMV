@@ -1,0 +1,25 @@
+01/07/25 10:59:46: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+01/07/25 10:59:46: Server was asked to start on port: '44448'
+01/07/25 10:59:46: Server is using token UUID: '87287c12-a524-4692-b054-09a8b77d4e99'
+01/07/25 10:59:46: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+01/07/25 10:59:46: Attempting to start server on port '44448'
+01/07/25 10:59:46: Running Dispatch Server
+01/07/25 10:59:46: Version 2.2.0
+01/07/25 10:59:48: Dispatch Server: Accepted socket connection from client
+01/07/25 10:59:48: Starting Socket connection
+01/07/25 10:59:48: EXCHANGE_TOKEN received, server token: 87287c12-a524-4692-b054-09a8b77d4e99, passed token: 87287c12-a524-4692-b054-09a8b77d4e99
+01/07/25 10:59:48: DISPATCH_HANDLER: Adding handler from function makeHandler in library librdi_system_diagram failed with exception: Could not dynamically load librdi_system_diagram.dll
+01/07/25 10:59:48: SESSION_MGR: creating session with session uuid: '2e89de87-befd-4382-8212-a99e3269ee8d' and name 'vitis-run_compile_hls_component'
+01/07/25 10:59:48: KERNEL_SVC: creating session with uuid: '2e89de87-befd-4382-8212-a99e3269ee8d' and name 'vitis-run_compile_hls_component'
+01/07/25 10:59:48: GUIDANCE_SMGR: creating guidance session with uuid: '2e89de87-befd-4382-8212-a99e3269ee8d' and name 'vitis-run_compile_hls_component'
+01/07/25 10:59:52: Dispatch Server: Accepted socket connection from client
+01/07/25 10:59:52: Starting Socket connection
+01/07/25 10:59:59: SESSION_MGR: closing session for UUID '2e89de87-befd-4382-8212-a99e3269ee8d' with name 'vitis-run_compile_hls_component'
+01/07/25 10:59:59: KERNEL_SVC: closing session for UUID '2e89de87-befd-4382-8212-a99e3269ee8d' with name 'vitis-run_compile_hls_component'
+01/07/25 10:59:59: GUIDANCE_SMGR: closing session for UUID '2e89de87-befd-4382-8212-a99e3269ee8d' with name 'vitis-run_compile_hls_component'
+01/07/25 10:59:59: STOP_SERVER received, server token: 87287c12-a524-4692-b054-09a8b77d4e99, passed token: 87287c12-a524-4692-b054-09a8b77d4e99
+01/07/25 10:59:59: Socket received request to stop server.
+01/07/25 10:59:59: Dispatch Server: do_await_stop
+01/07/25 10:59:59: SERVER: destructor for server bound to port 44448
+01/07/25 10:59:59: Server exiting with status 0.
+01/07/25 10:59:59: Closing log file.

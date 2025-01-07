@@ -1,0 +1,107 @@
+INFO-FLOW: Workspace D:/Desktop/SpMV/hls_component/hls_component/hls opened at Tue Jan 07 10:59:52 +0100 2025
+Execute     send_msg_by_id INFO @200-1505@%s%s default  vivado 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Execute   apply_ini D:/Desktop/SpMV/hls_component/hls_config.cfg 
+Execute     send_msg_by_id WARNING @200-2001@%s%s SpMV.c see [hls] from D:/Desktop/SpMV/hls_component/hls_config.cfg(7) 
+WARNING: [HLS 200-2001] file not found 'SpMV.c' see [hls] from D:/Desktop/SpMV/hls_component/hls_config.cfg(7)
+Execute     send_msg_by_id WARNING @200-2001@%s%s SpMV.hppb.file=SpMV.hpp see [hls] from D:/Desktop/SpMV/hls_component/hls_config.cfg(8) 
+WARNING: [HLS 200-2001] file not found 'SpMV.hppb.file=SpMV.hpp' see [hls] from D:/Desktop/SpMV/hls_component/hls_config.cfg(8)
+Execute     send_msg_by_id WARNING @200-2001@%s%s D:\Desktop\SpMV\hls_component\SpMV.h see [hls] from D:/Desktop/SpMV/hls_component/hls_config.cfg(9) 
+WARNING: [HLS 200-2001] file not found 'D:\Desktop\SpMV\hls_component\SpMV.h' see [hls] from D:/Desktop/SpMV/hls_component/hls_config.cfg(9)
+Execute     send_msg_by_id WARNING @200-2001@%s%s SpMV.hppp see [hls] from D:/Desktop/SpMV/hls_component/hls_config.cfg(12) 
+WARNING: [HLS 200-2001] file not found 'SpMV.hppp' see [hls] from D:/Desktop/SpMV/hls_component/hls_config.cfg(12)
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=SpMV.c' from D:/Desktop/SpMV/hls_component/hls_config.cfg(7) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=SpMV.c' from D:/Desktop/SpMV/hls_component/hls_config.cfg(7)
+Execute     add_files SpMV.c 
+WARNING: [HLS 200-40] Cannot find design file 'SpMV.c'
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=SpMV.hppb.file=SpMV.hpp' from D:/Desktop/SpMV/hls_component/hls_config.cfg(8) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=SpMV.hppb.file=SpMV.hpp' from D:/Desktop/SpMV/hls_component/hls_config.cfg(8)
+Execute     add_files SpMV.hppb.file=SpMV.hpp 
+WARNING: [HLS 200-40] Cannot find design file 'SpMV.hppb.file=SpMV.hpp'
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=D:\Desktop\SpMV\hls_component\SpMV.h' from D:/Desktop/SpMV/hls_component/hls_config.cfg(9) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=D:\Desktop\SpMV\hls_component\SpMV.h' from D:/Desktop/SpMV/hls_component/hls_config.cfg(9)
+Execute     add_files D:\Desktop\SpMV\hls_component\SpMV.h 
+WARNING: [HLS 200-40] Cannot find design file 'D:/Desktop/SpMV/hls_component/SpMV.h'
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=D:\Desktop\SpMV\hls_component\SpMV.cpp' from D:/Desktop/SpMV/hls_component/hls_config.cfg(10) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=D:\Desktop\SpMV\hls_component\SpMV.cpp' from D:/Desktop/SpMV/hls_component/hls_config.cfg(10)
+Execute     add_files D:\Desktop\SpMV\hls_component\SpMV.cpp 
+INFO: [HLS 200-10] Adding design file 'D:/Desktop/SpMV/hls_component/SpMV.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=D:\Desktop\SpMV\hls_component\SpMV.hpp' from D:/Desktop/SpMV/hls_component/hls_config.cfg(11) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=D:\Desktop\SpMV\hls_component\SpMV.hpp' from D:/Desktop/SpMV/hls_component/hls_config.cfg(11)
+Execute     add_files D:\Desktop\SpMV\hls_component\SpMV.hpp 
+INFO: [HLS 200-10] Adding design file 'D:/Desktop/SpMV/hls_component/SpMV.hpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file=SpMV.hppp' from D:/Desktop/SpMV/hls_component/hls_config.cfg(12) 
+INFO: [HLS 200-1465] Applying ini 'tb.file=SpMV.hppp' from D:/Desktop/SpMV/hls_component/hls_config.cfg(12)
+Execute     add_files -tb SpMV.hppp 
+WARNING: [HLS 200-40] Cannot find test bench file 'SpMV.hppp'
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file=testbench.cpp' from D:/Desktop/SpMV/hls_component/hls_config.cfg(13) 
+INFO: [HLS 200-1465] Applying ini 'tb.file=testbench.cpp' from D:/Desktop/SpMV/hls_component/hls_config.cfg(13)
+Execute     add_files -tb D:/Desktop/SpMV/hls_component/testbench.cpp 
+INFO: [HLS 200-10] Adding test bench file 'D:/Desktop/SpMV/hls_component/testbench.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file=input.txt' from D:/Desktop/SpMV/hls_component/hls_config.cfg(14) 
+INFO: [HLS 200-1465] Applying ini 'tb.file=input.txt' from D:/Desktop/SpMV/hls_component/hls_config.cfg(14)
+Execute     add_files -tb D:/Desktop/SpMV/hls_component/input.txt 
+INFO: [HLS 200-10] Adding test bench file 'D:/Desktop/SpMV/hls_component/input.txt' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file=testcase.cpp' from D:/Desktop/SpMV/hls_component/hls_config.cfg(15) 
+INFO: [HLS 200-1465] Applying ini 'tb.file=testcase.cpp' from D:/Desktop/SpMV/hls_component/hls_config.cfg(15)
+Execute     add_files -tb D:/Desktop/SpMV/hls_component/testcase.cpp 
+INFO: [HLS 200-10] Adding test bench file 'D:/Desktop/SpMV/hls_component/testcase.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file=testcase.hpp' from D:/Desktop/SpMV/hls_component/hls_config.cfg(16) 
+INFO: [HLS 200-1465] Applying ini 'tb.file=testcase.hpp' from D:/Desktop/SpMV/hls_component/hls_config.cfg(16)
+Execute     add_files -tb D:/Desktop/SpMV/hls_component/testcase.hpp 
+INFO: [HLS 200-10] Adding test bench file 'D:/Desktop/SpMV/hls_component/testcase.hpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'flow_target=vivado' from D:/Desktop/SpMV/hls_component/hls_config.cfg(4) 
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' from D:/Desktop/SpMV/hls_component/hls_config.cfg(4)
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute     send_msg_by_id INFO @200-1465@%s 'part=xc7z020clg400-1' from D:/Desktop/SpMV/hls_component/hls_config.cfg(1) 
+INFO: [HLS 200-1465] Applying ini 'part=xc7z020clg400-1' from D:/Desktop/SpMV/hls_component/hls_config.cfg(1)
+Execute     set_part xc7z020clg400-1 
+Execute       create_platform xc7z020clg400-1 -board  
+DBG:HLSDevice: Trying to load device library: D:/Xilinx\Vitis_HLS\2024.1\lib\win64.o\xv_hlsvwrap.dll
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: D:/Xilinx/Vivado/2024.1/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+Command       create_platform done; 0.493 sec.
+Execute       source D:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source D:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source D:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source D:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source D:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/saxilite.gen 
+Execute         source D:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source D:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source D:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source D:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/util.gen 
+Execute         source D:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfft.gen 
+Execute         source D:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source D:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/DSP48/dsp48.gen 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 0.6 sec.
+Execute     send_msg_by_id INFO @200-1465@%s 'package.output.format=ip_catalog' from D:/Desktop/SpMV/hls_component/hls_config.cfg(5) 
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from D:/Desktop/SpMV/hls_component/hls_config.cfg(5)
+Execute     config_export -format=ip_catalog 
+Command   apply_ini done; 0.655 sec.
+Execute   apply_ini D:/Desktop/SpMV/hls_component/hls_component/hls/config.cmdline 
+Execute   csim_design 
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+INFO-FLOW: Running SLX 'csim' proc: ::SLX::run_csim
+Execute     send_msg_by_id WARNING @200-1998@%s%s ../../SpMV.hppp D:/Desktop/SpMV/hls_component/hls_component/solution D:/Desktop/SpMV/hls_component 
+WARNING: [HLS 200-1998] cannot find relative file path '../../SpMV.hppp' in directory(s): D:/Desktop/SpMV/hls_component/hls_component/solution D:/Desktop/SpMV/hls_component
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
+Execute     send_msg_by_id INFO @200-2036@%s debug 
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+Execute     source D:/Xilinx/Vitis_HLS/2024.1/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute     source D:/Xilinx/Vitis_HLS/2024.1/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
+Execute     source run_sim.tcl 
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command   csim_design done; 7.005 sec.
+Execute   close_project 
+Execute     close_solution 
+Execute       cleanup_all 
+Execute       cleanup_all 

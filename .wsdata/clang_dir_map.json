@@ -1,8 +1,10 @@
 {
   "workspaceRoot": "D:\\Desktop\\SpMV",
   "mapping": {
+    "hls_component\\testcase.cpp": "hls_component",
     "hls_component\\SpMV.cpp": "hls_component",
     "hls_component\\SpMV.c": "hls_component",
+    "hls_component\\testbench.cpp": "hls_component",
     "hls_component\\SpMV.h": "hls_component"
   }
 }

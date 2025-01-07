@@ -1,5 +1,5 @@
-#ifndef __SPMV_H__
-#define __SPMV_H__
+#ifndef __SPMV_HPP__
+#define __SPMV_HPP__
 
 #include <ap_int.h>
 

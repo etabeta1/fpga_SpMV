@@ -22,5 +22,29 @@
       "D:\\Desktop\\SpMV\\hls_component\\SpMV.c"
     ],
     "file": "D:\\Desktop\\SpMV\\hls_component\\SpMV.c"
+  },
+  {
+    "directory": "D:\\Desktop\\SpMV\\hls_component",
+    "arguments": [
+      "D:\\Xilinx\\Vitis_HLS\\2024.1\\vcxx\\libexec\\clang++.exe",
+      "-fhls-tb",
+      "-hls-sim-headers-dir=D:\\Xilinx\\Vitis_HLS\\2024.1\\include",
+      "",
+      "-c",
+      "D:\\Desktop\\SpMV\\hls_component\\testbench.cpp"
+    ],
+    "file": "D:\\Desktop\\SpMV\\hls_component\\testbench.cpp"
+  },
+  {
+    "directory": "D:\\Desktop\\SpMV\\hls_component",
+    "arguments": [
+      "D:\\Xilinx\\Vitis_HLS\\2024.1\\vcxx\\libexec\\clang++.exe",
+      "-fhls-tb",
+      "-hls-sim-headers-dir=D:\\Xilinx\\Vitis_HLS\\2024.1\\include",
+      "",
+      "-c",
+      "D:\\Desktop\\SpMV\\hls_component\\testcase.cpp"
+    ],
+    "file": "D:\\Desktop\\SpMV\\hls_component\\testcase.cpp"
   }
 ]

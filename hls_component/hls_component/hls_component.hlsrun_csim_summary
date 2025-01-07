@@ -9,10 +9,10 @@
 <ENTRY>
 {
  "type": "ET_CmdStep",
- "dateTimestamp": "01/07/25 10:59:48",
- "timestampMillis": "1077200848",
+ "dateTimestamp": "01/07/25 11:38:17",
+ "timestampMillis": "1079509760",
  "buildStep": {
-  "cmdId": "747f4700-eae8-413c-b2ab-9861309653b3",
+  "cmdId": "de839c4d-c53b-44fa-b4d9-a0f2a897c2e8",
   "name": "vitis-run",
   "logFile": "D:/Desktop\\SpMV\\hls_component\\hls_component\\logs\\hls_component.steps.log",
   "commandLine": "D:/Xilinx/Vitis/2024.1/bin/unwrapped/win64.o/vitis-run.exe  --mode hls --csim --config D:\\Desktop\\SpMV\\hls_component\\hls_config.cfg --work_dir hls_component ",
@@ -33,10 +33,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "01/07/25 10:59:48",
- "timestampMillis": "1077200849",
+ "dateTimestamp": "01/07/25 11:38:17",
+ "timestampMillis": "1079509760",
  "status": {
-  "cmdId": "747f4700-eae8-413c-b2ab-9861309653b3",
+  "cmdId": "de839c4d-c53b-44fa-b4d9-a0f2a897c2e8",
   "state": "CS_RUNNING"
  }
 }
@@ -44,8 +44,8 @@
 <ENTRY>
 {
  "type": "ET_FlowMetaData",
- "dateTimestamp": "01/07/25 10:59:52",
- "timestampMillis": "1077205269",
+ "dateTimestamp": "01/07/25 11:38:22",
+ "timestampMillis": "1079514615",
  "buildSummary": {
   "hardwarePlatform": "",
   "hardwareDsa": "",
@@ -58,15 +58,12 @@
    {
     "base": {
      "type": "KERNEL",
-     "name": "",
+     "name": "SpMV",
      "file": "",
      "reports": [],
      "uuid": ""
     },
     "sources": [
-     "D:/Desktop\\SpMV\\hls_component\\SpMV.c",
-     "D:/Desktop\\SpMV\\hls_component\\SpMV.hppb.file=SpMV.hpp",
-     "D:/Desktop\\SpMV\\hls_component\\SpMV.h",
      "D:/Desktop\\SpMV\\hls_component\\SpMV.cpp",
      "D:/Desktop\\SpMV\\hls_component\\SpMV.hpp"
     ],
@@ -84,10 +81,10 @@
 <ENTRY>
 {
  "type": "ET_SubCmdStep",
- "dateTimestamp": "01/07/25 10:59:52",
- "timestampMillis": "1077205271",
+ "dateTimestamp": "01/07/25 11:38:22",
+ "timestampMillis": "1079514617",
  "buildStep": {
-  "cmdId": "f78da0a6-3adc-4471-916f-7d9a78da992c",
+  "cmdId": "0a089e3e-126c-49f8-bcfd-c6cef791cfeb",
   "name": "csim_design",
   "logFile": "D:/Desktop\\SpMV\\hls_component\\hls_component\\hls\\hls.log",
   "commandLine": "csim_design",
@@ -100,10 +97,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "01/07/25 10:59:52",
- "timestampMillis": "1077205272",
+ "dateTimestamp": "01/07/25 11:38:22",
+ "timestampMillis": "1079514618",
  "status": {
-  "cmdId": "f78da0a6-3adc-4471-916f-7d9a78da992c",
+  "cmdId": "0a089e3e-126c-49f8-bcfd-c6cef791cfeb",
   "state": "CS_RUNNING"
  }
 }
@@ -111,10 +108,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "01/07/25 10:59:59",
- "timestampMillis": "1077212276",
+ "dateTimestamp": "01/07/25 11:38:27",
+ "timestampMillis": "1079520355",
  "status": {
-  "cmdId": "f78da0a6-3adc-4471-916f-7d9a78da992c",
+  "cmdId": "0a089e3e-126c-49f8-bcfd-c6cef791cfeb",
   "state": "CS_PASSED"
  }
 }
@@ -122,10 +119,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "01/07/25 10:59:59",
- "timestampMillis": "1077212350",
+ "dateTimestamp": "01/07/25 11:38:28",
+ "timestampMillis": "1079520443",
  "status": {
-  "cmdId": "747f4700-eae8-413c-b2ab-9861309653b3",
+  "cmdId": "de839c4d-c53b-44fa-b4d9-a0f2a897c2e8",
   "state": "CS_PASSED"
  }
 }
@@ -133,8 +130,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "01/07/25 10:59:59",
- "timestampMillis": "1077212351",
+ "dateTimestamp": "01/07/25 11:38:28",
+ "timestampMillis": "1079520443",
  "report": {
   "path": "",
   "name": "",
@@ -147,8 +144,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "01/07/25 10:59:59",
- "timestampMillis": "1077212351",
+ "dateTimestamp": "01/07/25 11:38:28",
+ "timestampMillis": "1079520443",
  "report": {
   "path": "",
   "name": "",

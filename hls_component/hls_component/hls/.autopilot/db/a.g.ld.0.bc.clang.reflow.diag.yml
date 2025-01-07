@@ -1,0 +1,10 @@
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        spmv_loop_internal
+  - String:          '> at '
+  - LoopLoc:         'SpMV.cpp:19:32'
+  - String:          ' '
+...

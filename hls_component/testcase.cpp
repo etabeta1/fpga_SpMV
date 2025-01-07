@@ -37,13 +37,20 @@ Testcase::Testcase(std::istream& is) {
         is >> vector[i];
     }
 
-    target = (int*) malloc(numOfRows * sizeof(int));
+    target = (int*) malloc(MAX_MATRIX_SIDE_SIZE * sizeof(int));
 
     for(VectorSize i = 0; i < numOfRows; i++) {
         is >> target[i];
     }
+    for(VectorSize i = numOfRows; i < MAX_MATRIX_SIDE_SIZE; i++) {
+        target[i] = 0;
+    }
 
-    output = (int*) malloc(numOfRows * sizeof(int));
+    output = (int*) malloc(MAX_MATRIX_SIDE_SIZE * sizeof(int));
+
+    for(int i = 0; i < MAX_MATRIX_SIDE_SIZE; i++) {
+        output[i] = 0;
+    }
 
     assert(values != nullptr);
     assert(columnIndexes != nullptr);

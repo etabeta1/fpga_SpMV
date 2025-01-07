@@ -1,0 +1,761 @@
+{
+  "Top": "SpMV",
+  "RtlTop": "SpMV",
+  "RtlPrefix": "",
+  "RtlSubPrefix": "SpMV_",
+  "SourceLanguage": "cpp",
+  "HostMachineBits": "64",
+  "FunctionProtocol": "ap_ctrl_hs",
+  "ResetStyle": "control",
+  "Target": {
+    "Family": "zynq",
+    "Device": "xc7z020",
+    "Package": "-clg400",
+    "Speed": "-1",
+    "Triple": "fpga64-xilinx-none"
+  },
+  "Args": {
+    "values": {
+      "index": "0",
+      "direction": "in",
+      "srcType": "int*",
+      "srcSize": "32",
+      "hwRefs": [
+        {
+          "type": "port",
+          "interface": "values_address0",
+          "name": "values_address0",
+          "usage": "address",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "values_ce0",
+          "name": "values_ce0",
+          "usage": "control",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "values_q0",
+          "name": "values_q0",
+          "usage": "data",
+          "direction": "in"
+        }
+      ]
+    },
+    "columnIndexes": {
+      "index": "1",
+      "direction": "in",
+      "srcType": "ap_uint<5>*",
+      "srcSize": "8",
+      "hwRefs": [
+        {
+          "type": "port",
+          "interface": "columnIndexes_address0",
+          "name": "columnIndexes_address0",
+          "usage": "address",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "columnIndexes_ce0",
+          "name": "columnIndexes_ce0",
+          "usage": "control",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "columnIndexes_q0",
+          "name": "columnIndexes_q0",
+          "usage": "data",
+          "direction": "in"
+        }
+      ]
+    },
+    "rowPointers": {
+      "index": "2",
+      "direction": "in",
+      "srcType": "ap_uint<9>*",
+      "srcSize": "16",
+      "hwRefs": [
+        {
+          "type": "port",
+          "interface": "rowPointers_address0",
+          "name": "rowPointers_address0",
+          "usage": "address",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "rowPointers_ce0",
+          "name": "rowPointers_ce0",
+          "usage": "control",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "rowPointers_q0",
+          "name": "rowPointers_q0",
+          "usage": "data",
+          "direction": "in"
+        },
+        {
+          "type": "port",
+          "interface": "rowPointers_address1",
+          "name": "rowPointers_address1",
+          "usage": "address",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "rowPointers_ce1",
+          "name": "rowPointers_ce1",
+          "usage": "control",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "rowPointers_q1",
+          "name": "rowPointers_q1",
+          "usage": "data",
+          "direction": "in"
+        }
+      ]
+    },
+    "numOfRows": {
+      "index": "3",
+      "direction": "in",
+      "srcType": "ap_uint<5>",
+      "srcSize": "8",
+      "hwRefs": [{
+          "type": "port",
+          "interface": "numOfRows",
+          "name": "numOfRows",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "numOfCols": {
+      "index": "4",
+      "direction": "in",
+      "srcType": "ap_uint<5>",
+      "srcSize": "8",
+      "hwRefs": [{
+          "type": "port",
+          "interface": "numOfCols",
+          "name": "numOfCols",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "vector": {
+      "index": "5",
+      "direction": "in",
+      "srcType": "int*",
+      "srcSize": "32",
+      "hwRefs": [
+        {
+          "type": "port",
+          "interface": "vector_address0",
+          "name": "vector_address0",
+          "usage": "address",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "vector_ce0",
+          "name": "vector_ce0",
+          "usage": "control",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "vector_q0",
+          "name": "vector_q0",
+          "usage": "data",
+          "direction": "in"
+        }
+      ]
+    },
+    "output": {
+      "index": "6",
+      "direction": "out",
+      "srcType": "int*",
+      "srcSize": "32",
+      "hwRefs": [
+        {
+          "type": "port",
+          "interface": "output_r_address0",
+          "name": "output_r_address0",
+          "usage": "address",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "output_r_ce0",
+          "name": "output_r_ce0",
+          "usage": "control",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "output_r_we0",
+          "name": "output_r_we0",
+          "usage": "control",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "output_r_d0",
+          "name": "output_r_d0",
+          "usage": "data",
+          "direction": "out"
+        }
+      ]
+    }
+  },
+  "HlsSolution": {
+    "FlowTarget": "vivado",
+    "ConfigTcl": ["config_export -format=ip_catalog"],
+    "ProfileOption": "0",
+    "ProfileType": "none",
+    "KernelName": "SpMV"
+  },
+  "ClockInfo": {
+    "ClockName": "ap_clk",
+    "ClockPeriod": "10",
+    "Uncertainty": "2.7",
+    "IsCombinational": "0",
+    "II": "22 ~ 5212",
+    "Latency": "21"
+  },
+  "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 10.000 [get_ports ap_clk]"]},
+  "Ipx": {
+    "Vendor": "xilinx.com",
+    "Library": "hls",
+    "Name": "SpMV",
+    "Version": "1.0",
+    "DisplayName": "Spmv",
+    "Revision": "2113899933",
+    "Description": "An IP generated by Vitis HLS",
+    "Taxonomy": "\/VITIS_HLS_IP",
+    "AutoFamilySupport": "",
+    "ZipFile": "xilinx_com_hls_SpMV_1_0.zip"
+  },
+  "Files": {
+    "CSource": [
+      "..\/..\/SpMV.cpp",
+      "..\/..\/SpMV.hpp"
+    ],
+    "TestBench": [
+      "..\/..\/testbench.cpp",
+      "..\/..\/input.txt",
+      "..\/..\/testcase.cpp",
+      "..\/..\/testcase.hpp"
+    ],
+    "Vhdl": [
+      "impl\/vhdl\/SpMV_flow_control_loop_pipe_sequential_init.vhd",
+      "impl\/vhdl\/SpMV_mul_32s_32s_32_2_1.vhd",
+      "impl\/vhdl\/SpMV_SpMV_Pipeline_spmv_loop_internal.vhd",
+      "impl\/vhdl\/SpMV.vhd"
+    ],
+    "Verilog": [
+      "impl\/verilog\/SpMV_flow_control_loop_pipe_sequential_init.v",
+      "impl\/verilog\/SpMV_mul_32s_32s_32_2_1.v",
+      "impl\/verilog\/SpMV_SpMV_Pipeline_spmv_loop_internal.v",
+      "impl\/verilog\/SpMV.v"
+    ],
+    "IpMisc": ["impl\/misc\/logo.png"],
+    "CsynthXml": "syn\/report\/csynth.xml",
+    "DebugDir": ".debug",
+    "KernelXml": ".autopilot\/db\/kernel.internal.xml",
+    "Xo": "",
+    "XoHlsDir": "",
+    "ProtoInst": [".debug\/SpMV.protoinst"]
+  },
+  "SubcoreInfo": {
+    "HasXpmMemory": false,
+    "HasClockedDsp": false,
+    "Ip": []
+  },
+  "Interfaces": {
+    "ap_clk": {
+      "type": "clock",
+      "busTypeName": "clock",
+      "mode": "slave",
+      "busParams": {"ASSOCIATED_RESET": "ap_rst"},
+      "portMap": {"ap_clk": "CLK"},
+      "ports": ["ap_clk"]
+    },
+    "ap_rst": {
+      "type": "reset",
+      "busTypeName": "reset",
+      "mode": "slave",
+      "busParams": {"POLARITY": "ACTIVE_HIGH"},
+      "portMap": {"ap_rst": "RST"},
+      "ports": ["ap_rst"]
+    },
+    "ap_ctrl": {
+      "type": "ap_ctrl",
+      "busTypeName": "acc_handshake",
+      "mode": "slave",
+      "portMap": {
+        "ap_start": "start",
+        "ap_done": "done",
+        "ap_idle": "idle",
+        "ap_ready": "ready"
+      },
+      "ports": [
+        "ap_done",
+        "ap_idle",
+        "ap_ready",
+        "ap_start"
+      ]
+    },
+    "values_address0": {
+      "type": "data",
+      "busTypeName": "data",
+      "protocol": "ap_memory",
+      "mode": "master",
+      "dataWidth": "7",
+      "portMap": {"values_address0": "DATA"},
+      "ports": ["values_address0"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_memory",
+          "register_option": "0",
+          "argName": "values"
+        }]
+    },
+    "values_q0": {
+      "type": "data",
+      "busTypeName": "data",
+      "protocol": "ap_memory",
+      "mode": "slave",
+      "dataWidth": "32",
+      "portMap": {"values_q0": "DATA"},
+      "ports": ["values_q0"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_memory",
+          "register_option": "0",
+          "argName": "values"
+        }]
+    },
+    "columnIndexes_address0": {
+      "type": "data",
+      "busTypeName": "data",
+      "protocol": "ap_memory",
+      "mode": "master",
+      "dataWidth": "7",
+      "portMap": {"columnIndexes_address0": "DATA"},
+      "ports": ["columnIndexes_address0"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_memory",
+          "register_option": "0",
+          "argName": "columnIndexes"
+        }]
+    },
+    "columnIndexes_q0": {
+      "type": "data",
+      "busTypeName": "data",
+      "protocol": "ap_memory",
+      "mode": "slave",
+      "dataWidth": "5",
+      "portMap": {"columnIndexes_q0": "DATA"},
+      "ports": ["columnIndexes_q0"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_memory",
+          "register_option": "0",
+          "argName": "columnIndexes"
+        }]
+    },
+    "rowPointers_address0": {
+      "type": "data",
+      "busTypeName": "data",
+      "protocol": "ap_memory",
+      "mode": "master",
+      "dataWidth": "4",
+      "portMap": {"rowPointers_address0": "DATA"},
+      "ports": ["rowPointers_address0"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_memory",
+          "register_option": "0",
+          "argName": "rowPointers"
+        }]
+    },
+    "rowPointers_q0": {
+      "type": "data",
+      "busTypeName": "data",
+      "protocol": "ap_memory",
+      "mode": "slave",
+      "dataWidth": "9",
+      "portMap": {"rowPointers_q0": "DATA"},
+      "ports": ["rowPointers_q0"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_memory",
+          "register_option": "0",
+          "argName": "rowPointers"
+        }]
+    },
+    "rowPointers_address1": {
+      "type": "data",
+      "busTypeName": "data",
+      "protocol": "ap_memory",
+      "mode": "master",
+      "dataWidth": "4",
+      "portMap": {"rowPointers_address1": "DATA"},
+      "ports": ["rowPointers_address1"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_memory",
+          "register_option": "0",
+          "argName": "rowPointers"
+        }]
+    },
+    "rowPointers_q1": {
+      "type": "data",
+      "busTypeName": "data",
+      "protocol": "ap_memory",
+      "mode": "slave",
+      "dataWidth": "9",
+      "portMap": {"rowPointers_q1": "DATA"},
+      "ports": ["rowPointers_q1"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_memory",
+          "register_option": "0",
+          "argName": "rowPointers"
+        }]
+    },
+    "numOfRows": {
+      "type": "data",
+      "busTypeName": "data",
+      "protocol": "ap_none",
+      "mode": "slave",
+      "dataWidth": "5",
+      "portMap": {"numOfRows": "DATA"},
+      "ports": ["numOfRows"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_none",
+          "register_option": "0",
+          "argName": "numOfRows"
+        }]
+    },
+    "numOfCols": {
+      "type": "data",
+      "busTypeName": "data",
+      "protocol": "ap_none",
+      "mode": "slave",
+      "dataWidth": "5",
+      "portMap": {"numOfCols": "DATA"},
+      "ports": ["numOfCols"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_none",
+          "register_option": "0",
+          "argName": "numOfCols"
+        }]
+    },
+    "vector_address0": {
+      "type": "data",
+      "busTypeName": "data",
+      "protocol": "ap_memory",
+      "mode": "master",
+      "dataWidth": "4",
+      "portMap": {"vector_address0": "DATA"},
+      "ports": ["vector_address0"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_memory",
+          "register_option": "0",
+          "argName": "vector"
+        }]
+    },
+    "vector_q0": {
+      "type": "data",
+      "busTypeName": "data",
+      "protocol": "ap_memory",
+      "mode": "slave",
+      "dataWidth": "32",
+      "portMap": {"vector_q0": "DATA"},
+      "ports": ["vector_q0"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_memory",
+          "register_option": "0",
+          "argName": "vector"
+        }]
+    },
+    "output_r_address0": {
+      "type": "data",
+      "busTypeName": "data",
+      "protocol": "ap_memory",
+      "mode": "master",
+      "dataWidth": "4",
+      "portMap": {"output_r_address0": "DATA"},
+      "ports": ["output_r_address0"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_memory",
+          "register_option": "0",
+          "argName": "output"
+        }]
+    },
+    "output_r_d0": {
+      "type": "data",
+      "busTypeName": "data",
+      "protocol": "ap_memory",
+      "mode": "master",
+      "dataWidth": "32",
+      "portMap": {"output_r_d0": "DATA"},
+      "ports": ["output_r_d0"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_memory",
+          "register_option": "0",
+          "argName": "output"
+        }]
+    }
+  },
+  "RtlPorts": {
+    "ap_clk": {
+      "dir": "in",
+      "width": "1"
+    },
+    "ap_rst": {
+      "dir": "in",
+      "width": "1"
+    },
+    "ap_start": {
+      "dir": "in",
+      "width": "1"
+    },
+    "ap_done": {
+      "dir": "out",
+      "width": "1"
+    },
+    "ap_idle": {
+      "dir": "out",
+      "width": "1"
+    },
+    "ap_ready": {
+      "dir": "out",
+      "width": "1"
+    },
+    "values_address0": {
+      "dir": "out",
+      "width": "7"
+    },
+    "values_ce0": {
+      "dir": "out",
+      "width": "1"
+    },
+    "values_q0": {
+      "dir": "in",
+      "width": "32"
+    },
+    "columnIndexes_address0": {
+      "dir": "out",
+      "width": "7"
+    },
+    "columnIndexes_ce0": {
+      "dir": "out",
+      "width": "1"
+    },
+    "columnIndexes_q0": {
+      "dir": "in",
+      "width": "5"
+    },
+    "rowPointers_address0": {
+      "dir": "out",
+      "width": "4"
+    },
+    "rowPointers_ce0": {
+      "dir": "out",
+      "width": "1"
+    },
+    "rowPointers_q0": {
+      "dir": "in",
+      "width": "9"
+    },
+    "rowPointers_address1": {
+      "dir": "out",
+      "width": "4"
+    },
+    "rowPointers_ce1": {
+      "dir": "out",
+      "width": "1"
+    },
+    "rowPointers_q1": {
+      "dir": "in",
+      "width": "9"
+    },
+    "numOfRows": {
+      "dir": "in",
+      "width": "5"
+    },
+    "numOfCols": {
+      "dir": "in",
+      "width": "5"
+    },
+    "vector_address0": {
+      "dir": "out",
+      "width": "4"
+    },
+    "vector_ce0": {
+      "dir": "out",
+      "width": "1"
+    },
+    "vector_q0": {
+      "dir": "in",
+      "width": "32"
+    },
+    "output_r_address0": {
+      "dir": "out",
+      "width": "4"
+    },
+    "output_r_ce0": {
+      "dir": "out",
+      "width": "1"
+    },
+    "output_r_we0": {
+      "dir": "out",
+      "width": "1"
+    },
+    "output_r_d0": {
+      "dir": "out",
+      "width": "32"
+    }
+  },
+  "ModuleInfo": {
+    "Hierarchy": {
+      "ModuleName": "SpMV",
+      "BindInstances": "icmp_ln15_fu_132_p2 add_ln15_fu_138_p2 icmp_ln16_fu_154_p2 icmp_ln19_fu_164_p2",
+      "Instances": [{
+          "ModuleName": "SpMV_Pipeline_spmv_loop_internal",
+          "InstanceName": "grp_SpMV_Pipeline_spmv_loop_internal_fu_109",
+          "BindInstances": "icmp_ln19_fu_136_p2 mul_32s_32s_32_2_1_U1 add_ln26_fu_160_p2 add_ln19_fu_141_p2"
+        }]
+    },
+    "Info": {
+      "SpMV_Pipeline_spmv_loop_internal": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "1",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "SpMV": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      }
+    },
+    "Metrics": {
+      "SpMV_Pipeline_spmv_loop_internal": {
+        "Latency": {
+          "LatencyBest": "2",
+          "LatencyAvg": "261",
+          "LatencyWorst": "517",
+          "PipelineIIMin": "1",
+          "PipelineIIMax": "512",
+          "PipelineII": "1 ~ 512",
+          "PipelineDepth": "",
+          "PipelineType": "loop auto-rewind (delay=0 clock cycles(s))"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "2.70",
+          "Estimate": "6.912"
+        },
+        "Loops": [{
+            "Name": "spmv_loop_internal",
+            "TripCount": "",
+            "LatencyMin": "0",
+            "LatencyMax": "515",
+            "Latency": "0 ~ 515",
+            "PipelineII": "1",
+            "PipelineDepth": "6"
+          }],
+        "Area": {
+          "DSP": "3",
+          "AVAIL_DSP": "220",
+          "UTIL_DSP": "1",
+          "FF": "507",
+          "AVAIL_FF": "106400",
+          "UTIL_FF": "~0",
+          "LUT": "310",
+          "AVAIL_LUT": "53200",
+          "UTIL_LUT": "~0",
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "280",
+          "UTIL_BRAM": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "0",
+          "UTIL_URAM": "0"
+        }
+      },
+      "SpMV": {
+        "Latency": {
+          "LatencyBest": "21",
+          "LatencyAvg": "1341",
+          "LatencyWorst": "5211",
+          "PipelineIIMin": "22",
+          "PipelineIIMax": "5212",
+          "PipelineII": "22 ~ 5212",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "2.70",
+          "Estimate": "6.912"
+        },
+        "Loops": [{
+            "Name": "spmv_loop_external",
+            "TripCount": "10",
+            "LatencyMin": "20",
+            "LatencyMax": "5210",
+            "Latency": "20 ~ 5210",
+            "PipelineII": "",
+            "PipelineDepthMin": "2",
+            "PipelineDepthMax": "521",
+            "PipelineDepth": "2 ~ 521"
+          }],
+        "Area": {
+          "DSP": "3",
+          "AVAIL_DSP": "220",
+          "UTIL_DSP": "1",
+          "FF": "545",
+          "AVAIL_FF": "106400",
+          "UTIL_FF": "~0",
+          "LUT": "431",
+          "AVAIL_LUT": "53200",
+          "UTIL_LUT": "~0",
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "280",
+          "UTIL_BRAM": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "0",
+          "UTIL_URAM": "0"
+        }
+      }
+    }
+  },
+  "GenerateBdFiles": "0",
+  "GenData": {
+    "DataVersion": "0.2",
+    "Time": "2025-01-07 11:33:45 +0100",
+    "ToolName": "vitis_hls",
+    "ToolVersion": "2024.1"
+  }
+}

@@ -1,0 +1,13 @@
+sv work "glbl.v"
+sv xil_defaultlib "AESL_automem_columnIndexes.v"
+sv xil_defaultlib "AESL_automem_output_r.v"
+sv xil_defaultlib "AESL_automem_rowPointers.v"
+sv xil_defaultlib "AESL_automem_values.v"
+sv xil_defaultlib "AESL_automem_vector.v"
+sv xil_defaultlib "SpMV.autotb.v"
+sv xil_defaultlib "SpMV.v"
+sv xil_defaultlib "SpMV_flow_control_loop_pipe_sequential_init.v"
+sv xil_defaultlib "SpMV_mul_32s_32s_32_2_1.v"
+sv xil_defaultlib "SpMV_SpMV_Pipeline_spmv_loop_internal.v"
+sv xil_defaultlib "dataflow_monitor.sv"
+

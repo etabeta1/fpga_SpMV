@@ -12,10 +12,13 @@ void SpMV(
 
     int output[MAX_MATRIX_SIDE_SIZE]
 ) {
+    spmv_setup_loop:for(int i = 0; i < MAX_MATRIX_SIDE_SIZE; i++) {
+        #pragma HLS UNROLL
+        output[i] = 0;
+    }
+
     spmv_loop_external:for(VectorSize i = 0; i < MAX_MATRIX_SIDE_SIZE; i++) {
         if(i < numOfRows) {
-            output[i] = 0;
-
             spmv_loop_internal:for(ValuesSize j = rowPointers[i]; j < rowPointers[i + 1]; j++) {
                 int matrix_value = values[j];
                 ColumnIndex column_index = columnIndexes[j];

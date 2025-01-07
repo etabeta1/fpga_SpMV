@@ -1,0 +1,7 @@
+   Build using "D:/Xilinx/Vitis_HLS/2024.1/vcxx/libexec/clang++"
+   Compiling testbench.cpp_pre.cpp.tb.cpp
+   Compiling SpMV.cpp_pre.cpp.tb.cpp
+   Compiling apatb_SpMV.cpp
+   Compiling testcase.cpp_pre.cpp.tb.cpp
+   Compiling apatb_SpMV_ir.ll
+   Generating cosim.tv.exe

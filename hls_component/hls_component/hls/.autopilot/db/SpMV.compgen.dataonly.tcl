@@ -50,6 +50,12 @@ output_r {
 	offset 72
 	offset_end 83
 }
+ap_start { }
+ap_done { }
+ap_ready { }
+ap_idle { }
+interrupt {
+}
 }
 dict set axilite_register_dict control $port_control
 

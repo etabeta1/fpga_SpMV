@@ -2,10 +2,6 @@
 const Port_Property HLS_Design_Meta::port_props[]={
 	Port_Property("ap_clk", 1, hls_in, -1, "", "", 1),
 	Port_Property("ap_rst_n", 1, hls_in, -1, "", "", 1),
-	Port_Property("ap_start", 1, hls_in, -1, "", "", 1),
-	Port_Property("ap_done", 1, hls_out, -1, "", "", 1),
-	Port_Property("ap_idle", 1, hls_out, -1, "", "", 1),
-	Port_Property("ap_ready", 1, hls_out, -1, "", "", 1),
 	Port_Property("m_axi_gmem0_AWVALID", 1, hls_out, 0, "m_axi", "VALID", 1),
 	Port_Property("m_axi_gmem0_AWREADY", 1, hls_in, 0, "m_axi", "READY", 1),
 	Port_Property("m_axi_gmem0_AWADDR", 64, hls_out, 0, "m_axi", "ADDR", 1),
@@ -248,5 +244,6 @@ const Port_Property HLS_Design_Meta::port_props[]={
 	Port_Property("s_axi_control_BVALID", 1, hls_out, -1, "", "", 1),
 	Port_Property("s_axi_control_BREADY", 1, hls_in, -1, "", "", 1),
 	Port_Property("s_axi_control_BRESP", 2, hls_out, -1, "", "", 1),
+	Port_Property("interrupt", 1, hls_out, -1, "", "", 1),
 };
 const char* HLS_Design_Meta::dut_name = "SpMV";

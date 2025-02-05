@@ -11,14 +11,14 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 72 \
-    name zext_ln36_14 \
+    name zext_ln37_14 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_zext_ln36_14 \
+    corename dc_zext_ln37_14 \
     op interface \
-    ports { zext_ln36_14 { I 9 vector } } \
+    ports { zext_ln37_14 { I 9 vector } } \
 } "
 }
 
@@ -71,14 +71,14 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 76 \
-    name zext_ln36_15 \
+    name zext_ln37_15 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_zext_ln36_15 \
+    corename dc_zext_ln37_15 \
     op interface \
-    ports { zext_ln36_15 { I 9 vector } } \
+    ports { zext_ln37_15 { I 9 vector } } \
 } "
 }
 
@@ -86,14 +86,14 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 77 \
-    name sext_ln36_15 \
+    name sext_ln37_15 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_sext_ln36_15 \
+    corename dc_sext_ln37_15 \
     op interface \
-    ports { sext_ln36_15 { I 62 vector } } \
+    ports { sext_ln37_15 { I 62 vector } } \
 } "
 }
 
@@ -101,14 +101,14 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 78 \
-    name add_ln36_29 \
+    name add_ln37_29 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_add_ln36_29 \
+    corename dc_add_ln37_29 \
     op interface \
-    ports { add_ln36_29 { I 64 vector } } \
+    ports { add_ln37_29 { I 64 vector } } \
 } "
 }
 

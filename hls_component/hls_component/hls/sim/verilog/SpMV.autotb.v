@@ -113,10 +113,7 @@ wire [1 : 0] control_RRESP;
 wire  control_BVALID;
 wire  control_BREADY;
 wire [1 : 0] control_BRESP;
-wire ap_start;
-wire ap_done;
-wire ap_idle;
-wire ap_ready;
+wire  control_INTERRUPT;
 wire  gmem0_AWVALID;
 wire  gmem0_AWREADY;
 wire [63 : 0] gmem0_AWADDR;
@@ -388,12 +385,9 @@ wire ap_rst_n_n;
     .s_axi_control_BVALID(control_BVALID),
     .s_axi_control_BREADY(control_BREADY),
     .s_axi_control_BRESP(control_BRESP),
+    .interrupt(control_INTERRUPT),
     .ap_clk(ap_clk),
     .ap_rst_n(ap_rst_n),
-    .ap_start(ap_start),
-    .ap_done(ap_done),
-    .ap_idle(ap_idle),
-    .ap_ready(ap_ready),
     .m_axi_gmem0_AWVALID(gmem0_AWVALID),
     .m_axi_gmem0_AWREADY(gmem0_AWREADY),
     .m_axi_gmem0_AWADDR(gmem0_AWADDR),
@@ -625,50 +619,12 @@ assign ap_clk = AESL_clock;
 assign ap_rst_n = dut_rst;
 assign ap_rst_n_n = ~dut_rst;
 assign AESL_reset = rst;
-assign ap_start = AESL_slave_start | AESL_slave_start_lock;
 assign AESL_start = start;
-assign AESL_idle = ap_idle;
-assign AESL_ready = ap_ready;
 assign AESL_ce = ce;
 assign AESL_continue = tb_continue;
   assign AESL_slave_write_start_in = slave_start_status  & control_write_data_finish;
-  assign AESL_slave_write_start_finish = AESL_slave_write_start_in;
   assign AESL_slave_start = AESL_slave_write_start_finish;
-  assign AESL_slave_done =  1 ;
-  assign AESL_done = (ap_done_lock | ap_done) & AESL_slave_done & slave_done_status;
-  assign AESL_slave_output_done = ap_done;
-
-always @(posedge AESL_clock)
-begin
-    if(AESL_reset === 0)
-    begin
-        AESL_slave_start_lock <= 0;
-    end
-    else begin
-        if (AESL_ready == 1) begin
-            AESL_slave_start_lock <= 0;
-        end
-        else if (AESL_slave_start == 1) begin
-            AESL_slave_start_lock <= 1;
-        end
-    end
-end
-
-always @(posedge AESL_clock)
-begin
-    if(AESL_reset === 0)
-    begin
-        ap_done_lock <= 0;
-    end
-    else begin
-        if (AESL_done == 1) begin
-            ap_done_lock <= 0;
-        end
-        else if (ap_done == 1) begin
-            ap_done_lock <= 1;
-        end
-    end
-end
+  assign AESL_done = slave_done_status ;
 
 always @(posedge AESL_clock)
 begin
@@ -716,28 +672,10 @@ begin
     if (AESL_done == 1) begin
         slave_done_status <= 0;
     end
-    else if (AESL_slave_done == 1 ) begin
+    else if (AESL_slave_output_done == 1 ) begin
         slave_done_status <= 1;
     end
 end
-    always @(posedge AESL_clock) begin
-        if (AESL_reset === 0) begin
-        end else begin
-            if (AESL_done !== 1 && AESL_done !== 0) begin
-                $display("ERROR: Control signal AESL_done is invalid!");
-                $finish;
-            end
-        end
-    end
-    always @(posedge AESL_clock) begin
-        if (AESL_reset === 0) begin
-        end else begin
-            if (AESL_ready !== 1 && AESL_ready !== 0) begin
-                $display("ERROR: Control signal AESL_ready is invalid!");
-                $finish;
-            end
-        end
-    end
 
 
 
@@ -1045,10 +983,14 @@ AESL_axi_slave_control AESL_AXI_SLAVE_control(
     .TRAN_s_axi_control_BVALID (control_BVALID),
     .TRAN_s_axi_control_BREADY (control_BREADY),
     .TRAN_s_axi_control_BRESP (control_BRESP),
+    .TRAN_control_interrupt (control_INTERRUPT),
     .TRAN_control_write_data_finish(control_write_data_finish),
+    .TRAN_control_ready_out (AESL_ready),
     .TRAN_control_ready_in (AESL_slave_ready),
-    .TRAN_control_done_in (AESL_slave_output_done),
-    .TRAN_control_idle_in (AESL_idle),
+    .TRAN_control_done_out (AESL_slave_output_done),
+    .TRAN_control_idle_out (AESL_idle),
+    .TRAN_control_write_start_in     (AESL_slave_write_start_in),
+    .TRAN_control_write_start_finish (AESL_slave_write_start_finish),
     .TRAN_control_transaction_done_in (AESL_done_delay),
     .TRAN_control_start_in  (AESL_slave_start)
 );

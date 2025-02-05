@@ -55041,6 +55041,7 @@ void SpMV(
 #pragma HLS INTERFACE s_axilite port=vector bundle=control
 #pragma HLS INTERFACE s_axilite port=output bundle=control
 
+#pragma HLS INTERFACE s_axilite port=return bundle=control
 
     spmv_loop_external:for(VectorSize i = 0; i < 10; i++) {
 #pragma HLS UNROLL
@@ -55093,5 +55094,5 @@ apatb_SpMV_ir(values, columnIndexes, rowPointers, ((struct __cosim_s1__*)&numOfR
 return ;
 }
 #endif
-# 53 "D:/Desktop/SpMV/hls_component/SpMV.cpp"
+# 54 "D:/Desktop/SpMV/hls_component/SpMV.cpp"
 

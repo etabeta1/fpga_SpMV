@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'SpMV_Pipeline_spmv_loop_internal7'" level="0">
-<item name = "Date">Tue Jan  7 19:55:58 2025
+<item name = "Date">Wed Jan  8 20:12:20 2025
 </item>
 <item name = "Version">2024.1 (Build 5069499 on May 21 2024)</item>
 <item name = "Project">hls_component</item>
@@ -78,10 +78,10 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="add_ln36_fu_181_p2">+, 0, 0, 71, 64, 1</column>
-<column name="add_ln43_fu_213_p2">+, 0, 0, 71, 64, 64</column>
+<column name="add_ln37_fu_181_p2">+, 0, 0, 71, 64, 1</column>
+<column name="add_ln44_fu_213_p2">+, 0, 0, 71, 64, 64</column>
 <column name="sum_3_fu_247_p2">+, 0, 0, 39, 32, 32</column>
-<column name="icmp_ln36_fu_176_p2">icmp, 0, 0, 71, 64, 64</column>
+<column name="icmp_ln37_fu_176_p2">icmp, 0, 0, 71, 64, 64</column>
 <column name="ap_block_pp0_stage0_01001">or, 0, 0, 2, 1, 1</column>
 <column name="ap_block_pp0_stage0_11001">or, 0, 0, 2, 1, 1</column>
 <column name="ap_block_state13_pp0_stage0_iter12">or, 0, 0, 2, 1, 1</column>
@@ -134,15 +134,15 @@
 <column name="ap_loop_exit_ready_pp0_iter8_reg">1, 0, 1, 0</column>
 <column name="ap_loop_exit_ready_pp0_iter9_reg">1, 0, 1, 0</column>
 <column name="gmem3_addr_reg_305">64, 0, 64, 0</column>
-<column name="icmp_ln36_reg_296">1, 0, 1, 0</column>
+<column name="icmp_ln37_reg_296">1, 0, 1, 0</column>
 <column name="j_fu_84">64, 0, 64, 0</column>
 <column name="matrix_value_reg_311">32, 0, 32, 0</column>
 <column name="sum_fu_80">32, 0, 32, 0</column>
 <column name="temp_reg_321">32, 0, 32, 0</column>
-<column name="trunc_ln43_reg_300">5, 0, 5, 0</column>
+<column name="trunc_ln44_reg_300">5, 0, 5, 0</column>
 <column name="vector_value_reg_316">32, 0, 32, 0</column>
-<column name="zext_ln36_15_cast_reg_291">9, 0, 64, 55</column>
-<column name="icmp_ln36_reg_296">64, 32, 1, 0</column>
+<column name="zext_ln37_15_cast_reg_291">9, 0, 64, 55</column>
+<column name="icmp_ln37_reg_296">64, 32, 1, 0</column>
 </table>
 </item>
 </section>
@@ -300,10 +300,10 @@
 <column name="m_axi_gmem0_BRESP">in, 2, m_axi, gmem0, pointer</column>
 <column name="m_axi_gmem0_BID">in, 1, m_axi, gmem0, pointer</column>
 <column name="m_axi_gmem0_BUSER">in, 1, m_axi, gmem0, pointer</column>
-<column name="zext_ln36_14">in, 9, ap_none, zext_ln36_14, scalar</column>
-<column name="zext_ln36_15">in, 9, ap_none, zext_ln36_15, scalar</column>
-<column name="sext_ln36_15">in, 62, ap_none, sext_ln36_15, scalar</column>
-<column name="add_ln36_29">in, 64, ap_none, add_ln36_29, scalar</column>
+<column name="zext_ln37_14">in, 9, ap_none, zext_ln37_14, scalar</column>
+<column name="zext_ln37_15">in, 9, ap_none, zext_ln37_15, scalar</column>
+<column name="sext_ln37_15">in, 62, ap_none, sext_ln37_15, scalar</column>
+<column name="add_ln37_29">in, 64, ap_none, add_ln37_29, scalar</column>
 <column name="vector">in, 64, ap_none, vector, scalar</column>
 <column name="sum_21_out">out, 32, ap_vld, sum_21_out, pointer</column>
 <column name="sum_21_out_ap_vld">out, 1, ap_vld, sum_21_out, pointer</column>

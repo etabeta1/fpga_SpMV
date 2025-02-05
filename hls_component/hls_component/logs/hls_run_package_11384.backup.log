@@ -1,0 +1,75 @@
+INFO: [vitis-run 60-1548] Creating build summary session with primary output D:/Desktop/SpMV/hls_component/hls_component\hls_component.hlsrun_package_summary, at 01/07/25 20:49:02
+INFO: [vitis-run 82-31] Launching vitis_hls: vitis_hls -nolog -run package -work_dir D:/Desktop/SpMV/hls_component/hls_component -config D:/Desktop/SpMV/hls_component/hls_config.cfg -cmdlineconfig D:/Desktop/SpMV/hls_component/hls_component/hls/config.cmdline
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2024.1 (64-bit)
+  **** SW Build 5069499 on May 21 2024
+  **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+  **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+  **** Start of session at: Tue Jan  7 20:49:05 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source D:/Xilinx/Vitis_HLS/2024.1/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] For user 'Utente' on host 'laptop-9btr5ocl' (Windows NT_amd64 version 10.0) on Tue Jan 07 20:49:06 +0100 2025
+INFO: [HLS 200-10] In directory 'D:/Desktop/SpMV/hls_component'
+INFO: [HLS 200-2005] Using work_dir D:/Desktop/SpMV/hls_component/hls_component 
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'syn.file=D:\Desktop\SpMV\hls_component\SpMV.cpp' from D:/Desktop/SpMV/hls_component/hls_config.cfg(7)
+INFO: [HLS 200-10] Adding design file 'D:/Desktop/SpMV/hls_component/SpMV.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=D:\Desktop\SpMV\hls_component\SpMV.hpp' from D:/Desktop/SpMV/hls_component/hls_config.cfg(8)
+INFO: [HLS 200-10] Adding design file 'D:/Desktop/SpMV/hls_component/SpMV.hpp' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=testbench.cpp' from D:/Desktop/SpMV/hls_component/hls_config.cfg(9)
+INFO: [HLS 200-10] Adding test bench file 'D:/Desktop/SpMV/hls_component/testbench.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=input.txt' from D:/Desktop/SpMV/hls_component/hls_config.cfg(10)
+INFO: [HLS 200-10] Adding test bench file 'D:/Desktop/SpMV/hls_component/input.txt' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=testcase.cpp' from D:/Desktop/SpMV/hls_component/hls_config.cfg(11)
+INFO: [HLS 200-10] Adding test bench file 'D:/Desktop/SpMV/hls_component/testcase.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=testcase.hpp' from D:/Desktop/SpMV/hls_component/hls_config.cfg(12)
+INFO: [HLS 200-10] Adding test bench file 'D:/Desktop/SpMV/hls_component/testcase.hpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.top=SpMV' from D:/Desktop/SpMV/hls_component/hls_config.cfg(13)
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' from D:/Desktop/SpMV/hls_component/hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'part=xc7z020clg400-1' from D:/Desktop/SpMV/hls_component/hls_config.cfg(1)
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from D:/Desktop/SpMV/hls_component/hls_config.cfg(5)
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2024.1 (64-bit)
+  **** SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+  **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+  **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+  **** Start of session at: Tue Jan  7 20:49:13 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: calling package_hls_ip ip_types=vitis sysgen json_file=D:/Desktop/SpMV/hls_component/hls_component/hls/hls_data.json outdir=D:/Desktop/SpMV/hls_component/hls_component/hls/impl/ip srcdir=D:/Desktop/SpMV/hls_component/hls_component/hls sort_interfaces_ports=false
+INFO: Copied 1 ipmisc file(s) to D:/Desktop/SpMV/hls_component/hls_component/hls/impl/ip/misc
+INFO: Copied 19 verilog file(s) to D:/Desktop/SpMV/hls_component/hls_component/hls/impl/ip/hdl/verilog
+INFO: Copied 19 vhdl file(s) to D:/Desktop/SpMV/hls_component/hls_component/hls/impl/ip/hdl/vhdl
+INFO: Copied 10 swdriver file(s) to D:/Desktop/SpMV/hls_component/hls_component/hls/impl/ip/drivers
+ipx::create_core: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 513.078 ; gain = 198.680
+INFO: Import ports from HDL: D:/Desktop/SpMV/hls_component/hls_component/hls/impl/ip/hdl/vhdl/SpMV.vhd (SpMV)
+INFO: Add axi4lite interface s_axi_control
+INFO: Add clock interface ap_clk
+INFO: Add reset interface ap_rst_n
+INFO: Add ap_ctrl interface ap_ctrl
+INFO: Add axi4full interface m_axi_gmem0
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2024.1/data/ip'.
+INFO: Add axi4full interface m_axi_gmem1
+INFO: Add axi4full interface m_axi_gmem2
+INFO: Add axi4full interface m_axi_gmem3
+INFO: Add axi4full interface m_axi_gmem4
+INFO: Calling post_process_vitis to specialize IP
+INFO: Calling post_process_sysgen to specialize IP
+Generating sysgen info xml from json file
+INFO: Created IP D:/Desktop/SpMV/hls_component/hls_component/hls/impl/ip/component.xml
+INFO: Created IP archive D:/Desktop/SpMV/hls_component/hls_component/hls/impl/ip/xilinx_com_hls_SpMV_1_0.zip
+INFO: [Common 17-206] Exiting Vivado at Tue Jan  7 20:49:26 2025...
+INFO: [HLS 200-802] Generated output file hls_component/SpMV.zip
+INFO: [HLS 200-112] Total CPU user time: 4 seconds. Total CPU system time: 1 seconds. Total elapsed time: 21.079 seconds; peak allocated memory: 189.289 MB.
+INFO: [vitis-run 60-791] Total elapsed time: 0h 0m 26s

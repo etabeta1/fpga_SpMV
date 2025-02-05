@@ -16,13 +16,13 @@ set C_modelName {SpMV_Pipeline_spmv_loop_internal3}
 set C_modelType { void 0 }
 set ap_memory_interface_dict [dict create]
 set C_modelArgList {
-	{ zext_ln36_6 int 9 regular  }
+	{ zext_ln37_6 int 9 regular  }
 	{ gmem3 int 32 regular {axi_master 0}  }
 	{ gmem1 int 8 regular {axi_master 0}  }
 	{ gmem0 int 32 regular {axi_master 0}  }
-	{ zext_ln36_7 int 9 regular  }
-	{ sext_ln36_7 int 62 regular  }
-	{ add_ln36_13 int 64 regular  }
+	{ zext_ln37_7 int 9 regular  }
+	{ sext_ln37_7 int 62 regular  }
+	{ add_ln37_13 int 64 regular  }
 	{ vector int 64 regular  }
 	{ sum_9_out int 32 regular {pointer 1}  }
 }
@@ -30,13 +30,13 @@ set hasAXIMCache 0
 set hasAXIML2Cache 0
 set AXIMCacheInstDict [dict create]
 set C_modelArgMapList {[ 
-	{ "Name" : "zext_ln36_6", "interface" : "wire", "bitwidth" : 9, "direction" : "READONLY"} , 
+	{ "Name" : "zext_ln37_6", "interface" : "wire", "bitwidth" : 9, "direction" : "READONLY"} , 
  	{ "Name" : "gmem3", "interface" : "axi_master", "bitwidth" : 32, "direction" : "READONLY", "bitSlice":[ {"cElement": [{"cName": "vector","offset": { "type": "dynamic","port_name": "vector","bundle": "control"},"direction": "READONLY"}]}]} , 
  	{ "Name" : "gmem1", "interface" : "axi_master", "bitwidth" : 8, "direction" : "READONLY", "bitSlice":[ {"cElement": [{"cName": "columnIndexes","offset": { "type": "dynamic","port_name": "columnIndexes","bundle": "control"},"direction": "READONLY"}]}]} , 
  	{ "Name" : "gmem0", "interface" : "axi_master", "bitwidth" : 32, "direction" : "READONLY", "bitSlice":[ {"cElement": [{"cName": "values","offset": { "type": "dynamic","port_name": "values","bundle": "control"},"direction": "READONLY"}]}]} , 
- 	{ "Name" : "zext_ln36_7", "interface" : "wire", "bitwidth" : 9, "direction" : "READONLY"} , 
- 	{ "Name" : "sext_ln36_7", "interface" : "wire", "bitwidth" : 62, "direction" : "READONLY"} , 
- 	{ "Name" : "add_ln36_13", "interface" : "wire", "bitwidth" : 64, "direction" : "READONLY"} , 
+ 	{ "Name" : "zext_ln37_7", "interface" : "wire", "bitwidth" : 9, "direction" : "READONLY"} , 
+ 	{ "Name" : "sext_ln37_7", "interface" : "wire", "bitwidth" : 62, "direction" : "READONLY"} , 
+ 	{ "Name" : "add_ln37_13", "interface" : "wire", "bitwidth" : 64, "direction" : "READONLY"} , 
  	{ "Name" : "vector", "interface" : "wire", "bitwidth" : 64, "direction" : "READONLY"} , 
  	{ "Name" : "sum_9_out", "interface" : "wire", "bitwidth" : 32, "direction" : "WRITEONLY"} ]}
 # RTL Port declarations: 
@@ -186,10 +186,10 @@ set portList {
 	{ m_axi_gmem0_BRESP sc_in sc_lv 2 signal 3 } 
 	{ m_axi_gmem0_BID sc_in sc_lv 1 signal 3 } 
 	{ m_axi_gmem0_BUSER sc_in sc_lv 1 signal 3 } 
-	{ zext_ln36_6 sc_in sc_lv 9 signal 0 } 
-	{ zext_ln36_7 sc_in sc_lv 9 signal 4 } 
-	{ sext_ln36_7 sc_in sc_lv 62 signal 5 } 
-	{ add_ln36_13 sc_in sc_lv 64 signal 6 } 
+	{ zext_ln37_6 sc_in sc_lv 9 signal 0 } 
+	{ zext_ln37_7 sc_in sc_lv 9 signal 4 } 
+	{ sext_ln37_7 sc_in sc_lv 62 signal 5 } 
+	{ add_ln37_13 sc_in sc_lv 64 signal 6 } 
 	{ vector sc_in sc_lv 64 signal 7 } 
 	{ sum_9_out sc_out sc_lv 32 signal 8 } 
 	{ sum_9_out_ap_vld sc_out sc_logic 1 outvld 8 } 
@@ -343,10 +343,10 @@ set NewPortList {[
  	{ "name": "m_axi_gmem0_BRESP", "direction": "in", "datatype": "sc_lv", "bitwidth":2, "type": "signal", "bundle":{"name": "gmem0", "role": "BRESP" }} , 
  	{ "name": "m_axi_gmem0_BID", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "gmem0", "role": "BID" }} , 
  	{ "name": "m_axi_gmem0_BUSER", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "gmem0", "role": "BUSER" }} , 
- 	{ "name": "zext_ln36_6", "direction": "in", "datatype": "sc_lv", "bitwidth":9, "type": "signal", "bundle":{"name": "zext_ln36_6", "role": "default" }} , 
- 	{ "name": "zext_ln36_7", "direction": "in", "datatype": "sc_lv", "bitwidth":9, "type": "signal", "bundle":{"name": "zext_ln36_7", "role": "default" }} , 
- 	{ "name": "sext_ln36_7", "direction": "in", "datatype": "sc_lv", "bitwidth":62, "type": "signal", "bundle":{"name": "sext_ln36_7", "role": "default" }} , 
- 	{ "name": "add_ln36_13", "direction": "in", "datatype": "sc_lv", "bitwidth":64, "type": "signal", "bundle":{"name": "add_ln36_13", "role": "default" }} , 
+ 	{ "name": "zext_ln37_6", "direction": "in", "datatype": "sc_lv", "bitwidth":9, "type": "signal", "bundle":{"name": "zext_ln37_6", "role": "default" }} , 
+ 	{ "name": "zext_ln37_7", "direction": "in", "datatype": "sc_lv", "bitwidth":9, "type": "signal", "bundle":{"name": "zext_ln37_7", "role": "default" }} , 
+ 	{ "name": "sext_ln37_7", "direction": "in", "datatype": "sc_lv", "bitwidth":62, "type": "signal", "bundle":{"name": "sext_ln37_7", "role": "default" }} , 
+ 	{ "name": "add_ln37_13", "direction": "in", "datatype": "sc_lv", "bitwidth":64, "type": "signal", "bundle":{"name": "add_ln37_13", "role": "default" }} , 
  	{ "name": "vector", "direction": "in", "datatype": "sc_lv", "bitwidth":64, "type": "signal", "bundle":{"name": "vector", "role": "default" }} , 
  	{ "name": "sum_9_out", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "sum_9_out", "role": "default" }} , 
  	{ "name": "sum_9_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "sum_9_out", "role": "ap_vld" }} , 
@@ -371,7 +371,7 @@ set RtlHierarchyInfo {[
 		"HasNonBlockingOperation" : "0",
 		"IsBlackBox" : "0",
 		"Port" : [
-			{"Name" : "zext_ln36_6", "Type" : "None", "Direction" : "I"},
+			{"Name" : "zext_ln37_6", "Type" : "None", "Direction" : "I"},
 			{"Name" : "gmem3", "Type" : "MAXI", "Direction" : "I",
 				"BlockSignal" : [
 					{"Name" : "gmem3_blk_n_AR", "Type" : "RtlSignal"},
@@ -382,9 +382,9 @@ set RtlHierarchyInfo {[
 			{"Name" : "gmem0", "Type" : "MAXI", "Direction" : "I",
 				"BlockSignal" : [
 					{"Name" : "gmem0_blk_n_R", "Type" : "RtlSignal"}]},
-			{"Name" : "zext_ln36_7", "Type" : "None", "Direction" : "I"},
-			{"Name" : "sext_ln36_7", "Type" : "None", "Direction" : "I"},
-			{"Name" : "add_ln36_13", "Type" : "None", "Direction" : "I"},
+			{"Name" : "zext_ln37_7", "Type" : "None", "Direction" : "I"},
+			{"Name" : "sext_ln37_7", "Type" : "None", "Direction" : "I"},
+			{"Name" : "add_ln37_13", "Type" : "None", "Direction" : "I"},
 			{"Name" : "vector", "Type" : "None", "Direction" : "I"},
 			{"Name" : "sum_9_out", "Type" : "Vld", "Direction" : "O"}],
 		"Loop" : [
@@ -395,13 +395,13 @@ set RtlHierarchyInfo {[
 
 set ArgLastReadFirstWriteLatency {
 	SpMV_Pipeline_spmv_loop_internal3 {
-		zext_ln36_6 {Type I LastRead 0 FirstWrite -1}
+		zext_ln37_6 {Type I LastRead 0 FirstWrite -1}
 		gmem3 {Type I LastRead 12 FirstWrite -1}
 		gmem1 {Type I LastRead 2 FirstWrite -1}
 		gmem0 {Type I LastRead 12 FirstWrite -1}
-		zext_ln36_7 {Type I LastRead 0 FirstWrite -1}
-		sext_ln36_7 {Type I LastRead 0 FirstWrite -1}
-		add_ln36_13 {Type I LastRead 0 FirstWrite -1}
+		zext_ln37_7 {Type I LastRead 0 FirstWrite -1}
+		sext_ln37_7 {Type I LastRead 0 FirstWrite -1}
+		add_ln37_13 {Type I LastRead 0 FirstWrite -1}
 		vector {Type I LastRead 0 FirstWrite -1}
 		sum_9_out {Type O LastRead -1 FirstWrite 14}}}
 
@@ -417,13 +417,13 @@ set PipelineEnableSignalInfo {[
 ]}
 
 set Spec2ImplPortList { 
-	zext_ln36_6 { ap_none {  { zext_ln36_6 in_data 0 9 } } }
+	zext_ln37_6 { ap_none {  { zext_ln37_6 in_data 0 9 } } }
 	 { m_axi {  { m_axi_gmem3_AWVALID VALID 1 1 }  { m_axi_gmem3_AWREADY READY 0 1 }  { m_axi_gmem3_AWADDR ADDR 1 64 }  { m_axi_gmem3_AWID ID 1 1 }  { m_axi_gmem3_AWLEN SIZE 1 32 }  { m_axi_gmem3_AWSIZE BURST 1 3 }  { m_axi_gmem3_AWBURST LOCK 1 2 }  { m_axi_gmem3_AWLOCK CACHE 1 2 }  { m_axi_gmem3_AWCACHE PROT 1 4 }  { m_axi_gmem3_AWPROT QOS 1 3 }  { m_axi_gmem3_AWQOS REGION 1 4 }  { m_axi_gmem3_AWREGION USER 1 4 }  { m_axi_gmem3_AWUSER DATA 1 1 }  { m_axi_gmem3_WVALID VALID 1 1 }  { m_axi_gmem3_WREADY READY 0 1 }  { m_axi_gmem3_WDATA FIFONUM 1 32 }  { m_axi_gmem3_WSTRB STRB 1 4 }  { m_axi_gmem3_WLAST LAST 1 1 }  { m_axi_gmem3_WID ID 1 1 }  { m_axi_gmem3_WUSER DATA 1 1 }  { m_axi_gmem3_ARVALID VALID 1 1 }  { m_axi_gmem3_ARREADY READY 0 1 }  { m_axi_gmem3_ARADDR ADDR 1 64 }  { m_axi_gmem3_ARID ID 1 1 }  { m_axi_gmem3_ARLEN SIZE 1 32 }  { m_axi_gmem3_ARSIZE BURST 1 3 }  { m_axi_gmem3_ARBURST LOCK 1 2 }  { m_axi_gmem3_ARLOCK CACHE 1 2 }  { m_axi_gmem3_ARCACHE PROT 1 4 }  { m_axi_gmem3_ARPROT QOS 1 3 }  { m_axi_gmem3_ARQOS REGION 1 4 }  { m_axi_gmem3_ARREGION USER 1 4 }  { m_axi_gmem3_ARUSER DATA 1 1 }  { m_axi_gmem3_RVALID VALID 0 1 }  { m_axi_gmem3_RREADY READY 1 1 }  { m_axi_gmem3_RDATA FIFONUM 0 32 }  { m_axi_gmem3_RLAST LAST 0 1 }  { m_axi_gmem3_RID ID 0 1 }  { m_axi_gmem3_RFIFONUM LEN 0 9 }  { m_axi_gmem3_RUSER DATA 0 1 }  { m_axi_gmem3_RRESP RESP 0 2 }  { m_axi_gmem3_BVALID VALID 0 1 }  { m_axi_gmem3_BREADY READY 1 1 }  { m_axi_gmem3_BRESP RESP 0 2 }  { m_axi_gmem3_BID ID 0 1 }  { m_axi_gmem3_BUSER DATA 0 1 } } }
 	 { m_axi {  { m_axi_gmem1_AWVALID VALID 1 1 }  { m_axi_gmem1_AWREADY READY 0 1 }  { m_axi_gmem1_AWADDR ADDR 1 64 }  { m_axi_gmem1_AWID ID 1 1 }  { m_axi_gmem1_AWLEN SIZE 1 32 }  { m_axi_gmem1_AWSIZE BURST 1 3 }  { m_axi_gmem1_AWBURST LOCK 1 2 }  { m_axi_gmem1_AWLOCK CACHE 1 2 }  { m_axi_gmem1_AWCACHE PROT 1 4 }  { m_axi_gmem1_AWPROT QOS 1 3 }  { m_axi_gmem1_AWQOS REGION 1 4 }  { m_axi_gmem1_AWREGION USER 1 4 }  { m_axi_gmem1_AWUSER DATA 1 1 }  { m_axi_gmem1_WVALID VALID 1 1 }  { m_axi_gmem1_WREADY READY 0 1 }  { m_axi_gmem1_WDATA FIFONUM 1 8 }  { m_axi_gmem1_WSTRB STRB 1 1 }  { m_axi_gmem1_WLAST LAST 1 1 }  { m_axi_gmem1_WID ID 1 1 }  { m_axi_gmem1_WUSER DATA 1 1 }  { m_axi_gmem1_ARVALID VALID 1 1 }  { m_axi_gmem1_ARREADY READY 0 1 }  { m_axi_gmem1_ARADDR ADDR 1 64 }  { m_axi_gmem1_ARID ID 1 1 }  { m_axi_gmem1_ARLEN SIZE 1 32 }  { m_axi_gmem1_ARSIZE BURST 1 3 }  { m_axi_gmem1_ARBURST LOCK 1 2 }  { m_axi_gmem1_ARLOCK CACHE 1 2 }  { m_axi_gmem1_ARCACHE PROT 1 4 }  { m_axi_gmem1_ARPROT QOS 1 3 }  { m_axi_gmem1_ARQOS REGION 1 4 }  { m_axi_gmem1_ARREGION USER 1 4 }  { m_axi_gmem1_ARUSER DATA 1 1 }  { m_axi_gmem1_RVALID VALID 0 1 }  { m_axi_gmem1_RREADY READY 1 1 }  { m_axi_gmem1_RDATA FIFONUM 0 8 }  { m_axi_gmem1_RLAST LAST 0 1 }  { m_axi_gmem1_RID ID 0 1 }  { m_axi_gmem1_RFIFONUM LEN 0 11 }  { m_axi_gmem1_RUSER DATA 0 1 }  { m_axi_gmem1_RRESP RESP 0 2 }  { m_axi_gmem1_BVALID VALID 0 1 }  { m_axi_gmem1_BREADY READY 1 1 }  { m_axi_gmem1_BRESP RESP 0 2 }  { m_axi_gmem1_BID ID 0 1 }  { m_axi_gmem1_BUSER DATA 0 1 } } }
 	 { m_axi {  { m_axi_gmem0_AWVALID VALID 1 1 }  { m_axi_gmem0_AWREADY READY 0 1 }  { m_axi_gmem0_AWADDR ADDR 1 64 }  { m_axi_gmem0_AWID ID 1 1 }  { m_axi_gmem0_AWLEN SIZE 1 32 }  { m_axi_gmem0_AWSIZE BURST 1 3 }  { m_axi_gmem0_AWBURST LOCK 1 2 }  { m_axi_gmem0_AWLOCK CACHE 1 2 }  { m_axi_gmem0_AWCACHE PROT 1 4 }  { m_axi_gmem0_AWPROT QOS 1 3 }  { m_axi_gmem0_AWQOS REGION 1 4 }  { m_axi_gmem0_AWREGION USER 1 4 }  { m_axi_gmem0_AWUSER DATA 1 1 }  { m_axi_gmem0_WVALID VALID 1 1 }  { m_axi_gmem0_WREADY READY 0 1 }  { m_axi_gmem0_WDATA FIFONUM 1 32 }  { m_axi_gmem0_WSTRB STRB 1 4 }  { m_axi_gmem0_WLAST LAST 1 1 }  { m_axi_gmem0_WID ID 1 1 }  { m_axi_gmem0_WUSER DATA 1 1 }  { m_axi_gmem0_ARVALID VALID 1 1 }  { m_axi_gmem0_ARREADY READY 0 1 }  { m_axi_gmem0_ARADDR ADDR 1 64 }  { m_axi_gmem0_ARID ID 1 1 }  { m_axi_gmem0_ARLEN SIZE 1 32 }  { m_axi_gmem0_ARSIZE BURST 1 3 }  { m_axi_gmem0_ARBURST LOCK 1 2 }  { m_axi_gmem0_ARLOCK CACHE 1 2 }  { m_axi_gmem0_ARCACHE PROT 1 4 }  { m_axi_gmem0_ARPROT QOS 1 3 }  { m_axi_gmem0_ARQOS REGION 1 4 }  { m_axi_gmem0_ARREGION USER 1 4 }  { m_axi_gmem0_ARUSER DATA 1 1 }  { m_axi_gmem0_RVALID VALID 0 1 }  { m_axi_gmem0_RREADY READY 1 1 }  { m_axi_gmem0_RDATA FIFONUM 0 32 }  { m_axi_gmem0_RLAST LAST 0 1 }  { m_axi_gmem0_RID ID 0 1 }  { m_axi_gmem0_RFIFONUM LEN 0 9 }  { m_axi_gmem0_RUSER DATA 0 1 }  { m_axi_gmem0_RRESP RESP 0 2 }  { m_axi_gmem0_BVALID VALID 0 1 }  { m_axi_gmem0_BREADY READY 1 1 }  { m_axi_gmem0_BRESP RESP 0 2 }  { m_axi_gmem0_BID ID 0 1 }  { m_axi_gmem0_BUSER DATA 0 1 } } }
-	zext_ln36_7 { ap_none {  { zext_ln36_7 in_data 0 9 } } }
-	sext_ln36_7 { ap_none {  { sext_ln36_7 in_data 0 62 } } }
-	add_ln36_13 { ap_none {  { add_ln36_13 in_data 0 64 } } }
+	zext_ln37_7 { ap_none {  { zext_ln37_7 in_data 0 9 } } }
+	sext_ln37_7 { ap_none {  { sext_ln37_7 in_data 0 62 } } }
+	add_ln37_13 { ap_none {  { add_ln37_13 in_data 0 64 } } }
 	vector { ap_none {  { vector in_data 0 64 } } }
 	sum_9_out { ap_vld {  { sum_9_out out_data 1 32 }  { sum_9_out_ap_vld out_vld 1 1 } } }
 }

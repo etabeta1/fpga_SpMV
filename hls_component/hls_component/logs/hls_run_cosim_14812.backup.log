@@ -1,0 +1,44 @@
+INFO: [vitis-run 60-1548] Creating build summary session with primary output D:/Desktop/SpMV/hls_component/hls_component\hls_component.hlsrun_cosim_summary, at 01/07/25 20:46:42
+INFO: [vitis-run 82-31] Launching vitis_hls: vitis_hls -nolog -run cosim -work_dir D:/Desktop/SpMV/hls_component/hls_component -config D:/Desktop/SpMV/hls_component/hls_config.cfg -cmdlineconfig D:/Desktop/SpMV/hls_component/hls_component/hls/config.cmdline
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2024.1 (64-bit)
+  **** SW Build 5069499 on May 21 2024
+  **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+  **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+  **** Start of session at: Tue Jan  7 20:46:45 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source D:/Xilinx/Vitis_HLS/2024.1/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] For user 'Utente' on host 'laptop-9btr5ocl' (Windows NT_amd64 version 10.0) on Tue Jan 07 20:46:46 +0100 2025
+INFO: [HLS 200-10] In directory 'D:/Desktop/SpMV/hls_component'
+INFO: [HLS 200-2005] Using work_dir D:/Desktop/SpMV/hls_component/hls_component 
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'syn.file=D:\Desktop\SpMV\hls_component\SpMV.cpp' from D:/Desktop/SpMV/hls_component/hls_config.cfg(7)
+INFO: [HLS 200-10] Adding design file 'D:/Desktop/SpMV/hls_component/SpMV.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=D:\Desktop\SpMV\hls_component\SpMV.hpp' from D:/Desktop/SpMV/hls_component/hls_config.cfg(8)
+INFO: [HLS 200-10] Adding design file 'D:/Desktop/SpMV/hls_component/SpMV.hpp' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=testbench.cpp' from D:/Desktop/SpMV/hls_component/hls_config.cfg(9)
+INFO: [HLS 200-10] Adding test bench file 'D:/Desktop/SpMV/hls_component/testbench.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=input.txt' from D:/Desktop/SpMV/hls_component/hls_config.cfg(10)
+INFO: [HLS 200-10] Adding test bench file 'D:/Desktop/SpMV/hls_component/input.txt' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=testcase.cpp' from D:/Desktop/SpMV/hls_component/hls_config.cfg(11)
+INFO: [HLS 200-10] Adding test bench file 'D:/Desktop/SpMV/hls_component/testcase.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=testcase.hpp' from D:/Desktop/SpMV/hls_component/hls_config.cfg(12)
+INFO: [HLS 200-10] Adding test bench file 'D:/Desktop/SpMV/hls_component/testcase.hpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.top=SpMV' from D:/Desktop/SpMV/hls_component/hls_config.cfg(13)
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' from D:/Desktop/SpMV/hls_component/hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'part=xc7z020clg400-1' from D:/Desktop/SpMV/hls_component/hls_config.cfg(1)
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from D:/Desktop/SpMV/hls_component/hls_config.cfg(5)
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+ERROR: [COSIM 212-366] Cannot delete directory  './sim/autowrap/testbench': it is being used by another program. Please close the program and try again.
+error deleting "D:/Desktop/SpMV/hls_component/hls_component/hls/sim/autowrap/testbench\testcase.cpp_pre.cpp.tb.cpp": permission denied
+ERROR: [COSIM 212-5] *** C/RTL co-simulation file generation failed. ***
+ERROR: [COSIM 212-4] *** C/RTL co-simulation finished: FAIL ***
+ERROR: 
+INFO: [HLS 200-112] Total CPU user time: 2 seconds. Total CPU system time: 1 seconds. Total elapsed time: 2.902 seconds; peak allocated memory: 181.375 MB.

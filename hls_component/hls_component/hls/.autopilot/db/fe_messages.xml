@@ -35,14 +35,17 @@
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SpMV.cpp:26:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="SpMV" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=output bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SpMV.cpp:30:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SpMV.cpp:28:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="SpMV" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=return bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SpMV.cpp:31:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="SpMV" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SpMV.cpp:37:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SpMV.cpp:38:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="SpMV" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="SpMV.cpp:14:0" msg_body="Unrolling loop 'spmv_loop_external' (SpMV.cpp:29:21) in function 'SpMV' completely with a factor of 10">
-        <args Factor="10" LoopLoc="SpMV.cpp:29:21" LoopName="spmv_loop_external"/>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="SpMV.cpp:14:0" msg_body="Unrolling loop 'spmv_loop_external' (SpMV.cpp:30:21) in function 'SpMV' completely with a factor of 10">
+        <args Factor="10" LoopLoc="SpMV.cpp:30:21" LoopName="spmv_loop_external"/>
     </msg>
 </xilinx:hls_fe_msgs>
 

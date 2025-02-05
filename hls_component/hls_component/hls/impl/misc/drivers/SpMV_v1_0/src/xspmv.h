@@ -92,6 +92,12 @@ int XSpmv_Initialize(XSpmv *InstancePtr, const char* InstanceName);
 int XSpmv_Release(XSpmv *InstancePtr);
 #endif
 
+void XSpmv_Start(XSpmv *InstancePtr);
+u32 XSpmv_IsDone(XSpmv *InstancePtr);
+u32 XSpmv_IsIdle(XSpmv *InstancePtr);
+u32 XSpmv_IsReady(XSpmv *InstancePtr);
+void XSpmv_EnableAutoRestart(XSpmv *InstancePtr);
+void XSpmv_DisableAutoRestart(XSpmv *InstancePtr);
 
 void XSpmv_Set_values(XSpmv *InstancePtr, u64 Data);
 u64 XSpmv_Get_values(XSpmv *InstancePtr);
@@ -105,6 +111,14 @@ void XSpmv_Set_vector(XSpmv *InstancePtr, u64 Data);
 u64 XSpmv_Get_vector(XSpmv *InstancePtr);
 void XSpmv_Set_output_r(XSpmv *InstancePtr, u64 Data);
 u64 XSpmv_Get_output_r(XSpmv *InstancePtr);
+
+void XSpmv_InterruptGlobalEnable(XSpmv *InstancePtr);
+void XSpmv_InterruptGlobalDisable(XSpmv *InstancePtr);
+void XSpmv_InterruptEnable(XSpmv *InstancePtr, u32 Mask);
+void XSpmv_InterruptDisable(XSpmv *InstancePtr, u32 Mask);
+void XSpmv_InterruptClear(XSpmv *InstancePtr, u32 Mask);
+u32 XSpmv_InterruptGetEnabled(XSpmv *InstancePtr);
+u32 XSpmv_InterruptGetStatus(XSpmv *InstancePtr);
 
 #ifdef __cplusplus
 }

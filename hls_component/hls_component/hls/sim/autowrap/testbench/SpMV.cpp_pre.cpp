@@ -55034,6 +55034,7 @@ void SpMV(
 #pragma HLS INTERFACE s_axilite port=vector bundle=control
 #pragma HLS INTERFACE s_axilite port=output bundle=control
 
+#pragma HLS INTERFACE s_axilite port=return bundle=control
 
     spmv_loop_external:for(VectorSize i = 0; i < 10; i++) {
 #pragma HLS UNROLL

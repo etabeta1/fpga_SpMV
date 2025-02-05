@@ -1,16 +1,16 @@
-INFO: [vitis-run 60-1548] Creating build summary session with primary output D:/Desktop/SpMV/hls_component/hls_component\hls_component.hlsrun_cosim_summary, at 01/07/25 19:56:19
+INFO: [vitis-run 60-1548] Creating build summary session with primary output D:/Desktop/SpMV/hls_component/hls_component\hls_component.hlsrun_cosim_summary, at 01/08/25 20:12:36
 INFO: [vitis-run 82-31] Launching vitis_hls: vitis_hls -nolog -run cosim -work_dir D:/Desktop/SpMV/hls_component/hls_component -config D:/Desktop/SpMV/hls_component/hls_config.cfg -cmdlineconfig D:/Desktop/SpMV/hls_component/hls_component/hls/config.cmdline
 
 ****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2024.1 (64-bit)
   **** SW Build 5069499 on May 21 2024
   **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
   **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-  **** Start of session at: Tue Jan  7 19:56:21 2025
+  **** Start of session at: Wed Jan  8 20:12:39 2025
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 
 source D:/Xilinx/Vitis_HLS/2024.1/scripts/vitis_hls/hls.tcl -notrace
-INFO: [HLS 200-10] For user 'Utente' on host 'laptop-9btr5ocl' (Windows NT_amd64 version 10.0) on Tue Jan 07 19:56:22 +0100 2025
+INFO: [HLS 200-10] For user 'Utente' on host 'laptop-9btr5ocl' (Windows NT_amd64 version 10.0) on Wed Jan 08 20:12:40 +0100 2025
 INFO: [HLS 200-10] In directory 'D:/Desktop/SpMV/hls_component'
 INFO: [HLS 200-2005] Using work_dir D:/Desktop/SpMV/hls_component/hls_component 
 INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
@@ -361,7 +361,7 @@ Built simulation snapshot SpMV
   **** SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
   **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
   **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-  **** Start of session at: Tue Jan  7 19:57:08 2025
+  **** Start of session at: Wed Jan  8 20:13:30 2025
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -377,15 +377,15 @@ source SpMV.tcl
 // RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
 ////////////////////////////////////////////////////////////////////////////////////
 // RTL Simulation : 0 / 5 [n/a] @ "125000"
-// RTL Simulation : 1 / 5 [n/a] @ "3165000"
-// RTL Simulation : 2 / 5 [n/a] @ "5715000"
-// RTL Simulation : 3 / 5 [n/a] @ "9315000"
-// RTL Simulation : 4 / 5 [n/a] @ "14595000"
-// RTL Simulation : 5 / 5 [n/a] @ "20575000"
+// RTL Simulation : 1 / 5 [n/a] @ "3375000"
+// RTL Simulation : 2 / 5 [n/a] @ "6065000"
+// RTL Simulation : 3 / 5 [n/a] @ "9885000"
+// RTL Simulation : 4 / 5 [n/a] @ "15325000"
+// RTL Simulation : 5 / 5 [n/a] @ "21485000"
 ////////////////////////////////////////////////////////////////////////////////////
-$finish called at time : 20635 ns : File "D:/Desktop/SpMV/hls_component/hls_component/hls/sim/verilog/SpMV.autotb.v" Line 1106
+$finish called at time : 21545 ns : File "D:/Desktop/SpMV/hls_component/hls_component/hls/sim/verilog/SpMV.autotb.v" Line 1048
 ## quit
-INFO: [Common 17-206] Exiting xsim at Tue Jan  7 19:57:10 2025...
+INFO: [Common 17-206] Exiting xsim at Wed Jan  8 20:13:33 2025...
 INFO: [COSIM 212-316] Starting C post checking ...
 Running 5 tests
 Running test 'Square_4x4_matrix'...OK
@@ -394,5 +394,5 @@ Running test 'Biggish_matrix'...OK
 Running test 'Bigger_matrix'...OK
 Running test 'Biggest_matrix'...OK
 INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
-INFO: [HLS 200-112] Total CPU user time: 6 seconds. Total CPU system time: 1 seconds. Total elapsed time: 48.937 seconds; peak allocated memory: 191.676 MB.
-INFO: [vitis-run 60-791] Total elapsed time: 0h 0m 54s
+INFO: [HLS 200-112] Total CPU user time: 7 seconds. Total CPU system time: 1 seconds. Total elapsed time: 54.488 seconds; peak allocated memory: 191.641 MB.
+INFO: [vitis-run 60-791] Total elapsed time: 0h 0m 59s

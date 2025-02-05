@@ -44,14 +44,10 @@ set C_modelArgMapList {[
  	{ "Name" : "vector", "interface" : "axi_slave", "bundle":"control","type":"ap_none","bitwidth" : 64, "direction" : "READONLY", "offset" : {"in":60}, "offset_end" : {"in":71}} , 
  	{ "Name" : "output_r", "interface" : "axi_slave", "bundle":"control","type":"ap_none","bitwidth" : 64, "direction" : "READONLY", "offset" : {"in":72}, "offset_end" : {"in":83}} ]}
 # RTL Port declarations: 
-set portNum 248
+set portNum 245
 set portList { 
 	{ ap_clk sc_in sc_logic 1 clock -1 } 
 	{ ap_rst_n sc_in sc_logic 1 reset -1 active_low_sync } 
-	{ ap_start sc_in sc_logic 1 start -1 } 
-	{ ap_done sc_out sc_logic 1 predone -1 } 
-	{ ap_idle sc_out sc_logic 1 done -1 } 
-	{ ap_ready sc_out sc_logic 1 ready -1 } 
 	{ m_axi_gmem0_AWVALID sc_out sc_logic 1 signal 0 } 
 	{ m_axi_gmem0_AWREADY sc_in sc_logic 1 signal 0 } 
 	{ m_axi_gmem0_AWADDR sc_out sc_lv 64 signal 0 } 
@@ -294,16 +290,17 @@ set portList {
 	{ s_axi_control_BVALID sc_out sc_logic 1 signal -1 } 
 	{ s_axi_control_BREADY sc_in sc_logic 1 signal -1 } 
 	{ s_axi_control_BRESP sc_out sc_lv 2 signal -1 } 
+	{ interrupt sc_out sc_logic 1 signal -1 } 
 }
 set NewPortList {[ 
-	{ "name": "s_axi_control_AWADDR", "direction": "in", "datatype": "sc_lv", "bitwidth":7, "type": "signal", "bundle":{"name": "control", "role": "AWADDR" },"address":[{"name":"values","role":"data","value":"16"},{"name":"columnIndexes","role":"data","value":"28"},{"name":"rowPointers","role":"data","value":"40"},{"name":"numOfRows","role":"data","value":"52"},{"name":"vector","role":"data","value":"60"},{"name":"output_r","role":"data","value":"72"}] },
+	{ "name": "s_axi_control_AWADDR", "direction": "in", "datatype": "sc_lv", "bitwidth":7, "type": "signal", "bundle":{"name": "control", "role": "AWADDR" },"address":[{"name":"SpMV","role":"start","value":"0","valid_bit":"0"},{"name":"SpMV","role":"continue","value":"0","valid_bit":"4"},{"name":"SpMV","role":"auto_start","value":"0","valid_bit":"7"},{"name":"values","role":"data","value":"16"},{"name":"columnIndexes","role":"data","value":"28"},{"name":"rowPointers","role":"data","value":"40"},{"name":"numOfRows","role":"data","value":"52"},{"name":"vector","role":"data","value":"60"},{"name":"output_r","role":"data","value":"72"}] },
 	{ "name": "s_axi_control_AWVALID", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "control", "role": "AWVALID" } },
 	{ "name": "s_axi_control_AWREADY", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "control", "role": "AWREADY" } },
 	{ "name": "s_axi_control_WVALID", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "control", "role": "WVALID" } },
 	{ "name": "s_axi_control_WREADY", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "control", "role": "WREADY" } },
 	{ "name": "s_axi_control_WDATA", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "control", "role": "WDATA" } },
 	{ "name": "s_axi_control_WSTRB", "direction": "in", "datatype": "sc_lv", "bitwidth":4, "type": "signal", "bundle":{"name": "control", "role": "WSTRB" } },
-	{ "name": "s_axi_control_ARADDR", "direction": "in", "datatype": "sc_lv", "bitwidth":7, "type": "signal", "bundle":{"name": "control", "role": "ARADDR" },"address":[] },
+	{ "name": "s_axi_control_ARADDR", "direction": "in", "datatype": "sc_lv", "bitwidth":7, "type": "signal", "bundle":{"name": "control", "role": "ARADDR" },"address":[{"name":"SpMV","role":"start","value":"0","valid_bit":"0"},{"name":"SpMV","role":"done","value":"0","valid_bit":"1"},{"name":"SpMV","role":"idle","value":"0","valid_bit":"2"},{"name":"SpMV","role":"ready","value":"0","valid_bit":"3"},{"name":"SpMV","role":"auto_start","value":"0","valid_bit":"7"}] },
 	{ "name": "s_axi_control_ARVALID", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "control", "role": "ARVALID" } },
 	{ "name": "s_axi_control_ARREADY", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "control", "role": "ARREADY" } },
 	{ "name": "s_axi_control_RVALID", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "control", "role": "RVALID" } },
@@ -312,13 +309,10 @@ set NewPortList {[
 	{ "name": "s_axi_control_RRESP", "direction": "out", "datatype": "sc_lv", "bitwidth":2, "type": "signal", "bundle":{"name": "control", "role": "RRESP" } },
 	{ "name": "s_axi_control_BVALID", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "control", "role": "BVALID" } },
 	{ "name": "s_axi_control_BREADY", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "control", "role": "BREADY" } },
-	{ "name": "s_axi_control_BRESP", "direction": "out", "datatype": "sc_lv", "bitwidth":2, "type": "signal", "bundle":{"name": "control", "role": "BRESP" } }, 
+	{ "name": "s_axi_control_BRESP", "direction": "out", "datatype": "sc_lv", "bitwidth":2, "type": "signal", "bundle":{"name": "control", "role": "BRESP" } },
+	{ "name": "interrupt", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "control", "role": "interrupt" } }, 
  	{ "name": "ap_clk", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "clock", "bundle":{"name": "ap_clk", "role": "default" }} , 
  	{ "name": "ap_rst_n", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "reset", "bundle":{"name": "ap_rst_n", "role": "default" }} , 
- 	{ "name": "ap_start", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "start", "bundle":{"name": "ap_start", "role": "default" }} , 
- 	{ "name": "ap_done", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "predone", "bundle":{"name": "ap_done", "role": "default" }} , 
- 	{ "name": "ap_idle", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "done", "bundle":{"name": "ap_idle", "role": "default" }} , 
- 	{ "name": "ap_ready", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "ready", "bundle":{"name": "ap_ready", "role": "default" }} , 
  	{ "name": "m_axi_gmem0_AWVALID", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "gmem0", "role": "AWVALID" }} , 
  	{ "name": "m_axi_gmem0_AWREADY", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "gmem0", "role": "AWREADY" }} , 
  	{ "name": "m_axi_gmem0_AWADDR", "direction": "out", "datatype": "sc_lv", "bitwidth":64, "type": "signal", "bundle":{"name": "gmem0", "role": "AWADDR" }} , 
@@ -565,46 +559,46 @@ set RtlHierarchyInfo {[
 				"BlockSignal" : [
 					{"Name" : "gmem0_blk_n_AR", "Type" : "RtlSignal"}],
 				"SubConnect" : [
-					{"ID" : "19", "SubInstance" : "grp_SpMV_Pipeline_spmv_loop_internal9_fu_985", "Port" : "gmem0", "Inst_start_state" : "219", "Inst_end_state" : "220"},
-					{"ID" : "15", "SubInstance" : "grp_SpMV_Pipeline_spmv_loop_internal7_fu_953", "Port" : "gmem0", "Inst_start_state" : "175", "Inst_end_state" : "176"},
-					{"ID" : "5", "SubInstance" : "grp_SpMV_Pipeline_spmv_loop_internal2_fu_873", "Port" : "gmem0", "Inst_start_state" : "65", "Inst_end_state" : "66"},
 					{"ID" : "1", "SubInstance" : "grp_SpMV_Pipeline_spmv_loop_internal_fu_841", "Port" : "gmem0", "Inst_start_state" : "21", "Inst_end_state" : "22"},
-					{"ID" : "3", "SubInstance" : "grp_SpMV_Pipeline_spmv_loop_internal1_fu_857", "Port" : "gmem0", "Inst_start_state" : "43", "Inst_end_state" : "44"},
 					{"ID" : "7", "SubInstance" : "grp_SpMV_Pipeline_spmv_loop_internal3_fu_889", "Port" : "gmem0", "Inst_start_state" : "87", "Inst_end_state" : "88"},
-					{"ID" : "13", "SubInstance" : "grp_SpMV_Pipeline_spmv_loop_internal6_fu_937", "Port" : "gmem0", "Inst_start_state" : "153", "Inst_end_state" : "154"},
+					{"ID" : "9", "SubInstance" : "grp_SpMV_Pipeline_spmv_loop_internal4_fu_905", "Port" : "gmem0", "Inst_start_state" : "109", "Inst_end_state" : "110"},
 					{"ID" : "11", "SubInstance" : "grp_SpMV_Pipeline_spmv_loop_internal5_fu_921", "Port" : "gmem0", "Inst_start_state" : "131", "Inst_end_state" : "132"},
+					{"ID" : "13", "SubInstance" : "grp_SpMV_Pipeline_spmv_loop_internal6_fu_937", "Port" : "gmem0", "Inst_start_state" : "153", "Inst_end_state" : "154"},
+					{"ID" : "3", "SubInstance" : "grp_SpMV_Pipeline_spmv_loop_internal1_fu_857", "Port" : "gmem0", "Inst_start_state" : "43", "Inst_end_state" : "44"},
+					{"ID" : "5", "SubInstance" : "grp_SpMV_Pipeline_spmv_loop_internal2_fu_873", "Port" : "gmem0", "Inst_start_state" : "65", "Inst_end_state" : "66"},
 					{"ID" : "17", "SubInstance" : "grp_SpMV_Pipeline_spmv_loop_internal8_fu_969", "Port" : "gmem0", "Inst_start_state" : "197", "Inst_end_state" : "198"},
-					{"ID" : "9", "SubInstance" : "grp_SpMV_Pipeline_spmv_loop_internal4_fu_905", "Port" : "gmem0", "Inst_start_state" : "109", "Inst_end_state" : "110"}]},
+					{"ID" : "15", "SubInstance" : "grp_SpMV_Pipeline_spmv_loop_internal7_fu_953", "Port" : "gmem0", "Inst_start_state" : "175", "Inst_end_state" : "176"},
+					{"ID" : "19", "SubInstance" : "grp_SpMV_Pipeline_spmv_loop_internal9_fu_985", "Port" : "gmem0", "Inst_start_state" : "219", "Inst_end_state" : "220"}]},
 			{"Name" : "gmem1", "Type" : "MAXI", "Direction" : "I",
 				"BlockSignal" : [
 					{"Name" : "gmem1_blk_n_AR", "Type" : "RtlSignal"}],
 				"SubConnect" : [
-					{"ID" : "19", "SubInstance" : "grp_SpMV_Pipeline_spmv_loop_internal9_fu_985", "Port" : "gmem1", "Inst_start_state" : "219", "Inst_end_state" : "220"},
-					{"ID" : "15", "SubInstance" : "grp_SpMV_Pipeline_spmv_loop_internal7_fu_953", "Port" : "gmem1", "Inst_start_state" : "175", "Inst_end_state" : "176"},
-					{"ID" : "5", "SubInstance" : "grp_SpMV_Pipeline_spmv_loop_internal2_fu_873", "Port" : "gmem1", "Inst_start_state" : "65", "Inst_end_state" : "66"},
 					{"ID" : "1", "SubInstance" : "grp_SpMV_Pipeline_spmv_loop_internal_fu_841", "Port" : "gmem1", "Inst_start_state" : "21", "Inst_end_state" : "22"},
-					{"ID" : "3", "SubInstance" : "grp_SpMV_Pipeline_spmv_loop_internal1_fu_857", "Port" : "gmem1", "Inst_start_state" : "43", "Inst_end_state" : "44"},
 					{"ID" : "7", "SubInstance" : "grp_SpMV_Pipeline_spmv_loop_internal3_fu_889", "Port" : "gmem1", "Inst_start_state" : "87", "Inst_end_state" : "88"},
-					{"ID" : "13", "SubInstance" : "grp_SpMV_Pipeline_spmv_loop_internal6_fu_937", "Port" : "gmem1", "Inst_start_state" : "153", "Inst_end_state" : "154"},
+					{"ID" : "9", "SubInstance" : "grp_SpMV_Pipeline_spmv_loop_internal4_fu_905", "Port" : "gmem1", "Inst_start_state" : "109", "Inst_end_state" : "110"},
 					{"ID" : "11", "SubInstance" : "grp_SpMV_Pipeline_spmv_loop_internal5_fu_921", "Port" : "gmem1", "Inst_start_state" : "131", "Inst_end_state" : "132"},
+					{"ID" : "13", "SubInstance" : "grp_SpMV_Pipeline_spmv_loop_internal6_fu_937", "Port" : "gmem1", "Inst_start_state" : "153", "Inst_end_state" : "154"},
+					{"ID" : "3", "SubInstance" : "grp_SpMV_Pipeline_spmv_loop_internal1_fu_857", "Port" : "gmem1", "Inst_start_state" : "43", "Inst_end_state" : "44"},
+					{"ID" : "5", "SubInstance" : "grp_SpMV_Pipeline_spmv_loop_internal2_fu_873", "Port" : "gmem1", "Inst_start_state" : "65", "Inst_end_state" : "66"},
 					{"ID" : "17", "SubInstance" : "grp_SpMV_Pipeline_spmv_loop_internal8_fu_969", "Port" : "gmem1", "Inst_start_state" : "197", "Inst_end_state" : "198"},
-					{"ID" : "9", "SubInstance" : "grp_SpMV_Pipeline_spmv_loop_internal4_fu_905", "Port" : "gmem1", "Inst_start_state" : "109", "Inst_end_state" : "110"}]},
+					{"ID" : "15", "SubInstance" : "grp_SpMV_Pipeline_spmv_loop_internal7_fu_953", "Port" : "gmem1", "Inst_start_state" : "175", "Inst_end_state" : "176"},
+					{"ID" : "19", "SubInstance" : "grp_SpMV_Pipeline_spmv_loop_internal9_fu_985", "Port" : "gmem1", "Inst_start_state" : "219", "Inst_end_state" : "220"}]},
 			{"Name" : "gmem2", "Type" : "MAXI", "Direction" : "I",
 				"BlockSignal" : [
 					{"Name" : "gmem2_blk_n_AR", "Type" : "RtlSignal"},
 					{"Name" : "gmem2_blk_n_R", "Type" : "RtlSignal"}]},
 			{"Name" : "gmem3", "Type" : "MAXI", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "19", "SubInstance" : "grp_SpMV_Pipeline_spmv_loop_internal9_fu_985", "Port" : "gmem3", "Inst_start_state" : "219", "Inst_end_state" : "220"},
-					{"ID" : "15", "SubInstance" : "grp_SpMV_Pipeline_spmv_loop_internal7_fu_953", "Port" : "gmem3", "Inst_start_state" : "175", "Inst_end_state" : "176"},
-					{"ID" : "5", "SubInstance" : "grp_SpMV_Pipeline_spmv_loop_internal2_fu_873", "Port" : "gmem3", "Inst_start_state" : "65", "Inst_end_state" : "66"},
 					{"ID" : "1", "SubInstance" : "grp_SpMV_Pipeline_spmv_loop_internal_fu_841", "Port" : "gmem3", "Inst_start_state" : "21", "Inst_end_state" : "22"},
-					{"ID" : "3", "SubInstance" : "grp_SpMV_Pipeline_spmv_loop_internal1_fu_857", "Port" : "gmem3", "Inst_start_state" : "43", "Inst_end_state" : "44"},
 					{"ID" : "7", "SubInstance" : "grp_SpMV_Pipeline_spmv_loop_internal3_fu_889", "Port" : "gmem3", "Inst_start_state" : "87", "Inst_end_state" : "88"},
-					{"ID" : "13", "SubInstance" : "grp_SpMV_Pipeline_spmv_loop_internal6_fu_937", "Port" : "gmem3", "Inst_start_state" : "153", "Inst_end_state" : "154"},
+					{"ID" : "9", "SubInstance" : "grp_SpMV_Pipeline_spmv_loop_internal4_fu_905", "Port" : "gmem3", "Inst_start_state" : "109", "Inst_end_state" : "110"},
 					{"ID" : "11", "SubInstance" : "grp_SpMV_Pipeline_spmv_loop_internal5_fu_921", "Port" : "gmem3", "Inst_start_state" : "131", "Inst_end_state" : "132"},
+					{"ID" : "13", "SubInstance" : "grp_SpMV_Pipeline_spmv_loop_internal6_fu_937", "Port" : "gmem3", "Inst_start_state" : "153", "Inst_end_state" : "154"},
+					{"ID" : "3", "SubInstance" : "grp_SpMV_Pipeline_spmv_loop_internal1_fu_857", "Port" : "gmem3", "Inst_start_state" : "43", "Inst_end_state" : "44"},
+					{"ID" : "5", "SubInstance" : "grp_SpMV_Pipeline_spmv_loop_internal2_fu_873", "Port" : "gmem3", "Inst_start_state" : "65", "Inst_end_state" : "66"},
 					{"ID" : "17", "SubInstance" : "grp_SpMV_Pipeline_spmv_loop_internal8_fu_969", "Port" : "gmem3", "Inst_start_state" : "197", "Inst_end_state" : "198"},
-					{"ID" : "9", "SubInstance" : "grp_SpMV_Pipeline_spmv_loop_internal4_fu_905", "Port" : "gmem3", "Inst_start_state" : "109", "Inst_end_state" : "110"}]},
+					{"ID" : "15", "SubInstance" : "grp_SpMV_Pipeline_spmv_loop_internal7_fu_953", "Port" : "gmem3", "Inst_start_state" : "175", "Inst_end_state" : "176"},
+					{"ID" : "19", "SubInstance" : "grp_SpMV_Pipeline_spmv_loop_internal9_fu_985", "Port" : "gmem3", "Inst_start_state" : "219", "Inst_end_state" : "220"}]},
 			{"Name" : "gmem4", "Type" : "MAXI", "Direction" : "O",
 				"BlockSignal" : [
 					{"Name" : "gmem4_blk_n_AW", "Type" : "RtlSignal"},
@@ -631,7 +625,7 @@ set RtlHierarchyInfo {[
 		"HasNonBlockingOperation" : "0",
 		"IsBlackBox" : "0",
 		"Port" : [
-			{"Name" : "zext_ln36", "Type" : "None", "Direction" : "I"},
+			{"Name" : "zext_ln37", "Type" : "None", "Direction" : "I"},
 			{"Name" : "gmem3", "Type" : "MAXI", "Direction" : "I",
 				"BlockSignal" : [
 					{"Name" : "gmem3_blk_n_AR", "Type" : "RtlSignal"},
@@ -642,9 +636,9 @@ set RtlHierarchyInfo {[
 			{"Name" : "gmem0", "Type" : "MAXI", "Direction" : "I",
 				"BlockSignal" : [
 					{"Name" : "gmem0_blk_n_R", "Type" : "RtlSignal"}]},
-			{"Name" : "zext_ln36_1", "Type" : "None", "Direction" : "I"},
-			{"Name" : "sext_ln36_1", "Type" : "None", "Direction" : "I"},
-			{"Name" : "add_ln36_1", "Type" : "None", "Direction" : "I"},
+			{"Name" : "zext_ln37_1", "Type" : "None", "Direction" : "I"},
+			{"Name" : "sext_ln37_1", "Type" : "None", "Direction" : "I"},
+			{"Name" : "add_ln37_1", "Type" : "None", "Direction" : "I"},
 			{"Name" : "vector", "Type" : "None", "Direction" : "I"},
 			{"Name" : "sum_out", "Type" : "Vld", "Direction" : "O"}],
 		"Loop" : [
@@ -666,7 +660,7 @@ set RtlHierarchyInfo {[
 		"HasNonBlockingOperation" : "0",
 		"IsBlackBox" : "0",
 		"Port" : [
-			{"Name" : "zext_ln36_2", "Type" : "None", "Direction" : "I"},
+			{"Name" : "zext_ln37_2", "Type" : "None", "Direction" : "I"},
 			{"Name" : "gmem3", "Type" : "MAXI", "Direction" : "I",
 				"BlockSignal" : [
 					{"Name" : "gmem3_blk_n_AR", "Type" : "RtlSignal"},
@@ -677,9 +671,9 @@ set RtlHierarchyInfo {[
 			{"Name" : "gmem0", "Type" : "MAXI", "Direction" : "I",
 				"BlockSignal" : [
 					{"Name" : "gmem0_blk_n_R", "Type" : "RtlSignal"}]},
-			{"Name" : "zext_ln36_3", "Type" : "None", "Direction" : "I"},
-			{"Name" : "sext_ln36_3", "Type" : "None", "Direction" : "I"},
-			{"Name" : "add_ln36_5", "Type" : "None", "Direction" : "I"},
+			{"Name" : "zext_ln37_3", "Type" : "None", "Direction" : "I"},
+			{"Name" : "sext_ln37_3", "Type" : "None", "Direction" : "I"},
+			{"Name" : "add_ln37_5", "Type" : "None", "Direction" : "I"},
 			{"Name" : "vector", "Type" : "None", "Direction" : "I"},
 			{"Name" : "sum_3_out", "Type" : "Vld", "Direction" : "O"}],
 		"Loop" : [
@@ -701,7 +695,7 @@ set RtlHierarchyInfo {[
 		"HasNonBlockingOperation" : "0",
 		"IsBlackBox" : "0",
 		"Port" : [
-			{"Name" : "zext_ln36_4", "Type" : "None", "Direction" : "I"},
+			{"Name" : "zext_ln37_4", "Type" : "None", "Direction" : "I"},
 			{"Name" : "gmem3", "Type" : "MAXI", "Direction" : "I",
 				"BlockSignal" : [
 					{"Name" : "gmem3_blk_n_AR", "Type" : "RtlSignal"},
@@ -712,9 +706,9 @@ set RtlHierarchyInfo {[
 			{"Name" : "gmem0", "Type" : "MAXI", "Direction" : "I",
 				"BlockSignal" : [
 					{"Name" : "gmem0_blk_n_R", "Type" : "RtlSignal"}]},
-			{"Name" : "zext_ln36_5", "Type" : "None", "Direction" : "I"},
-			{"Name" : "sext_ln36_5", "Type" : "None", "Direction" : "I"},
-			{"Name" : "add_ln36_9", "Type" : "None", "Direction" : "I"},
+			{"Name" : "zext_ln37_5", "Type" : "None", "Direction" : "I"},
+			{"Name" : "sext_ln37_5", "Type" : "None", "Direction" : "I"},
+			{"Name" : "add_ln37_9", "Type" : "None", "Direction" : "I"},
 			{"Name" : "vector", "Type" : "None", "Direction" : "I"},
 			{"Name" : "sum_6_out", "Type" : "Vld", "Direction" : "O"}],
 		"Loop" : [
@@ -736,7 +730,7 @@ set RtlHierarchyInfo {[
 		"HasNonBlockingOperation" : "0",
 		"IsBlackBox" : "0",
 		"Port" : [
-			{"Name" : "zext_ln36_6", "Type" : "None", "Direction" : "I"},
+			{"Name" : "zext_ln37_6", "Type" : "None", "Direction" : "I"},
 			{"Name" : "gmem3", "Type" : "MAXI", "Direction" : "I",
 				"BlockSignal" : [
 					{"Name" : "gmem3_blk_n_AR", "Type" : "RtlSignal"},
@@ -747,9 +741,9 @@ set RtlHierarchyInfo {[
 			{"Name" : "gmem0", "Type" : "MAXI", "Direction" : "I",
 				"BlockSignal" : [
 					{"Name" : "gmem0_blk_n_R", "Type" : "RtlSignal"}]},
-			{"Name" : "zext_ln36_7", "Type" : "None", "Direction" : "I"},
-			{"Name" : "sext_ln36_7", "Type" : "None", "Direction" : "I"},
-			{"Name" : "add_ln36_13", "Type" : "None", "Direction" : "I"},
+			{"Name" : "zext_ln37_7", "Type" : "None", "Direction" : "I"},
+			{"Name" : "sext_ln37_7", "Type" : "None", "Direction" : "I"},
+			{"Name" : "add_ln37_13", "Type" : "None", "Direction" : "I"},
 			{"Name" : "vector", "Type" : "None", "Direction" : "I"},
 			{"Name" : "sum_9_out", "Type" : "Vld", "Direction" : "O"}],
 		"Loop" : [
@@ -771,7 +765,7 @@ set RtlHierarchyInfo {[
 		"HasNonBlockingOperation" : "0",
 		"IsBlackBox" : "0",
 		"Port" : [
-			{"Name" : "zext_ln36_8", "Type" : "None", "Direction" : "I"},
+			{"Name" : "zext_ln37_8", "Type" : "None", "Direction" : "I"},
 			{"Name" : "gmem3", "Type" : "MAXI", "Direction" : "I",
 				"BlockSignal" : [
 					{"Name" : "gmem3_blk_n_AR", "Type" : "RtlSignal"},
@@ -782,9 +776,9 @@ set RtlHierarchyInfo {[
 			{"Name" : "gmem0", "Type" : "MAXI", "Direction" : "I",
 				"BlockSignal" : [
 					{"Name" : "gmem0_blk_n_R", "Type" : "RtlSignal"}]},
-			{"Name" : "zext_ln36_9", "Type" : "None", "Direction" : "I"},
-			{"Name" : "sext_ln36_9", "Type" : "None", "Direction" : "I"},
-			{"Name" : "add_ln36_17", "Type" : "None", "Direction" : "I"},
+			{"Name" : "zext_ln37_9", "Type" : "None", "Direction" : "I"},
+			{"Name" : "sext_ln37_9", "Type" : "None", "Direction" : "I"},
+			{"Name" : "add_ln37_17", "Type" : "None", "Direction" : "I"},
 			{"Name" : "vector", "Type" : "None", "Direction" : "I"},
 			{"Name" : "sum_12_out", "Type" : "Vld", "Direction" : "O"}],
 		"Loop" : [
@@ -806,7 +800,7 @@ set RtlHierarchyInfo {[
 		"HasNonBlockingOperation" : "0",
 		"IsBlackBox" : "0",
 		"Port" : [
-			{"Name" : "zext_ln36_10", "Type" : "None", "Direction" : "I"},
+			{"Name" : "zext_ln37_10", "Type" : "None", "Direction" : "I"},
 			{"Name" : "gmem3", "Type" : "MAXI", "Direction" : "I",
 				"BlockSignal" : [
 					{"Name" : "gmem3_blk_n_AR", "Type" : "RtlSignal"},
@@ -817,9 +811,9 @@ set RtlHierarchyInfo {[
 			{"Name" : "gmem0", "Type" : "MAXI", "Direction" : "I",
 				"BlockSignal" : [
 					{"Name" : "gmem0_blk_n_R", "Type" : "RtlSignal"}]},
-			{"Name" : "zext_ln36_11", "Type" : "None", "Direction" : "I"},
-			{"Name" : "sext_ln36_11", "Type" : "None", "Direction" : "I"},
-			{"Name" : "add_ln36_21", "Type" : "None", "Direction" : "I"},
+			{"Name" : "zext_ln37_11", "Type" : "None", "Direction" : "I"},
+			{"Name" : "sext_ln37_11", "Type" : "None", "Direction" : "I"},
+			{"Name" : "add_ln37_21", "Type" : "None", "Direction" : "I"},
 			{"Name" : "vector", "Type" : "None", "Direction" : "I"},
 			{"Name" : "sum_15_out", "Type" : "Vld", "Direction" : "O"}],
 		"Loop" : [
@@ -841,7 +835,7 @@ set RtlHierarchyInfo {[
 		"HasNonBlockingOperation" : "0",
 		"IsBlackBox" : "0",
 		"Port" : [
-			{"Name" : "zext_ln36_12", "Type" : "None", "Direction" : "I"},
+			{"Name" : "zext_ln37_12", "Type" : "None", "Direction" : "I"},
 			{"Name" : "gmem3", "Type" : "MAXI", "Direction" : "I",
 				"BlockSignal" : [
 					{"Name" : "gmem3_blk_n_AR", "Type" : "RtlSignal"},
@@ -852,9 +846,9 @@ set RtlHierarchyInfo {[
 			{"Name" : "gmem0", "Type" : "MAXI", "Direction" : "I",
 				"BlockSignal" : [
 					{"Name" : "gmem0_blk_n_R", "Type" : "RtlSignal"}]},
-			{"Name" : "zext_ln36_13", "Type" : "None", "Direction" : "I"},
-			{"Name" : "sext_ln36_13", "Type" : "None", "Direction" : "I"},
-			{"Name" : "add_ln36_25", "Type" : "None", "Direction" : "I"},
+			{"Name" : "zext_ln37_13", "Type" : "None", "Direction" : "I"},
+			{"Name" : "sext_ln37_13", "Type" : "None", "Direction" : "I"},
+			{"Name" : "add_ln37_25", "Type" : "None", "Direction" : "I"},
 			{"Name" : "vector", "Type" : "None", "Direction" : "I"},
 			{"Name" : "sum_18_out", "Type" : "Vld", "Direction" : "O"}],
 		"Loop" : [
@@ -876,7 +870,7 @@ set RtlHierarchyInfo {[
 		"HasNonBlockingOperation" : "0",
 		"IsBlackBox" : "0",
 		"Port" : [
-			{"Name" : "zext_ln36_14", "Type" : "None", "Direction" : "I"},
+			{"Name" : "zext_ln37_14", "Type" : "None", "Direction" : "I"},
 			{"Name" : "gmem3", "Type" : "MAXI", "Direction" : "I",
 				"BlockSignal" : [
 					{"Name" : "gmem3_blk_n_AR", "Type" : "RtlSignal"},
@@ -887,9 +881,9 @@ set RtlHierarchyInfo {[
 			{"Name" : "gmem0", "Type" : "MAXI", "Direction" : "I",
 				"BlockSignal" : [
 					{"Name" : "gmem0_blk_n_R", "Type" : "RtlSignal"}]},
-			{"Name" : "zext_ln36_15", "Type" : "None", "Direction" : "I"},
-			{"Name" : "sext_ln36_15", "Type" : "None", "Direction" : "I"},
-			{"Name" : "add_ln36_29", "Type" : "None", "Direction" : "I"},
+			{"Name" : "zext_ln37_15", "Type" : "None", "Direction" : "I"},
+			{"Name" : "sext_ln37_15", "Type" : "None", "Direction" : "I"},
+			{"Name" : "add_ln37_29", "Type" : "None", "Direction" : "I"},
 			{"Name" : "vector", "Type" : "None", "Direction" : "I"},
 			{"Name" : "sum_21_out", "Type" : "Vld", "Direction" : "O"}],
 		"Loop" : [
@@ -911,7 +905,7 @@ set RtlHierarchyInfo {[
 		"HasNonBlockingOperation" : "0",
 		"IsBlackBox" : "0",
 		"Port" : [
-			{"Name" : "zext_ln36_16", "Type" : "None", "Direction" : "I"},
+			{"Name" : "zext_ln37_16", "Type" : "None", "Direction" : "I"},
 			{"Name" : "gmem3", "Type" : "MAXI", "Direction" : "I",
 				"BlockSignal" : [
 					{"Name" : "gmem3_blk_n_AR", "Type" : "RtlSignal"},
@@ -922,9 +916,9 @@ set RtlHierarchyInfo {[
 			{"Name" : "gmem0", "Type" : "MAXI", "Direction" : "I",
 				"BlockSignal" : [
 					{"Name" : "gmem0_blk_n_R", "Type" : "RtlSignal"}]},
-			{"Name" : "zext_ln36_17", "Type" : "None", "Direction" : "I"},
-			{"Name" : "sext_ln36_17", "Type" : "None", "Direction" : "I"},
-			{"Name" : "add_ln36_33", "Type" : "None", "Direction" : "I"},
+			{"Name" : "zext_ln37_17", "Type" : "None", "Direction" : "I"},
+			{"Name" : "sext_ln37_17", "Type" : "None", "Direction" : "I"},
+			{"Name" : "add_ln37_33", "Type" : "None", "Direction" : "I"},
 			{"Name" : "vector", "Type" : "None", "Direction" : "I"},
 			{"Name" : "sum_24_out", "Type" : "Vld", "Direction" : "O"}],
 		"Loop" : [
@@ -946,7 +940,7 @@ set RtlHierarchyInfo {[
 		"HasNonBlockingOperation" : "0",
 		"IsBlackBox" : "0",
 		"Port" : [
-			{"Name" : "zext_ln36_18", "Type" : "None", "Direction" : "I"},
+			{"Name" : "zext_ln37_18", "Type" : "None", "Direction" : "I"},
 			{"Name" : "gmem3", "Type" : "MAXI", "Direction" : "I",
 				"BlockSignal" : [
 					{"Name" : "gmem3_blk_n_AR", "Type" : "RtlSignal"},
@@ -957,9 +951,9 @@ set RtlHierarchyInfo {[
 			{"Name" : "gmem0", "Type" : "MAXI", "Direction" : "I",
 				"BlockSignal" : [
 					{"Name" : "gmem0_blk_n_R", "Type" : "RtlSignal"}]},
-			{"Name" : "zext_ln36_19", "Type" : "None", "Direction" : "I"},
-			{"Name" : "sext_ln36_19", "Type" : "None", "Direction" : "I"},
-			{"Name" : "add_ln36_37", "Type" : "None", "Direction" : "I"},
+			{"Name" : "zext_ln37_19", "Type" : "None", "Direction" : "I"},
+			{"Name" : "sext_ln37_19", "Type" : "None", "Direction" : "I"},
+			{"Name" : "add_ln37_37", "Type" : "None", "Direction" : "I"},
 			{"Name" : "vector", "Type" : "None", "Direction" : "I"},
 			{"Name" : "sum_27_out", "Type" : "Vld", "Direction" : "O"}],
 		"Loop" : [
@@ -989,103 +983,103 @@ set ArgLastReadFirstWriteLatency {
 		vector {Type I LastRead 0 FirstWrite -1}
 		output_r {Type I LastRead 0 FirstWrite -1}}
 	SpMV_Pipeline_spmv_loop_internal {
-		zext_ln36 {Type I LastRead 0 FirstWrite -1}
+		zext_ln37 {Type I LastRead 0 FirstWrite -1}
 		gmem3 {Type I LastRead 12 FirstWrite -1}
 		gmem1 {Type I LastRead 2 FirstWrite -1}
 		gmem0 {Type I LastRead 12 FirstWrite -1}
-		zext_ln36_1 {Type I LastRead 0 FirstWrite -1}
-		sext_ln36_1 {Type I LastRead 0 FirstWrite -1}
-		add_ln36_1 {Type I LastRead 0 FirstWrite -1}
+		zext_ln37_1 {Type I LastRead 0 FirstWrite -1}
+		sext_ln37_1 {Type I LastRead 0 FirstWrite -1}
+		add_ln37_1 {Type I LastRead 0 FirstWrite -1}
 		vector {Type I LastRead 0 FirstWrite -1}
 		sum_out {Type O LastRead -1 FirstWrite 14}}
 	SpMV_Pipeline_spmv_loop_internal1 {
-		zext_ln36_2 {Type I LastRead 0 FirstWrite -1}
+		zext_ln37_2 {Type I LastRead 0 FirstWrite -1}
 		gmem3 {Type I LastRead 12 FirstWrite -1}
 		gmem1 {Type I LastRead 2 FirstWrite -1}
 		gmem0 {Type I LastRead 12 FirstWrite -1}
-		zext_ln36_3 {Type I LastRead 0 FirstWrite -1}
-		sext_ln36_3 {Type I LastRead 0 FirstWrite -1}
-		add_ln36_5 {Type I LastRead 0 FirstWrite -1}
+		zext_ln37_3 {Type I LastRead 0 FirstWrite -1}
+		sext_ln37_3 {Type I LastRead 0 FirstWrite -1}
+		add_ln37_5 {Type I LastRead 0 FirstWrite -1}
 		vector {Type I LastRead 0 FirstWrite -1}
 		sum_3_out {Type O LastRead -1 FirstWrite 14}}
 	SpMV_Pipeline_spmv_loop_internal2 {
-		zext_ln36_4 {Type I LastRead 0 FirstWrite -1}
+		zext_ln37_4 {Type I LastRead 0 FirstWrite -1}
 		gmem3 {Type I LastRead 12 FirstWrite -1}
 		gmem1 {Type I LastRead 2 FirstWrite -1}
 		gmem0 {Type I LastRead 12 FirstWrite -1}
-		zext_ln36_5 {Type I LastRead 0 FirstWrite -1}
-		sext_ln36_5 {Type I LastRead 0 FirstWrite -1}
-		add_ln36_9 {Type I LastRead 0 FirstWrite -1}
+		zext_ln37_5 {Type I LastRead 0 FirstWrite -1}
+		sext_ln37_5 {Type I LastRead 0 FirstWrite -1}
+		add_ln37_9 {Type I LastRead 0 FirstWrite -1}
 		vector {Type I LastRead 0 FirstWrite -1}
 		sum_6_out {Type O LastRead -1 FirstWrite 14}}
 	SpMV_Pipeline_spmv_loop_internal3 {
-		zext_ln36_6 {Type I LastRead 0 FirstWrite -1}
+		zext_ln37_6 {Type I LastRead 0 FirstWrite -1}
 		gmem3 {Type I LastRead 12 FirstWrite -1}
 		gmem1 {Type I LastRead 2 FirstWrite -1}
 		gmem0 {Type I LastRead 12 FirstWrite -1}
-		zext_ln36_7 {Type I LastRead 0 FirstWrite -1}
-		sext_ln36_7 {Type I LastRead 0 FirstWrite -1}
-		add_ln36_13 {Type I LastRead 0 FirstWrite -1}
+		zext_ln37_7 {Type I LastRead 0 FirstWrite -1}
+		sext_ln37_7 {Type I LastRead 0 FirstWrite -1}
+		add_ln37_13 {Type I LastRead 0 FirstWrite -1}
 		vector {Type I LastRead 0 FirstWrite -1}
 		sum_9_out {Type O LastRead -1 FirstWrite 14}}
 	SpMV_Pipeline_spmv_loop_internal4 {
-		zext_ln36_8 {Type I LastRead 0 FirstWrite -1}
+		zext_ln37_8 {Type I LastRead 0 FirstWrite -1}
 		gmem3 {Type I LastRead 12 FirstWrite -1}
 		gmem1 {Type I LastRead 2 FirstWrite -1}
 		gmem0 {Type I LastRead 12 FirstWrite -1}
-		zext_ln36_9 {Type I LastRead 0 FirstWrite -1}
-		sext_ln36_9 {Type I LastRead 0 FirstWrite -1}
-		add_ln36_17 {Type I LastRead 0 FirstWrite -1}
+		zext_ln37_9 {Type I LastRead 0 FirstWrite -1}
+		sext_ln37_9 {Type I LastRead 0 FirstWrite -1}
+		add_ln37_17 {Type I LastRead 0 FirstWrite -1}
 		vector {Type I LastRead 0 FirstWrite -1}
 		sum_12_out {Type O LastRead -1 FirstWrite 14}}
 	SpMV_Pipeline_spmv_loop_internal5 {
-		zext_ln36_10 {Type I LastRead 0 FirstWrite -1}
+		zext_ln37_10 {Type I LastRead 0 FirstWrite -1}
 		gmem3 {Type I LastRead 12 FirstWrite -1}
 		gmem1 {Type I LastRead 2 FirstWrite -1}
 		gmem0 {Type I LastRead 12 FirstWrite -1}
-		zext_ln36_11 {Type I LastRead 0 FirstWrite -1}
-		sext_ln36_11 {Type I LastRead 0 FirstWrite -1}
-		add_ln36_21 {Type I LastRead 0 FirstWrite -1}
+		zext_ln37_11 {Type I LastRead 0 FirstWrite -1}
+		sext_ln37_11 {Type I LastRead 0 FirstWrite -1}
+		add_ln37_21 {Type I LastRead 0 FirstWrite -1}
 		vector {Type I LastRead 0 FirstWrite -1}
 		sum_15_out {Type O LastRead -1 FirstWrite 14}}
 	SpMV_Pipeline_spmv_loop_internal6 {
-		zext_ln36_12 {Type I LastRead 0 FirstWrite -1}
+		zext_ln37_12 {Type I LastRead 0 FirstWrite -1}
 		gmem3 {Type I LastRead 12 FirstWrite -1}
 		gmem1 {Type I LastRead 2 FirstWrite -1}
 		gmem0 {Type I LastRead 12 FirstWrite -1}
-		zext_ln36_13 {Type I LastRead 0 FirstWrite -1}
-		sext_ln36_13 {Type I LastRead 0 FirstWrite -1}
-		add_ln36_25 {Type I LastRead 0 FirstWrite -1}
+		zext_ln37_13 {Type I LastRead 0 FirstWrite -1}
+		sext_ln37_13 {Type I LastRead 0 FirstWrite -1}
+		add_ln37_25 {Type I LastRead 0 FirstWrite -1}
 		vector {Type I LastRead 0 FirstWrite -1}
 		sum_18_out {Type O LastRead -1 FirstWrite 14}}
 	SpMV_Pipeline_spmv_loop_internal7 {
-		zext_ln36_14 {Type I LastRead 0 FirstWrite -1}
+		zext_ln37_14 {Type I LastRead 0 FirstWrite -1}
 		gmem3 {Type I LastRead 12 FirstWrite -1}
 		gmem1 {Type I LastRead 2 FirstWrite -1}
 		gmem0 {Type I LastRead 12 FirstWrite -1}
-		zext_ln36_15 {Type I LastRead 0 FirstWrite -1}
-		sext_ln36_15 {Type I LastRead 0 FirstWrite -1}
-		add_ln36_29 {Type I LastRead 0 FirstWrite -1}
+		zext_ln37_15 {Type I LastRead 0 FirstWrite -1}
+		sext_ln37_15 {Type I LastRead 0 FirstWrite -1}
+		add_ln37_29 {Type I LastRead 0 FirstWrite -1}
 		vector {Type I LastRead 0 FirstWrite -1}
 		sum_21_out {Type O LastRead -1 FirstWrite 14}}
 	SpMV_Pipeline_spmv_loop_internal8 {
-		zext_ln36_16 {Type I LastRead 0 FirstWrite -1}
+		zext_ln37_16 {Type I LastRead 0 FirstWrite -1}
 		gmem3 {Type I LastRead 12 FirstWrite -1}
 		gmem1 {Type I LastRead 2 FirstWrite -1}
 		gmem0 {Type I LastRead 12 FirstWrite -1}
-		zext_ln36_17 {Type I LastRead 0 FirstWrite -1}
-		sext_ln36_17 {Type I LastRead 0 FirstWrite -1}
-		add_ln36_33 {Type I LastRead 0 FirstWrite -1}
+		zext_ln37_17 {Type I LastRead 0 FirstWrite -1}
+		sext_ln37_17 {Type I LastRead 0 FirstWrite -1}
+		add_ln37_33 {Type I LastRead 0 FirstWrite -1}
 		vector {Type I LastRead 0 FirstWrite -1}
 		sum_24_out {Type O LastRead -1 FirstWrite 14}}
 	SpMV_Pipeline_spmv_loop_internal9 {
-		zext_ln36_18 {Type I LastRead 0 FirstWrite -1}
+		zext_ln37_18 {Type I LastRead 0 FirstWrite -1}
 		gmem3 {Type I LastRead 12 FirstWrite -1}
 		gmem1 {Type I LastRead 2 FirstWrite -1}
 		gmem0 {Type I LastRead 12 FirstWrite -1}
-		zext_ln36_19 {Type I LastRead 0 FirstWrite -1}
-		sext_ln36_19 {Type I LastRead 0 FirstWrite -1}
-		add_ln36_37 {Type I LastRead 0 FirstWrite -1}
+		zext_ln37_19 {Type I LastRead 0 FirstWrite -1}
+		sext_ln37_19 {Type I LastRead 0 FirstWrite -1}
+		add_ln37_37 {Type I LastRead 0 FirstWrite -1}
 		vector {Type I LastRead 0 FirstWrite -1}
 		sum_27_out {Type O LastRead -1 FirstWrite 14}}}
 

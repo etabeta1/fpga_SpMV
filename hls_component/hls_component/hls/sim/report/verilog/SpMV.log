@@ -16,18 +16,6 @@ INFO: [COSIM-15] Starting XSIM ...
 INFO: [COSIM-316] Starting C post checking ...
 Running 5 tests
 Running test 'Square_4x4_matrix'...OK
-Running test 'Big_matrix'...ERROR: System received a signal named SIGSEGV and the program has to stop immediately!
-This signal was generated when a program tries to read or write outside the memory that is allocated for it, or to write memory that can only be read.
-Possible cause of this problem may be:
-  1) Missing depth information for one or more pointers to arrays in the interface;
-  2) Insufficient depth setting for array argument(s);
-  3) Excessive depth setting for array argument(s), that exceeds the maximum virtual memory size for the process;
-  4) Null pointer etc.
-Current execution stopped during CodeState = DUMP_OUTPUTS.
-You can search CodeState variable name in apatb*.cpp file under ./sim/wrapc dir to locate the position.
-
-Running 5 tests
-Running test 'Square_4x4_matrix'...OK
 Running test 'Big_matrix'...OK
 Running test 'Biggish_matrix'...OK
 Running test 'Bigger_matrix'...OK
@@ -338,7 +326,7 @@ Built simulation snapshot SpMV
   **** SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
   **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
   **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-  **** Start of session at: Tue Jan  7 19:57:08 2025
+  **** Start of session at: Wed Jan  8 20:13:30 2025
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -354,15 +342,15 @@ source SpMV.tcl
 // RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
 ////////////////////////////////////////////////////////////////////////////////////
 // RTL Simulation : 0 / 5 [n/a] @ "125000"
-// RTL Simulation : 1 / 5 [n/a] @ "3165000"
-// RTL Simulation : 2 / 5 [n/a] @ "5715000"
-// RTL Simulation : 3 / 5 [n/a] @ "9315000"
-// RTL Simulation : 4 / 5 [n/a] @ "14595000"
-// RTL Simulation : 5 / 5 [n/a] @ "20575000"
+// RTL Simulation : 1 / 5 [n/a] @ "3375000"
+// RTL Simulation : 2 / 5 [n/a] @ "6065000"
+// RTL Simulation : 3 / 5 [n/a] @ "9885000"
+// RTL Simulation : 4 / 5 [n/a] @ "15325000"
+// RTL Simulation : 5 / 5 [n/a] @ "21485000"
 ////////////////////////////////////////////////////////////////////////////////////
-$finish called at time : 20635 ns : File "D:/Desktop/SpMV/hls_component/hls_component/hls/sim/verilog/SpMV.autotb.v" Line 1106
+$finish called at time : 21545 ns : File "D:/Desktop/SpMV/hls_component/hls_component/hls/sim/verilog/SpMV.autotb.v" Line 1048
 ## quit
-INFO: [Common 17-206] Exiting xsim at Tue Jan  7 19:57:10 2025...
+INFO: [Common 17-206] Exiting xsim at Wed Jan  8 20:13:33 2025...
 Running 5 tests
 Running test 'Square_4x4_matrix'...OK
 Running test 'Big_matrix'...OK

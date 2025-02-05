@@ -1,0 +1,160 @@
+<ENTRY>
+{
+ "thisFile": "D:/Desktop\\SpMV\\hls_component\\hls_component\\hls_component.hlsrun_package_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "01/08/25 20:13:59",
+ "timestampMillis": "1196852248",
+ "buildStep": {
+  "cmdId": "b7dea908-742b-4c0e-a5c9-c6a5074627de",
+  "name": "vitis-run",
+  "logFile": "D:/Desktop\\SpMV\\hls_component\\hls_component\\logs\\hls_component.steps.log",
+  "commandLine": "D:/Xilinx/Vitis/2024.1/bin/unwrapped/win64.o/vitis-run.exe  --mode hls --package --config D:\\Desktop\\SpMV\\hls_component\\hls_config.cfg --work_dir hls_component ",
+  "args": [
+   "--mode",
+   "hls",
+   "--package",
+   "--config",
+   "D:\\Desktop\\SpMV\\hls_component\\hls_config.cfg",
+   "--work_dir",
+   "hls_component"
+  ],
+  "iniFiles": [],
+  "cwd": "D:\\Desktop\\SpMV\\hls_component"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "01/08/25 20:13:59",
+ "timestampMillis": "1196852249",
+ "status": {
+  "cmdId": "b7dea908-742b-4c0e-a5c9-c6a5074627de",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "01/08/25 20:14:04",
+ "timestampMillis": "1196857178",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_IP",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "SpMV",
+     "file": "D:/Desktop\\SpMV\\hls_component\\hls_component\\SpMV.zip",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "D:/Desktop\\SpMV\\hls_component\\SpMV.cpp",
+     "D:/Desktop\\SpMV\\hls_component\\SpMV.hpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2024.1"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "01/08/25 20:14:04",
+ "timestampMillis": "1196857180",
+ "buildStep": {
+  "cmdId": "d5df2eae-cd81-4053-8af1-8c5ad648e5a5",
+  "name": "export_design",
+  "logFile": "D:/Desktop\\SpMV\\hls_component\\hls_component\\hls\\hls.log",
+  "commandLine": "export_design -flow none",
+  "args": [
+   "-flow",
+   "none"
+  ],
+  "iniFiles": [],
+  "cwd": "D:\\Desktop\\SpMV\\hls_component"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "01/08/25 20:14:04",
+ "timestampMillis": "1196857181",
+ "status": {
+  "cmdId": "d5df2eae-cd81-4053-8af1-8c5ad648e5a5",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "01/08/25 20:14:26",
+ "timestampMillis": "1196878631",
+ "status": {
+  "cmdId": "d5df2eae-cd81-4053-8af1-8c5ad648e5a5",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "01/08/25 20:14:26",
+ "timestampMillis": "1196878750",
+ "status": {
+  "cmdId": "b7dea908-742b-4c0e-a5c9-c6a5074627de",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "01/08/25 20:14:26",
+ "timestampMillis": "1196878751",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "01/08/25 20:14:26",
+ "timestampMillis": "1196878752",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

@@ -7,7 +7,7 @@ Args:
   - String:          'Unrolling loop '''
   - LoopName:        spmv_loop_external
   - String:          ''' ('
-  - LoopLoc:         'SpMV.cpp:29:21'
+  - LoopLoc:         'SpMV.cpp:30:21'
   - String:          ') '
   - String:          'in function '''
   - String:          SpMV
@@ -17,7 +17,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
-DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+DebugLoc:        { File: SpMV.cpp, Line: 37, Column: 36 }
 Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
 Args:            
   - String:          'Sequential '
@@ -34,21 +34,21 @@ Args:
   - String:          ' '
   - LoopName:        spmv_loop_internal
   - String:          ' '
-  - LoopLoc:         'SpMV.cpp:36:32'
+  - LoopLoc:         'SpMV.cpp:37:32'
   - String:          ' '
   - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
     DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
   - String:          ' '
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      load
-    DebugLoc:        { File: SpMV.cpp, Line: 39, Column: 21 }
+    DebugLoc:        { File: SpMV.cpp, Line: 40, Column: 21 }
   - OrigDirection:   read
   - OrigID:          for.inc.load.2
 ...
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
-DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+DebugLoc:        { File: SpMV.cpp, Line: 37, Column: 36 }
 Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
 Args:            
   - String:          'Sequential '
@@ -65,21 +65,21 @@ Args:
   - String:          ' '
   - LoopName:        spmv_loop_internal
   - String:          ' '
-  - LoopLoc:         'SpMV.cpp:36:32'
+  - LoopLoc:         'SpMV.cpp:37:32'
   - String:          ' '
   - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
     DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
   - String:          ' '
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      load
-    DebugLoc:        { File: SpMV.cpp, Line: 41, Column: 44 }
+    DebugLoc:        { File: SpMV.cpp, Line: 42, Column: 44 }
   - OrigDirection:   read
   - OrigID:          for.inc.load.7
 ...
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
-DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+DebugLoc:        { File: SpMV.cpp, Line: 37, Column: 36 }
 Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
 Args:            
   - String:          'Sequential '
@@ -96,21 +96,21 @@ Args:
   - String:          ' '
   - LoopName:        spmv_loop_internal
   - String:          ' '
-  - LoopLoc:         'SpMV.cpp:36:32'
+  - LoopLoc:         'SpMV.cpp:37:32'
   - String:          ' '
   - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
     DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
   - String:          ' '
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      load
-    DebugLoc:        { File: SpMV.cpp, Line: 39, Column: 21 }
+    DebugLoc:        { File: SpMV.cpp, Line: 40, Column: 21 }
   - OrigDirection:   read
   - OrigID:          for.inc.1.load.2
 ...
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
-DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+DebugLoc:        { File: SpMV.cpp, Line: 37, Column: 36 }
 Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
 Args:            
   - String:          'Sequential '
@@ -127,21 +127,21 @@ Args:
   - String:          ' '
   - LoopName:        spmv_loop_internal
   - String:          ' '
-  - LoopLoc:         'SpMV.cpp:36:32'
+  - LoopLoc:         'SpMV.cpp:37:32'
   - String:          ' '
   - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
     DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
   - String:          ' '
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      load
-    DebugLoc:        { File: SpMV.cpp, Line: 41, Column: 44 }
+    DebugLoc:        { File: SpMV.cpp, Line: 42, Column: 44 }
   - OrigDirection:   read
   - OrigID:          for.inc.1.load.7
 ...
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
-DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+DebugLoc:        { File: SpMV.cpp, Line: 37, Column: 36 }
 Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
 Args:            
   - String:          'Sequential '
@@ -158,21 +158,21 @@ Args:
   - String:          ' '
   - LoopName:        spmv_loop_internal
   - String:          ' '
-  - LoopLoc:         'SpMV.cpp:36:32'
+  - LoopLoc:         'SpMV.cpp:37:32'
   - String:          ' '
   - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
     DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
   - String:          ' '
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      load
-    DebugLoc:        { File: SpMV.cpp, Line: 39, Column: 21 }
+    DebugLoc:        { File: SpMV.cpp, Line: 40, Column: 21 }
   - OrigDirection:   read
   - OrigID:          for.inc.2.load.2
 ...
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
-DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+DebugLoc:        { File: SpMV.cpp, Line: 37, Column: 36 }
 Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
 Args:            
   - String:          'Sequential '
@@ -189,21 +189,21 @@ Args:
   - String:          ' '
   - LoopName:        spmv_loop_internal
   - String:          ' '
-  - LoopLoc:         'SpMV.cpp:36:32'
+  - LoopLoc:         'SpMV.cpp:37:32'
   - String:          ' '
   - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
     DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
   - String:          ' '
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      load
-    DebugLoc:        { File: SpMV.cpp, Line: 41, Column: 44 }
+    DebugLoc:        { File: SpMV.cpp, Line: 42, Column: 44 }
   - OrigDirection:   read
   - OrigID:          for.inc.2.load.7
 ...
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
-DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+DebugLoc:        { File: SpMV.cpp, Line: 37, Column: 36 }
 Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
 Args:            
   - String:          'Sequential '
@@ -220,21 +220,21 @@ Args:
   - String:          ' '
   - LoopName:        spmv_loop_internal
   - String:          ' '
-  - LoopLoc:         'SpMV.cpp:36:32'
+  - LoopLoc:         'SpMV.cpp:37:32'
   - String:          ' '
   - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
     DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
   - String:          ' '
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      load
-    DebugLoc:        { File: SpMV.cpp, Line: 39, Column: 21 }
+    DebugLoc:        { File: SpMV.cpp, Line: 40, Column: 21 }
   - OrigDirection:   read
   - OrigID:          for.inc.3.load.2
 ...
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
-DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+DebugLoc:        { File: SpMV.cpp, Line: 37, Column: 36 }
 Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
 Args:            
   - String:          'Sequential '
@@ -251,21 +251,21 @@ Args:
   - String:          ' '
   - LoopName:        spmv_loop_internal
   - String:          ' '
-  - LoopLoc:         'SpMV.cpp:36:32'
+  - LoopLoc:         'SpMV.cpp:37:32'
   - String:          ' '
   - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
     DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
   - String:          ' '
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      load
-    DebugLoc:        { File: SpMV.cpp, Line: 41, Column: 44 }
+    DebugLoc:        { File: SpMV.cpp, Line: 42, Column: 44 }
   - OrigDirection:   read
   - OrigID:          for.inc.3.load.7
 ...
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
-DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+DebugLoc:        { File: SpMV.cpp, Line: 37, Column: 36 }
 Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
 Args:            
   - String:          'Sequential '
@@ -282,21 +282,21 @@ Args:
   - String:          ' '
   - LoopName:        spmv_loop_internal
   - String:          ' '
-  - LoopLoc:         'SpMV.cpp:36:32'
+  - LoopLoc:         'SpMV.cpp:37:32'
   - String:          ' '
   - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
     DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
   - String:          ' '
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      load
-    DebugLoc:        { File: SpMV.cpp, Line: 39, Column: 21 }
+    DebugLoc:        { File: SpMV.cpp, Line: 40, Column: 21 }
   - OrigDirection:   read
   - OrigID:          for.inc.4.load.2
 ...
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
-DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+DebugLoc:        { File: SpMV.cpp, Line: 37, Column: 36 }
 Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
 Args:            
   - String:          'Sequential '
@@ -313,21 +313,21 @@ Args:
   - String:          ' '
   - LoopName:        spmv_loop_internal
   - String:          ' '
-  - LoopLoc:         'SpMV.cpp:36:32'
+  - LoopLoc:         'SpMV.cpp:37:32'
   - String:          ' '
   - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
     DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
   - String:          ' '
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      load
-    DebugLoc:        { File: SpMV.cpp, Line: 41, Column: 44 }
+    DebugLoc:        { File: SpMV.cpp, Line: 42, Column: 44 }
   - OrigDirection:   read
   - OrigID:          for.inc.4.load.7
 ...
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
-DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+DebugLoc:        { File: SpMV.cpp, Line: 37, Column: 36 }
 Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
 Args:            
   - String:          'Sequential '
@@ -344,21 +344,21 @@ Args:
   - String:          ' '
   - LoopName:        spmv_loop_internal
   - String:          ' '
-  - LoopLoc:         'SpMV.cpp:36:32'
+  - LoopLoc:         'SpMV.cpp:37:32'
   - String:          ' '
   - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
     DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
   - String:          ' '
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      load
-    DebugLoc:        { File: SpMV.cpp, Line: 39, Column: 21 }
+    DebugLoc:        { File: SpMV.cpp, Line: 40, Column: 21 }
   - OrigDirection:   read
   - OrigID:          for.inc.5.load.2
 ...
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
-DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+DebugLoc:        { File: SpMV.cpp, Line: 37, Column: 36 }
 Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
 Args:            
   - String:          'Sequential '
@@ -375,21 +375,21 @@ Args:
   - String:          ' '
   - LoopName:        spmv_loop_internal
   - String:          ' '
-  - LoopLoc:         'SpMV.cpp:36:32'
+  - LoopLoc:         'SpMV.cpp:37:32'
   - String:          ' '
   - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
     DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
   - String:          ' '
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      load
-    DebugLoc:        { File: SpMV.cpp, Line: 41, Column: 44 }
+    DebugLoc:        { File: SpMV.cpp, Line: 42, Column: 44 }
   - OrigDirection:   read
   - OrigID:          for.inc.5.load.7
 ...
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
-DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+DebugLoc:        { File: SpMV.cpp, Line: 37, Column: 36 }
 Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
 Args:            
   - String:          'Sequential '
@@ -406,21 +406,21 @@ Args:
   - String:          ' '
   - LoopName:        spmv_loop_internal
   - String:          ' '
-  - LoopLoc:         'SpMV.cpp:36:32'
+  - LoopLoc:         'SpMV.cpp:37:32'
   - String:          ' '
   - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
     DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
   - String:          ' '
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      load
-    DebugLoc:        { File: SpMV.cpp, Line: 39, Column: 21 }
+    DebugLoc:        { File: SpMV.cpp, Line: 40, Column: 21 }
   - OrigDirection:   read
   - OrigID:          for.inc.6.load.2
 ...
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
-DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+DebugLoc:        { File: SpMV.cpp, Line: 37, Column: 36 }
 Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
 Args:            
   - String:          'Sequential '
@@ -437,21 +437,21 @@ Args:
   - String:          ' '
   - LoopName:        spmv_loop_internal
   - String:          ' '
-  - LoopLoc:         'SpMV.cpp:36:32'
+  - LoopLoc:         'SpMV.cpp:37:32'
   - String:          ' '
   - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
     DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
   - String:          ' '
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      load
-    DebugLoc:        { File: SpMV.cpp, Line: 41, Column: 44 }
+    DebugLoc:        { File: SpMV.cpp, Line: 42, Column: 44 }
   - OrigDirection:   read
   - OrigID:          for.inc.6.load.7
 ...
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
-DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+DebugLoc:        { File: SpMV.cpp, Line: 37, Column: 36 }
 Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
 Args:            
   - String:          'Sequential '
@@ -468,21 +468,21 @@ Args:
   - String:          ' '
   - LoopName:        spmv_loop_internal
   - String:          ' '
-  - LoopLoc:         'SpMV.cpp:36:32'
+  - LoopLoc:         'SpMV.cpp:37:32'
   - String:          ' '
   - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
     DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
   - String:          ' '
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      load
-    DebugLoc:        { File: SpMV.cpp, Line: 39, Column: 21 }
+    DebugLoc:        { File: SpMV.cpp, Line: 40, Column: 21 }
   - OrigDirection:   read
   - OrigID:          for.inc.7.load.2
 ...
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
-DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+DebugLoc:        { File: SpMV.cpp, Line: 37, Column: 36 }
 Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
 Args:            
   - String:          'Sequential '
@@ -499,21 +499,21 @@ Args:
   - String:          ' '
   - LoopName:        spmv_loop_internal
   - String:          ' '
-  - LoopLoc:         'SpMV.cpp:36:32'
+  - LoopLoc:         'SpMV.cpp:37:32'
   - String:          ' '
   - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
     DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
   - String:          ' '
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      load
-    DebugLoc:        { File: SpMV.cpp, Line: 41, Column: 44 }
+    DebugLoc:        { File: SpMV.cpp, Line: 42, Column: 44 }
   - OrigDirection:   read
   - OrigID:          for.inc.7.load.7
 ...
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
-DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+DebugLoc:        { File: SpMV.cpp, Line: 37, Column: 36 }
 Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
 Args:            
   - String:          'Sequential '
@@ -530,21 +530,21 @@ Args:
   - String:          ' '
   - LoopName:        spmv_loop_internal
   - String:          ' '
-  - LoopLoc:         'SpMV.cpp:36:32'
+  - LoopLoc:         'SpMV.cpp:37:32'
   - String:          ' '
   - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
     DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
   - String:          ' '
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      load
-    DebugLoc:        { File: SpMV.cpp, Line: 39, Column: 21 }
+    DebugLoc:        { File: SpMV.cpp, Line: 40, Column: 21 }
   - OrigDirection:   read
   - OrigID:          for.inc.8.load.2
 ...
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
-DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+DebugLoc:        { File: SpMV.cpp, Line: 37, Column: 36 }
 Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
 Args:            
   - String:          'Sequential '
@@ -561,21 +561,21 @@ Args:
   - String:          ' '
   - LoopName:        spmv_loop_internal
   - String:          ' '
-  - LoopLoc:         'SpMV.cpp:36:32'
+  - LoopLoc:         'SpMV.cpp:37:32'
   - String:          ' '
   - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
     DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
   - String:          ' '
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      load
-    DebugLoc:        { File: SpMV.cpp, Line: 41, Column: 44 }
+    DebugLoc:        { File: SpMV.cpp, Line: 42, Column: 44 }
   - OrigDirection:   read
   - OrigID:          for.inc.8.load.7
 ...
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
-DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+DebugLoc:        { File: SpMV.cpp, Line: 37, Column: 36 }
 Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
 Args:            
   - String:          'Sequential '
@@ -592,21 +592,21 @@ Args:
   - String:          ' '
   - LoopName:        spmv_loop_internal
   - String:          ' '
-  - LoopLoc:         'SpMV.cpp:36:32'
+  - LoopLoc:         'SpMV.cpp:37:32'
   - String:          ' '
   - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
     DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
   - String:          ' '
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      load
-    DebugLoc:        { File: SpMV.cpp, Line: 39, Column: 21 }
+    DebugLoc:        { File: SpMV.cpp, Line: 40, Column: 21 }
   - OrigDirection:   read
   - OrigID:          for.inc.9.load.2
 ...
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
-DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+DebugLoc:        { File: SpMV.cpp, Line: 37, Column: 36 }
 Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
 Args:            
   - String:          'Sequential '
@@ -623,21 +623,21 @@ Args:
   - String:          ' '
   - LoopName:        spmv_loop_internal
   - String:          ' '
-  - LoopLoc:         'SpMV.cpp:36:32'
+  - LoopLoc:         'SpMV.cpp:37:32'
   - String:          ' '
   - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
     DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
   - String:          ' '
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      load
-    DebugLoc:        { File: SpMV.cpp, Line: 41, Column: 44 }
+    DebugLoc:        { File: SpMV.cpp, Line: 42, Column: 44 }
   - OrigDirection:   read
   - OrigID:          for.inc.9.load.7
 ...
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
-DebugLoc:        { File: SpMV.cpp, Line: 51, Column: 19 }
+DebugLoc:        { File: SpMV.cpp, Line: 52, Column: 19 }
 Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
 Args:            
   - String:          'Sequential '
@@ -656,56 +656,56 @@ Args:
   - String:          ' '
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      store
-    DebugLoc:        { File: SpMV.cpp, Line: 51, Column: 19 }
+    DebugLoc:        { File: SpMV.cpp, Line: 52, Column: 19 }
   - OrigDirection:   write
   - OrigID:          for.inc19.store.2
   - OrigAccess:      store
-    DebugLoc:        { File: SpMV.cpp, Line: 51, Column: 19 }
+    DebugLoc:        { File: SpMV.cpp, Line: 52, Column: 19 }
   - OrigDirection:   write
   - OrigID:          for.inc19.1.store.3
   - OrigAccess:      store
-    DebugLoc:        { File: SpMV.cpp, Line: 51, Column: 19 }
+    DebugLoc:        { File: SpMV.cpp, Line: 52, Column: 19 }
   - OrigDirection:   write
   - OrigID:          for.inc19.2.store.3
   - OrigAccess:      store
-    DebugLoc:        { File: SpMV.cpp, Line: 51, Column: 19 }
+    DebugLoc:        { File: SpMV.cpp, Line: 52, Column: 19 }
   - OrigDirection:   write
   - OrigID:          for.inc19.3.store.3
   - OrigAccess:      store
-    DebugLoc:        { File: SpMV.cpp, Line: 51, Column: 19 }
+    DebugLoc:        { File: SpMV.cpp, Line: 52, Column: 19 }
   - OrigDirection:   write
   - OrigID:          for.inc19.4.store.3
   - OrigAccess:      store
-    DebugLoc:        { File: SpMV.cpp, Line: 51, Column: 19 }
+    DebugLoc:        { File: SpMV.cpp, Line: 52, Column: 19 }
   - OrigDirection:   write
   - OrigID:          for.inc19.5.store.3
   - OrigAccess:      store
-    DebugLoc:        { File: SpMV.cpp, Line: 51, Column: 19 }
+    DebugLoc:        { File: SpMV.cpp, Line: 52, Column: 19 }
   - OrigDirection:   write
   - OrigID:          for.inc19.6.store.3
   - OrigAccess:      store
-    DebugLoc:        { File: SpMV.cpp, Line: 51, Column: 19 }
+    DebugLoc:        { File: SpMV.cpp, Line: 52, Column: 19 }
   - OrigDirection:   write
   - OrigID:          for.inc19.7.store.3
   - OrigAccess:      store
-    DebugLoc:        { File: SpMV.cpp, Line: 51, Column: 19 }
+    DebugLoc:        { File: SpMV.cpp, Line: 52, Column: 19 }
   - OrigDirection:   write
   - OrigID:          for.inc19.8.store.3
   - OrigAccess:      store
-    DebugLoc:        { File: SpMV.cpp, Line: 51, Column: 19 }
+    DebugLoc:        { File: SpMV.cpp, Line: 52, Column: 19 }
   - OrigDirection:   write
   - OrigID:          for.inc19.9.store.15
 ...
 --- !Missed
 Pass:            reflow-burst-inference
 Name:            CouldNotAnalyzePattern
-DebugLoc:        { File: SpMV.cpp, Line: 43, Column: 36 }
+DebugLoc:        { File: SpMV.cpp, Line: 44, Column: 36 }
 Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
 Args:            
   - String:          Could not analyze pattern
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      vector_value
-    DebugLoc:        { File: SpMV.cpp, Line: 43, Column: 36 }
+    DebugLoc:        { File: SpMV.cpp, Line: 44, Column: 36 }
   - OrigDirection:   read
   - OrigID:          for.inc.load.11
   - ArrayName:       vector
@@ -714,7 +714,7 @@ Args:
   - String:          ' '
   - LoopName:        spmv_loop_internal
   - String:          ' '
-  - LoopLoc:         'SpMV.cpp:36:32'
+  - LoopLoc:         'SpMV.cpp:37:32'
   - String:          ' '
   - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
     DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
@@ -723,13 +723,13 @@ Args:
 --- !Missed
 Pass:            reflow-burst-inference
 Name:            CouldNotAnalyzePattern
-DebugLoc:        { File: SpMV.cpp, Line: 43, Column: 36 }
+DebugLoc:        { File: SpMV.cpp, Line: 44, Column: 36 }
 Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
 Args:            
   - String:          Could not analyze pattern
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      vector_value
-    DebugLoc:        { File: SpMV.cpp, Line: 43, Column: 36 }
+    DebugLoc:        { File: SpMV.cpp, Line: 44, Column: 36 }
   - OrigDirection:   read
   - OrigID:          for.inc.1.load.11
   - ArrayName:       vector
@@ -738,7 +738,7 @@ Args:
   - String:          ' '
   - LoopName:        spmv_loop_internal
   - String:          ' '
-  - LoopLoc:         'SpMV.cpp:36:32'
+  - LoopLoc:         'SpMV.cpp:37:32'
   - String:          ' '
   - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
     DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
@@ -747,13 +747,13 @@ Args:
 --- !Missed
 Pass:            reflow-burst-inference
 Name:            CouldNotAnalyzePattern
-DebugLoc:        { File: SpMV.cpp, Line: 43, Column: 36 }
+DebugLoc:        { File: SpMV.cpp, Line: 44, Column: 36 }
 Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
 Args:            
   - String:          Could not analyze pattern
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      vector_value
-    DebugLoc:        { File: SpMV.cpp, Line: 43, Column: 36 }
+    DebugLoc:        { File: SpMV.cpp, Line: 44, Column: 36 }
   - OrigDirection:   read
   - OrigID:          for.inc.2.load.11
   - ArrayName:       vector
@@ -762,7 +762,7 @@ Args:
   - String:          ' '
   - LoopName:        spmv_loop_internal
   - String:          ' '
-  - LoopLoc:         'SpMV.cpp:36:32'
+  - LoopLoc:         'SpMV.cpp:37:32'
   - String:          ' '
   - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
     DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
@@ -771,13 +771,13 @@ Args:
 --- !Missed
 Pass:            reflow-burst-inference
 Name:            CouldNotAnalyzePattern
-DebugLoc:        { File: SpMV.cpp, Line: 43, Column: 36 }
+DebugLoc:        { File: SpMV.cpp, Line: 44, Column: 36 }
 Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
 Args:            
   - String:          Could not analyze pattern
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      vector_value
-    DebugLoc:        { File: SpMV.cpp, Line: 43, Column: 36 }
+    DebugLoc:        { File: SpMV.cpp, Line: 44, Column: 36 }
   - OrigDirection:   read
   - OrigID:          for.inc.3.load.11
   - ArrayName:       vector
@@ -786,7 +786,7 @@ Args:
   - String:          ' '
   - LoopName:        spmv_loop_internal
   - String:          ' '
-  - LoopLoc:         'SpMV.cpp:36:32'
+  - LoopLoc:         'SpMV.cpp:37:32'
   - String:          ' '
   - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
     DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
@@ -795,13 +795,13 @@ Args:
 --- !Missed
 Pass:            reflow-burst-inference
 Name:            CouldNotAnalyzePattern
-DebugLoc:        { File: SpMV.cpp, Line: 43, Column: 36 }
+DebugLoc:        { File: SpMV.cpp, Line: 44, Column: 36 }
 Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
 Args:            
   - String:          Could not analyze pattern
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      vector_value
-    DebugLoc:        { File: SpMV.cpp, Line: 43, Column: 36 }
+    DebugLoc:        { File: SpMV.cpp, Line: 44, Column: 36 }
   - OrigDirection:   read
   - OrigID:          for.inc.4.load.11
   - ArrayName:       vector
@@ -810,7 +810,7 @@ Args:
   - String:          ' '
   - LoopName:        spmv_loop_internal
   - String:          ' '
-  - LoopLoc:         'SpMV.cpp:36:32'
+  - LoopLoc:         'SpMV.cpp:37:32'
   - String:          ' '
   - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
     DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
@@ -819,13 +819,13 @@ Args:
 --- !Missed
 Pass:            reflow-burst-inference
 Name:            CouldNotAnalyzePattern
-DebugLoc:        { File: SpMV.cpp, Line: 43, Column: 36 }
+DebugLoc:        { File: SpMV.cpp, Line: 44, Column: 36 }
 Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
 Args:            
   - String:          Could not analyze pattern
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      vector_value
-    DebugLoc:        { File: SpMV.cpp, Line: 43, Column: 36 }
+    DebugLoc:        { File: SpMV.cpp, Line: 44, Column: 36 }
   - OrigDirection:   read
   - OrigID:          for.inc.5.load.11
   - ArrayName:       vector
@@ -834,7 +834,7 @@ Args:
   - String:          ' '
   - LoopName:        spmv_loop_internal
   - String:          ' '
-  - LoopLoc:         'SpMV.cpp:36:32'
+  - LoopLoc:         'SpMV.cpp:37:32'
   - String:          ' '
   - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
     DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
@@ -843,13 +843,13 @@ Args:
 --- !Missed
 Pass:            reflow-burst-inference
 Name:            CouldNotAnalyzePattern
-DebugLoc:        { File: SpMV.cpp, Line: 43, Column: 36 }
+DebugLoc:        { File: SpMV.cpp, Line: 44, Column: 36 }
 Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
 Args:            
   - String:          Could not analyze pattern
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      vector_value
-    DebugLoc:        { File: SpMV.cpp, Line: 43, Column: 36 }
+    DebugLoc:        { File: SpMV.cpp, Line: 44, Column: 36 }
   - OrigDirection:   read
   - OrigID:          for.inc.6.load.11
   - ArrayName:       vector
@@ -858,7 +858,7 @@ Args:
   - String:          ' '
   - LoopName:        spmv_loop_internal
   - String:          ' '
-  - LoopLoc:         'SpMV.cpp:36:32'
+  - LoopLoc:         'SpMV.cpp:37:32'
   - String:          ' '
   - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
     DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
@@ -867,13 +867,13 @@ Args:
 --- !Missed
 Pass:            reflow-burst-inference
 Name:            CouldNotAnalyzePattern
-DebugLoc:        { File: SpMV.cpp, Line: 43, Column: 36 }
+DebugLoc:        { File: SpMV.cpp, Line: 44, Column: 36 }
 Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
 Args:            
   - String:          Could not analyze pattern
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      vector_value
-    DebugLoc:        { File: SpMV.cpp, Line: 43, Column: 36 }
+    DebugLoc:        { File: SpMV.cpp, Line: 44, Column: 36 }
   - OrigDirection:   read
   - OrigID:          for.inc.7.load.11
   - ArrayName:       vector
@@ -882,7 +882,7 @@ Args:
   - String:          ' '
   - LoopName:        spmv_loop_internal
   - String:          ' '
-  - LoopLoc:         'SpMV.cpp:36:32'
+  - LoopLoc:         'SpMV.cpp:37:32'
   - String:          ' '
   - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
     DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
@@ -891,13 +891,13 @@ Args:
 --- !Missed
 Pass:            reflow-burst-inference
 Name:            CouldNotAnalyzePattern
-DebugLoc:        { File: SpMV.cpp, Line: 43, Column: 36 }
+DebugLoc:        { File: SpMV.cpp, Line: 44, Column: 36 }
 Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
 Args:            
   - String:          Could not analyze pattern
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      vector_value
-    DebugLoc:        { File: SpMV.cpp, Line: 43, Column: 36 }
+    DebugLoc:        { File: SpMV.cpp, Line: 44, Column: 36 }
   - OrigDirection:   read
   - OrigID:          for.inc.8.load.11
   - ArrayName:       vector
@@ -906,7 +906,7 @@ Args:
   - String:          ' '
   - LoopName:        spmv_loop_internal
   - String:          ' '
-  - LoopLoc:         'SpMV.cpp:36:32'
+  - LoopLoc:         'SpMV.cpp:37:32'
   - String:          ' '
   - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
     DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
@@ -915,13 +915,13 @@ Args:
 --- !Missed
 Pass:            reflow-burst-inference
 Name:            CouldNotAnalyzePattern
-DebugLoc:        { File: SpMV.cpp, Line: 43, Column: 36 }
+DebugLoc:        { File: SpMV.cpp, Line: 44, Column: 36 }
 Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
 Args:            
   - String:          Could not analyze pattern
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      vector_value
-    DebugLoc:        { File: SpMV.cpp, Line: 43, Column: 36 }
+    DebugLoc:        { File: SpMV.cpp, Line: 44, Column: 36 }
   - OrigDirection:   read
   - OrigID:          for.inc.9.load.11
   - ArrayName:       vector
@@ -930,7 +930,7 @@ Args:
   - String:          ' '
   - LoopName:        spmv_loop_internal
   - String:          ' '
-  - LoopLoc:         'SpMV.cpp:36:32'
+  - LoopLoc:         'SpMV.cpp:37:32'
   - String:          ' '
   - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
     DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
@@ -939,7 +939,7 @@ Args:
 --- !Missed
 Pass:            reflow-burst-widen
 Name:            GreaterOrEqualThreshold
-DebugLoc:        { File: SpMV.cpp, Line: 51, Column: 19 }
+DebugLoc:        { File: SpMV.cpp, Line: 52, Column: 19 }
 Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
 Args:            
   - String:          'Could not widen since type '
@@ -948,7 +948,7 @@ Args:
   - Threshold:       '0'
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      call
-    DebugLoc:        { File: SpMV.cpp, Line: 51, Column: 19 }
+    DebugLoc:        { File: SpMV.cpp, Line: 52, Column: 19 }
   - OrigDirection:   write
   - OrigID:          output144seq
   - ArrayName:       output
@@ -962,7 +962,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredVerboseSummary
-DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+DebugLoc:        { File: SpMV.cpp, Line: 37, Column: 36 }
 Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
 Args:            
   - String:          'Multiple burst '
@@ -981,7 +981,7 @@ Args:
   - String:          ' '
   - LoopName:        spmv_loop_internal
   - String:          ' '
-  - LoopLoc:         'SpMV.cpp:36:32'
+  - LoopLoc:         'SpMV.cpp:37:32'
   - String:          ' '
   - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
     DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
@@ -990,7 +990,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredSummary
-DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+DebugLoc:        { File: SpMV.cpp, Line: 37, Column: 36 }
 Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
 Args:            
   - String:          'Multiple burst '
@@ -1002,7 +1002,7 @@ Args:
   - String:          ' in loop '''
   - LoopName:        spmv_loop_internal
   - String:          '''('
-  - LoopLoc:         'SpMV.cpp:36:32'
+  - LoopLoc:         'SpMV.cpp:37:32'
   - String:          ')'
   - String:          ' has been inferred on bundle '''
   - BundleName:      gmem0
@@ -1012,7 +1012,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredVerboseSummary
-DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+DebugLoc:        { File: SpMV.cpp, Line: 37, Column: 36 }
 Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
 Args:            
   - String:          'Multiple burst '
@@ -1031,7 +1031,7 @@ Args:
   - String:          ' '
   - LoopName:        spmv_loop_internal
   - String:          ' '
-  - LoopLoc:         'SpMV.cpp:36:32'
+  - LoopLoc:         'SpMV.cpp:37:32'
   - String:          ' '
   - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
     DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
@@ -1040,7 +1040,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredSummary
-DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+DebugLoc:        { File: SpMV.cpp, Line: 37, Column: 36 }
 Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
 Args:            
   - String:          'Multiple burst '
@@ -1052,7 +1052,7 @@ Args:
   - String:          ' in loop '''
   - LoopName:        spmv_loop_internal
   - String:          '''('
-  - LoopLoc:         'SpMV.cpp:36:32'
+  - LoopLoc:         'SpMV.cpp:37:32'
   - String:          ')'
   - String:          ' has been inferred on bundle '''
   - BundleName:      gmem1
@@ -1062,7 +1062,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredVerboseSummary
-DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+DebugLoc:        { File: SpMV.cpp, Line: 37, Column: 36 }
 Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
 Args:            
   - String:          'Multiple burst '
@@ -1081,7 +1081,7 @@ Args:
   - String:          ' '
   - LoopName:        spmv_loop_internal
   - String:          ' '
-  - LoopLoc:         'SpMV.cpp:36:32'
+  - LoopLoc:         'SpMV.cpp:37:32'
   - String:          ' '
   - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
     DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
@@ -1090,7 +1090,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredSummary
-DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+DebugLoc:        { File: SpMV.cpp, Line: 37, Column: 36 }
 Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
 Args:            
   - String:          'Multiple burst '
@@ -1102,7 +1102,7 @@ Args:
   - String:          ' in loop '''
   - LoopName:        spmv_loop_internal
   - String:          '''('
-  - LoopLoc:         'SpMV.cpp:36:32'
+  - LoopLoc:         'SpMV.cpp:37:32'
   - String:          ')'
   - String:          ' has been inferred on bundle '''
   - BundleName:      gmem0
@@ -1112,7 +1112,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredVerboseSummary
-DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+DebugLoc:        { File: SpMV.cpp, Line: 37, Column: 36 }
 Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
 Args:            
   - String:          'Multiple burst '
@@ -1131,7 +1131,7 @@ Args:
   - String:          ' '
   - LoopName:        spmv_loop_internal
   - String:          ' '
-  - LoopLoc:         'SpMV.cpp:36:32'
+  - LoopLoc:         'SpMV.cpp:37:32'
   - String:          ' '
   - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
     DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
@@ -1140,7 +1140,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredSummary
-DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+DebugLoc:        { File: SpMV.cpp, Line: 37, Column: 36 }
 Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
 Args:            
   - String:          'Multiple burst '
@@ -1152,7 +1152,7 @@ Args:
   - String:          ' in loop '''
   - LoopName:        spmv_loop_internal
   - String:          '''('
-  - LoopLoc:         'SpMV.cpp:36:32'
+  - LoopLoc:         'SpMV.cpp:37:32'
   - String:          ')'
   - String:          ' has been inferred on bundle '''
   - BundleName:      gmem1
@@ -1162,7 +1162,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredVerboseSummary
-DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+DebugLoc:        { File: SpMV.cpp, Line: 37, Column: 36 }
 Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
 Args:            
   - String:          'Multiple burst '
@@ -1181,7 +1181,7 @@ Args:
   - String:          ' '
   - LoopName:        spmv_loop_internal
   - String:          ' '
-  - LoopLoc:         'SpMV.cpp:36:32'
+  - LoopLoc:         'SpMV.cpp:37:32'
   - String:          ' '
   - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
     DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
@@ -1190,7 +1190,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredSummary
-DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+DebugLoc:        { File: SpMV.cpp, Line: 37, Column: 36 }
 Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
 Args:            
   - String:          'Multiple burst '
@@ -1202,7 +1202,7 @@ Args:
   - String:          ' in loop '''
   - LoopName:        spmv_loop_internal
   - String:          '''('
-  - LoopLoc:         'SpMV.cpp:36:32'
+  - LoopLoc:         'SpMV.cpp:37:32'
   - String:          ')'
   - String:          ' has been inferred on bundle '''
   - BundleName:      gmem0
@@ -1212,7 +1212,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredVerboseSummary
-DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+DebugLoc:        { File: SpMV.cpp, Line: 37, Column: 36 }
 Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
 Args:            
   - String:          'Multiple burst '
@@ -1231,7 +1231,7 @@ Args:
   - String:          ' '
   - LoopName:        spmv_loop_internal
   - String:          ' '
-  - LoopLoc:         'SpMV.cpp:36:32'
+  - LoopLoc:         'SpMV.cpp:37:32'
   - String:          ' '
   - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
     DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
@@ -1240,7 +1240,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredSummary
-DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+DebugLoc:        { File: SpMV.cpp, Line: 37, Column: 36 }
 Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
 Args:            
   - String:          'Multiple burst '
@@ -1252,7 +1252,7 @@ Args:
   - String:          ' in loop '''
   - LoopName:        spmv_loop_internal
   - String:          '''('
-  - LoopLoc:         'SpMV.cpp:36:32'
+  - LoopLoc:         'SpMV.cpp:37:32'
   - String:          ')'
   - String:          ' has been inferred on bundle '''
   - BundleName:      gmem1
@@ -1262,7 +1262,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredVerboseSummary
-DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+DebugLoc:        { File: SpMV.cpp, Line: 37, Column: 36 }
 Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
 Args:            
   - String:          'Multiple burst '
@@ -1281,7 +1281,7 @@ Args:
   - String:          ' '
   - LoopName:        spmv_loop_internal
   - String:          ' '
-  - LoopLoc:         'SpMV.cpp:36:32'
+  - LoopLoc:         'SpMV.cpp:37:32'
   - String:          ' '
   - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
     DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
@@ -1290,7 +1290,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredSummary
-DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+DebugLoc:        { File: SpMV.cpp, Line: 37, Column: 36 }
 Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
 Args:            
   - String:          'Multiple burst '
@@ -1302,7 +1302,7 @@ Args:
   - String:          ' in loop '''
   - LoopName:        spmv_loop_internal
   - String:          '''('
-  - LoopLoc:         'SpMV.cpp:36:32'
+  - LoopLoc:         'SpMV.cpp:37:32'
   - String:          ')'
   - String:          ' has been inferred on bundle '''
   - BundleName:      gmem0
@@ -1312,7 +1312,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredVerboseSummary
-DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+DebugLoc:        { File: SpMV.cpp, Line: 37, Column: 36 }
 Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
 Args:            
   - String:          'Multiple burst '
@@ -1331,7 +1331,7 @@ Args:
   - String:          ' '
   - LoopName:        spmv_loop_internal
   - String:          ' '
-  - LoopLoc:         'SpMV.cpp:36:32'
+  - LoopLoc:         'SpMV.cpp:37:32'
   - String:          ' '
   - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
     DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
@@ -1340,7 +1340,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredSummary
-DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+DebugLoc:        { File: SpMV.cpp, Line: 37, Column: 36 }
 Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
 Args:            
   - String:          'Multiple burst '
@@ -1352,7 +1352,7 @@ Args:
   - String:          ' in loop '''
   - LoopName:        spmv_loop_internal
   - String:          '''('
-  - LoopLoc:         'SpMV.cpp:36:32'
+  - LoopLoc:         'SpMV.cpp:37:32'
   - String:          ')'
   - String:          ' has been inferred on bundle '''
   - BundleName:      gmem1
@@ -1362,7 +1362,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredVerboseSummary
-DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+DebugLoc:        { File: SpMV.cpp, Line: 37, Column: 36 }
 Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
 Args:            
   - String:          'Multiple burst '
@@ -1381,7 +1381,7 @@ Args:
   - String:          ' '
   - LoopName:        spmv_loop_internal
   - String:          ' '
-  - LoopLoc:         'SpMV.cpp:36:32'
+  - LoopLoc:         'SpMV.cpp:37:32'
   - String:          ' '
   - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
     DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
@@ -1390,7 +1390,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredSummary
-DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+DebugLoc:        { File: SpMV.cpp, Line: 37, Column: 36 }
 Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
 Args:            
   - String:          'Multiple burst '
@@ -1402,7 +1402,7 @@ Args:
   - String:          ' in loop '''
   - LoopName:        spmv_loop_internal
   - String:          '''('
-  - LoopLoc:         'SpMV.cpp:36:32'
+  - LoopLoc:         'SpMV.cpp:37:32'
   - String:          ')'
   - String:          ' has been inferred on bundle '''
   - BundleName:      gmem0
@@ -1412,7 +1412,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredVerboseSummary
-DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+DebugLoc:        { File: SpMV.cpp, Line: 37, Column: 36 }
 Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
 Args:            
   - String:          'Multiple burst '
@@ -1431,7 +1431,7 @@ Args:
   - String:          ' '
   - LoopName:        spmv_loop_internal
   - String:          ' '
-  - LoopLoc:         'SpMV.cpp:36:32'
+  - LoopLoc:         'SpMV.cpp:37:32'
   - String:          ' '
   - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
     DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
@@ -1440,7 +1440,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredSummary
-DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+DebugLoc:        { File: SpMV.cpp, Line: 37, Column: 36 }
 Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
 Args:            
   - String:          'Multiple burst '
@@ -1452,7 +1452,7 @@ Args:
   - String:          ' in loop '''
   - LoopName:        spmv_loop_internal
   - String:          '''('
-  - LoopLoc:         'SpMV.cpp:36:32'
+  - LoopLoc:         'SpMV.cpp:37:32'
   - String:          ')'
   - String:          ' has been inferred on bundle '''
   - BundleName:      gmem1
@@ -1462,7 +1462,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredVerboseSummary
-DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+DebugLoc:        { File: SpMV.cpp, Line: 37, Column: 36 }
 Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
 Args:            
   - String:          'Multiple burst '
@@ -1481,7 +1481,7 @@ Args:
   - String:          ' '
   - LoopName:        spmv_loop_internal
   - String:          ' '
-  - LoopLoc:         'SpMV.cpp:36:32'
+  - LoopLoc:         'SpMV.cpp:37:32'
   - String:          ' '
   - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
     DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
@@ -1490,7 +1490,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredSummary
-DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+DebugLoc:        { File: SpMV.cpp, Line: 37, Column: 36 }
 Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
 Args:            
   - String:          'Multiple burst '
@@ -1502,7 +1502,7 @@ Args:
   - String:          ' in loop '''
   - LoopName:        spmv_loop_internal
   - String:          '''('
-  - LoopLoc:         'SpMV.cpp:36:32'
+  - LoopLoc:         'SpMV.cpp:37:32'
   - String:          ')'
   - String:          ' has been inferred on bundle '''
   - BundleName:      gmem0
@@ -1512,7 +1512,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredVerboseSummary
-DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+DebugLoc:        { File: SpMV.cpp, Line: 37, Column: 36 }
 Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
 Args:            
   - String:          'Multiple burst '
@@ -1531,7 +1531,7 @@ Args:
   - String:          ' '
   - LoopName:        spmv_loop_internal
   - String:          ' '
-  - LoopLoc:         'SpMV.cpp:36:32'
+  - LoopLoc:         'SpMV.cpp:37:32'
   - String:          ' '
   - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
     DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
@@ -1540,7 +1540,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredSummary
-DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+DebugLoc:        { File: SpMV.cpp, Line: 37, Column: 36 }
 Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
 Args:            
   - String:          'Multiple burst '
@@ -1552,7 +1552,7 @@ Args:
   - String:          ' in loop '''
   - LoopName:        spmv_loop_internal
   - String:          '''('
-  - LoopLoc:         'SpMV.cpp:36:32'
+  - LoopLoc:         'SpMV.cpp:37:32'
   - String:          ')'
   - String:          ' has been inferred on bundle '''
   - BundleName:      gmem1
@@ -1562,7 +1562,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredVerboseSummary
-DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+DebugLoc:        { File: SpMV.cpp, Line: 37, Column: 36 }
 Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
 Args:            
   - String:          'Multiple burst '
@@ -1581,7 +1581,7 @@ Args:
   - String:          ' '
   - LoopName:        spmv_loop_internal
   - String:          ' '
-  - LoopLoc:         'SpMV.cpp:36:32'
+  - LoopLoc:         'SpMV.cpp:37:32'
   - String:          ' '
   - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
     DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
@@ -1590,7 +1590,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredSummary
-DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+DebugLoc:        { File: SpMV.cpp, Line: 37, Column: 36 }
 Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
 Args:            
   - String:          'Multiple burst '
@@ -1602,7 +1602,7 @@ Args:
   - String:          ' in loop '''
   - LoopName:        spmv_loop_internal
   - String:          '''('
-  - LoopLoc:         'SpMV.cpp:36:32'
+  - LoopLoc:         'SpMV.cpp:37:32'
   - String:          ')'
   - String:          ' has been inferred on bundle '''
   - BundleName:      gmem0
@@ -1612,7 +1612,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredVerboseSummary
-DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+DebugLoc:        { File: SpMV.cpp, Line: 37, Column: 36 }
 Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
 Args:            
   - String:          'Multiple burst '
@@ -1631,7 +1631,7 @@ Args:
   - String:          ' '
   - LoopName:        spmv_loop_internal
   - String:          ' '
-  - LoopLoc:         'SpMV.cpp:36:32'
+  - LoopLoc:         'SpMV.cpp:37:32'
   - String:          ' '
   - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
     DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
@@ -1640,7 +1640,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredSummary
-DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+DebugLoc:        { File: SpMV.cpp, Line: 37, Column: 36 }
 Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
 Args:            
   - String:          'Multiple burst '
@@ -1652,7 +1652,7 @@ Args:
   - String:          ' in loop '''
   - LoopName:        spmv_loop_internal
   - String:          '''('
-  - LoopLoc:         'SpMV.cpp:36:32'
+  - LoopLoc:         'SpMV.cpp:37:32'
   - String:          ')'
   - String:          ' has been inferred on bundle '''
   - BundleName:      gmem1
@@ -1662,7 +1662,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredVerboseSummary
-DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+DebugLoc:        { File: SpMV.cpp, Line: 37, Column: 36 }
 Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
 Args:            
   - String:          'Multiple burst '
@@ -1681,7 +1681,7 @@ Args:
   - String:          ' '
   - LoopName:        spmv_loop_internal
   - String:          ' '
-  - LoopLoc:         'SpMV.cpp:36:32'
+  - LoopLoc:         'SpMV.cpp:37:32'
   - String:          ' '
   - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
     DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
@@ -1690,7 +1690,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredSummary
-DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+DebugLoc:        { File: SpMV.cpp, Line: 37, Column: 36 }
 Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
 Args:            
   - String:          'Multiple burst '
@@ -1702,7 +1702,7 @@ Args:
   - String:          ' in loop '''
   - LoopName:        spmv_loop_internal
   - String:          '''('
-  - LoopLoc:         'SpMV.cpp:36:32'
+  - LoopLoc:         'SpMV.cpp:37:32'
   - String:          ')'
   - String:          ' has been inferred on bundle '''
   - BundleName:      gmem0
@@ -1712,7 +1712,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredVerboseSummary
-DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+DebugLoc:        { File: SpMV.cpp, Line: 37, Column: 36 }
 Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
 Args:            
   - String:          'Multiple burst '
@@ -1731,7 +1731,7 @@ Args:
   - String:          ' '
   - LoopName:        spmv_loop_internal
   - String:          ' '
-  - LoopLoc:         'SpMV.cpp:36:32'
+  - LoopLoc:         'SpMV.cpp:37:32'
   - String:          ' '
   - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
     DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
@@ -1740,7 +1740,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredSummary
-DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+DebugLoc:        { File: SpMV.cpp, Line: 37, Column: 36 }
 Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
 Args:            
   - String:          'Multiple burst '
@@ -1752,7 +1752,7 @@ Args:
   - String:          ' in loop '''
   - LoopName:        spmv_loop_internal
   - String:          '''('
-  - LoopLoc:         'SpMV.cpp:36:32'
+  - LoopLoc:         'SpMV.cpp:37:32'
   - String:          ')'
   - String:          ' has been inferred on bundle '''
   - BundleName:      gmem1
@@ -1762,7 +1762,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredVerboseSummary
-DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+DebugLoc:        { File: SpMV.cpp, Line: 37, Column: 36 }
 Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
 Args:            
   - String:          'Multiple burst '
@@ -1781,7 +1781,7 @@ Args:
   - String:          ' '
   - LoopName:        spmv_loop_internal
   - String:          ' '
-  - LoopLoc:         'SpMV.cpp:36:32'
+  - LoopLoc:         'SpMV.cpp:37:32'
   - String:          ' '
   - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
     DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
@@ -1790,7 +1790,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredSummary
-DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+DebugLoc:        { File: SpMV.cpp, Line: 37, Column: 36 }
 Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
 Args:            
   - String:          'Multiple burst '
@@ -1802,7 +1802,7 @@ Args:
   - String:          ' in loop '''
   - LoopName:        spmv_loop_internal
   - String:          '''('
-  - LoopLoc:         'SpMV.cpp:36:32'
+  - LoopLoc:         'SpMV.cpp:37:32'
   - String:          ')'
   - String:          ' has been inferred on bundle '''
   - BundleName:      gmem0
@@ -1812,7 +1812,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredVerboseSummary
-DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+DebugLoc:        { File: SpMV.cpp, Line: 37, Column: 36 }
 Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
 Args:            
   - String:          'Multiple burst '
@@ -1831,7 +1831,7 @@ Args:
   - String:          ' '
   - LoopName:        spmv_loop_internal
   - String:          ' '
-  - LoopLoc:         'SpMV.cpp:36:32'
+  - LoopLoc:         'SpMV.cpp:37:32'
   - String:          ' '
   - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
     DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
@@ -1840,7 +1840,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredSummary
-DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+DebugLoc:        { File: SpMV.cpp, Line: 37, Column: 36 }
 Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
 Args:            
   - String:          'Multiple burst '
@@ -1852,7 +1852,7 @@ Args:
   - String:          ' in loop '''
   - LoopName:        spmv_loop_internal
   - String:          '''('
-  - LoopLoc:         'SpMV.cpp:36:32'
+  - LoopLoc:         'SpMV.cpp:37:32'
   - String:          ')'
   - String:          ' has been inferred on bundle '''
   - BundleName:      gmem1
@@ -1862,7 +1862,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredVerboseSummary
-DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+DebugLoc:        { File: SpMV.cpp, Line: 37, Column: 36 }
 Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
 Args:            
   - String:          'Multiple burst '
@@ -1881,7 +1881,7 @@ Args:
   - String:          ' '
   - LoopName:        spmv_loop_internal
   - String:          ' '
-  - LoopLoc:         'SpMV.cpp:36:32'
+  - LoopLoc:         'SpMV.cpp:37:32'
   - String:          ' '
   - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
     DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
@@ -1890,7 +1890,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredSummary
-DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+DebugLoc:        { File: SpMV.cpp, Line: 37, Column: 36 }
 Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
 Args:            
   - String:          'Multiple burst '
@@ -1902,7 +1902,7 @@ Args:
   - String:          ' in loop '''
   - LoopName:        spmv_loop_internal
   - String:          '''('
-  - LoopLoc:         'SpMV.cpp:36:32'
+  - LoopLoc:         'SpMV.cpp:37:32'
   - String:          ')'
   - String:          ' has been inferred on bundle '''
   - BundleName:      gmem0
@@ -1912,7 +1912,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredVerboseSummary
-DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+DebugLoc:        { File: SpMV.cpp, Line: 37, Column: 36 }
 Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
 Args:            
   - String:          'Multiple burst '
@@ -1931,7 +1931,7 @@ Args:
   - String:          ' '
   - LoopName:        spmv_loop_internal
   - String:          ' '
-  - LoopLoc:         'SpMV.cpp:36:32'
+  - LoopLoc:         'SpMV.cpp:37:32'
   - String:          ' '
   - Function:        'SpMV(int*, ap_uint<5>*, ap_uint<9>*, ap_uint<5>, int*, int*)'
     DebugLoc:        { File: SpMV.cpp, Line: 14, Column: 0 }
@@ -1940,7 +1940,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredSummary
-DebugLoc:        { File: SpMV.cpp, Line: 36, Column: 36 }
+DebugLoc:        { File: SpMV.cpp, Line: 37, Column: 36 }
 Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
 Args:            
   - String:          'Multiple burst '
@@ -1952,7 +1952,7 @@ Args:
   - String:          ' in loop '''
   - LoopName:        spmv_loop_internal
   - String:          '''('
-  - LoopLoc:         'SpMV.cpp:36:32'
+  - LoopLoc:         'SpMV.cpp:37:32'
   - String:          ')'
   - String:          ' has been inferred on bundle '''
   - BundleName:      gmem1
@@ -1962,7 +1962,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredVerboseSummary
-DebugLoc:        { File: SpMV.cpp, Line: 51, Column: 19 }
+DebugLoc:        { File: SpMV.cpp, Line: 52, Column: 19 }
 Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
 Args:            
   - String:          'Multiple burst '
@@ -1986,7 +1986,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredSummary
-DebugLoc:        { File: SpMV.cpp, Line: 51, Column: 19 }
+DebugLoc:        { File: SpMV.cpp, Line: 52, Column: 19 }
 Function:        _Z4SpMVPiP7ap_uintILi5EEPS0_ILi9EES1_S_S_
 Args:            
   - String:          'Multiple burst '

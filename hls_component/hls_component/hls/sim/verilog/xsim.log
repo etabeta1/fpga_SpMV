@@ -3,8 +3,8 @@
 # SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Tue Jan  7 19:57:08 2025
-# Process ID: 11276
+# Start of session at: Wed Jan  8 20:13:29 2025
+# Process ID: 18284
 # Current directory: D:/Desktop/SpMV/hls_component/hls_component/hls/sim/verilog
 # Command line: xsim.exe -mode tcl -source {xsim.dir/SpMV/xsim_script.tcl}
 # Log file: D:/Desktop/SpMV/hls_component/hls_component/hls/sim/verilog/xsim.log
@@ -17,9 +17,9 @@
 # CPU Physical cores:8
 # CPU Logical cores :16
 # Host memory       :16505 MB
-# Swap memory       :6979 MB
-# Total Virtual     :23485 MB
-# Available Virtual :6466 MB
+# Swap memory       :9147 MB
+# Total Virtual     :25653 MB
+# Available Virtual :3333 MB
 #-----------------------------------------------------------
 source xsim.dir/SpMV/xsim_script.tcl
 # xsim {SpMV} -autoloadwcfg -tclbatch {SpMV.tcl}
@@ -33,12 +33,12 @@ source SpMV.tcl
 // RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
 ////////////////////////////////////////////////////////////////////////////////////
 // RTL Simulation : 0 / 5 [n/a] @ "125000"
-// RTL Simulation : 1 / 5 [n/a] @ "3165000"
-// RTL Simulation : 2 / 5 [n/a] @ "5715000"
-// RTL Simulation : 3 / 5 [n/a] @ "9315000"
-// RTL Simulation : 4 / 5 [n/a] @ "14595000"
-// RTL Simulation : 5 / 5 [n/a] @ "20575000"
+// RTL Simulation : 1 / 5 [n/a] @ "3375000"
+// RTL Simulation : 2 / 5 [n/a] @ "6065000"
+// RTL Simulation : 3 / 5 [n/a] @ "9885000"
+// RTL Simulation : 4 / 5 [n/a] @ "15325000"
+// RTL Simulation : 5 / 5 [n/a] @ "21485000"
 ////////////////////////////////////////////////////////////////////////////////////
-$finish called at time : 20635 ns : File "D:/Desktop/SpMV/hls_component/hls_component/hls/sim/verilog/SpMV.autotb.v" Line 1106
+$finish called at time : 21545 ns : File "D:/Desktop/SpMV/hls_component/hls_component/hls/sim/verilog/SpMV.autotb.v" Line 1048
 ## quit
-INFO: [Common 17-206] Exiting xsim at Tue Jan  7 19:57:10 2025...
+INFO: [Common 17-206] Exiting xsim at Wed Jan  8 20:13:33 2025...

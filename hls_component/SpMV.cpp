@@ -25,6 +25,7 @@ void SpMV(
     #pragma HLS INTERFACE s_axilite port=vector bundle=control
     #pragma HLS INTERFACE s_axilite port=output bundle=control
 
+    #pragma HLS INTERFACE s_axilite port=return bundle=control
 
     spmv_loop_external:for(VectorSize i = 0; i < MAX_MATRIX_SIDE_SIZE; i++) {
         #pragma HLS UNROLL
@@ -51,3 +52,8 @@ void SpMV(
         output[i] = sum;
     }
 };
+
+
+
+
+
